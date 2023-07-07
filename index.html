@@ -14,11 +14,13 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     
         <!-- SCRIPTS -->
-        <script src="js/myscript.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <!-- <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script> -->
+        <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="   crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
-        
+        <script  type="text/javascript" src="js/pub_loader.js"></script>
+
+
         <!-- STYLE -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
@@ -30,7 +32,7 @@
 <body>
 <div class="container">
 
-    <nav class="navbar navbar-expand-lg fixed-top  navbar-light justify-content-between" style="background-color: #e3f2fd;">
+    <nav class="navbar navbar-expand-lg fixed-top justify-content-between navbar-custom" >
             <div class="container">
                 <a class="navbar-brand d-lg-none" href="#">
                     <img src="img/UMN_NLP_logo_final_circle.png" width="30" height="30" class="d-inline-block align-top" alt="">
@@ -41,14 +43,14 @@
             
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
+                    <li class="nav-item">
                     <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/#publications">Publication</a>
+                        <a class="nav-link" href="index.html#publication">Publication</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/#people">People</a>
+                        <a class="nav-link" href="index.html#people">People</a>
                     </li>
                 </ul>
                 </div>
@@ -66,11 +68,11 @@
         </p>
     </div>
 
-    <br><br>
+    <br>
     <h2>News</h2>
     <div class="row">
         
-        <div class="col-md-5">
+        <div class="col-md-7">
             <!-- Slideshow container -->
             <div class="slideshow-container">
                 <!-- Full-width images with number and caption text -->
@@ -111,34 +113,51 @@
                 <span class="dot"></span>                 
               </div>
         </div>
-        <div class="col-md-7">
+        <div class="col-md-5">
 
             <p>
-            Minnesita NLP Seminar <a href="https://www.youtube.com/channel/UCtZN01zrrX4WYKRaoDt_rLA/playlists"><i class="fa fa-youtube-play" style="font-size:20px;color:red;position:relative; top:1px;"></i></a>  
+            <a href="https://www.youtube.com/channel/UCtZN01zrrX4WYKRaoDt_rLA/playlists"><i class="fa fa-youtube-play" style="font-size:20px;color:red;position:relative; top:1px;margin-right:2px"></i></a>  
+            NLP Seminar  
             <br>
-            Minnesota NLP Github Repository <span class="icon" onclick="window.open('https://github.com/minnesotanlp')" style="cursor: pointer">
-                <i class="fa fa-github ai-lg" aria-hidden="true" style="margin-right:-2px"></i>
-            </span>
-            <br>
-            Minnesota NLP Twitter <span class="icon" onclick="window.open('https://twitter.com/MinnesotaNLP')" style="cursor: pointer">
-                <i class="fa fa-twitter ai-lg" aria-hidden="true" style="margin-right:0px;margin-right:1px"></i>
+            <span class="icon" onclick="window.open('https://github.com/minnesotanlp')" style="cursor: pointer"> 
+                <i class="fa fa-github ai-lg" aria-hidden="true" style="margin-right:2px"></i>
             </span> 
+            Github  
+            <br>
+            <span class="icon" onclick="window.open('https://twitter.com/MinnesotaNLP')" style="cursor: pointer">
+                <i class="fa fa-twitter ai-lg" aria-hidden="true" style="margin-right:0px;margin-right:2px"></i>
+            </span> 
+            Twitter 
             <br>
             <br>
             If you like to join us, <a href="http://cs-u-ada.cs.umn.edu/openings">please read this page</a> and fill out this <a href="https://forms.gle/Zdw5C4U6t7x8Xxnk8">form</a>. 
             </p>
 
+
+            <!-- <blockquote class="twitter-tweet"><a href="https://twitter.com/x/status/807811447862468608"></a></blockquote> -->
+            <a class="twitter-timeline" href="https://twitter.com/MinnesotaNLP" data-tweet-limit="5">Tweets by @MinnesotaNLP</a>
+            <div id="github-card" data-username="minnesotanlp"></div>
+            <div id="github-card"
+                data-username="minnesotanlp"
+                data-max-repos="4"
+                data-sort-by="stars"
+                data-header-text="Most starred repositories">
+            </div>
+
+            <div class="github-card" data-github="dykang""></div>
+
+            <iframe src="https://www.youtube.com/embed/videoseries?list=PLg6vSm3Aw78-UD-OhSYIn0FAXar2U7w2f" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </div>
     </div>
 
     <hr>
     <div class="row">
         <div id="people" >
-            <h2 style="margin-top:0px;">People</h2>
+            <h2>People</h2>
             <br>
             <div class="row justify-content-between">
                 
-                <div class="col-md-3">
+                <div class="col-md-2">
                     
                     <h5> Faculty </h5>
                     <br>
@@ -153,14 +172,11 @@
                         </figure>
                     </div>
                 </div>
-                
+                <div class="col-md-1"></div>
                 <div class="col-md-9">
-            
-                    <h5> Current Students </h5>
-                    <br>
-
                     <div class="row">
-                        <h6> Ph.D. Students </h6>
+                        <h5> Current  Students </h5>
+
                         <br><br>
                         <div id="members_wrapper">
                             <figure class="member_figure">
@@ -187,14 +203,7 @@
                                 PhD, w/ <a href="https://www-users.cse.umn.edu/~gini/">Maria Gini</a>
                                 </figcaption>
                             </figure>
-                            <figure class="member_figure">
-                                <img class="member_image" src="img/members/jk.jpg" alt="Jaehyung Kim">
-                                <figcaption class="member_image_caption">
-                                <a href="https://sites.google.com/view/jaehyungkim">Jaehyung Kim</a>
-                                <br>
-                                visiting PhD @KAIST<br/> 
-                                </figcaption>
-                            </figure>
+
                             <figure class="member_figure">
                                 <img class="member_image" src="img/members/london.jpeg" alt="London Lowmanstone">
                                 <figcaption class="member_image_caption">
@@ -228,20 +237,6 @@
                                 </figcaption>
                             </figure>
 
-                        </div>
-                    </div>
-                    <div class="row">
-                        <h6> Masters and Undergraduate Students </h6>
-                        <br><br>
-                        <div id="members_wrapper">
-                            <figure class="member_figure">
-                                <img class="member_image" src="img/members/kelsey.jpg" alt="Rose Neis">
-                                <figcaption class="member_image_caption">
-                                <a href="https://github.com/kelseyneis">Rose Neis</a>
-                                <br>	
-                                MS
-                                </figcaption>
-                            </figure>			  
                             <figure class="member_figure">
                                 <img class="member_image" src="img/members/hao.JPG" alt="Hao Zou">
                                 <figcaption class="member_image_caption">
@@ -279,805 +274,55 @@
                     </div>
                     <br><br>
                     <div class="row">
-                        <h6> <a href="/people.html">Alumni</a> </h6>
-                        <div align="left" ></div>
+                        <!-- <h6> <a href="/people.html">Alumni</a> </h6> -->
+                        <div align="left" >
+
+                        <h5 onclick="show_alumni()">Alumni</h5>
+                        <ul id="datalist_alumni" style="display:block">
+                            <li><a href="https://github.com/kelseyneis">Rose Neis</a> (UMN Data Science Master, 2023) </li>
+                            <li><a href="https://sites.google.com/view/jaehyungkim">Jaehyung Kim</a> (Visiting Ph.D, 2022 Spring) &rarr; Intern @Meta AI &rarr; Ph.D @KAIST AI</li>
+                            <li><a href="https://goucejia.github.io/">Yu Fang</a> (UMN CS Master, 2022) &rarr; <a href="https://www.bimsa.cn/">BIMSA</a></li>
+                            <li>David Ma (UMN CS Master, 2022) &rarr; <a href="https://optiver.com/">Optiver</a></li>
+                            <li><a href="https://ruyuanwan.github.io/">Ruyuan Wan</a> (UMN Linguistics/Data Science Master, 2022) &rarr; CS Ph.D @University of Notre Dame </li>
+                            <li>Petros Karypis (UMN CS Undergrad, 2022) &rarr; UCSD Master</li>
+                            <li>Miguel Miguélez Díaz (UMN Data Science Master, 2022) &rarr; Amazon</li>
+                            <li>Yang He (UMN CS Master, 2022) &rarr; Google</li>
+                        </ul>
+                        </div>
                         <br><br>
+
                     </div>
                 </div>
             </div>
            
         </div>
+    </div>
+    <hr>
+    <div class="row" >
+        <div id="publication">
+            <h2>Publications</h2>
+
+            <div id="publication_2023"></div>
+            <div id="publication_2022"></div>
+            <div id="publication_2021"></div>	
+        </div>
+
         <hr>
     </div>
+    <hr>
+    <div class="row">
+        <div id="funding">
+            <h2>Funding</h2>
+            Our research is supported by the following organizations/companies:
+            <br>
+            <a href="https://twin-cities.umn.edu/"><img src="img/umn.png" style="width:130px;padding-right: 20px;"></img></a> 
+            <a href="https://www.grammarly.com/blog/engineering/category/nlp-ml/"><img src="img/grammarly_icon.png" style="width:100px;padding-right: 20px;"></img></a> 
+            <a href="https://www.sony.com/en/SonyInfo/research-award-program/"><img src="img/sony_icon.png" style="width:90px;position:relative;padding-right: 20px;"></img></a> 
+            <a href="https://news.3m.com/"><img src="img/3m_icon.png" style="width:130px;position:relative;padding-right: 5px;;"></img></a>.
+            <a href="https://cse.umn.edu/mnri"><img src="img/mnri_icon.jpg" style="width:150px;padding-right: 20px;"></img></a>
 
-    <div id="publications">
-    <h2>Publications</h2>
-
-    <div id="pubs"></div>
-    <script id="pubs_by_date" language="text" />
-    <div class="text anchor">2023</div>
-    <ul>
-        <li>
-            <div class="publication">
-            <div class="text">
-                <div class="title">
-                    CoEdIT: Text Editing by Task-Specific Instruction Tuning
-                </div>
-                <div class="authors">
-                    Vipul Raheja, Dhruv Kumar, Ryan Koo, Dongyeop Kang
-                </div>
-                <div>
-                    <span class="tag"><a href="https://arxiv.org/abs/2305.09857">Paper</a></span> /
-                    <span class="tag"><a href="https://github.com/vipulraheja/coedit">Code&Model</a></span> 
-                </div>
-            </div>
-            </div>
-        </li>
-
-        <li>
-            <div class="publication">
-            <div class="text">
-                <div class="title">
-                    A Survey of Diffusion Models in Natural Language Processing
-                </div>
-                <div class="authors">
-                    Hao Zou, Zae Myung Kim, Dongyeop Kang
-
-                </div>
-                <div>
-                    <span class="tag"><a href="https://arxiv.org/abs/2305.14671">Paper</a></span>  
-                </div>
-            </div>
-            </div>
-        </li>
-
-
-        <li>
-            <div class="publication">
-            <div class="text">
-                <div class="title">
-                    Complex Mathematical Symbol Definition Structures: A Dataset and Model for Coordination Resolution in Definition Extraction
-                </div>
-                <div class="authors">
-                    Anna Martin-Boyle, Andrew Head, Kyle Lo, Risham Sidhu, Marti A Hearst, Dongyeop Kang
-                </div>
-                <div>
-                    <span class="tag"><a href="https://arxiv.org/abs/2305.14660">Paper</a></span>  
-                </div>
-            </div>
-            </div>
-        </li>
-
-
-        <li>
-            <div class="publication">
-            <div class="text">
-                <div class="title">
-                    "Is the Pope Catholic?" Applying Chain-of-Thought Reasoning to Understanding Conversational Implicatures
-                </div>
-                <div class="authors">
-                    Zae Myung Kim, David E Taylor, Dongyeop Kang
-                </div>
-                <div>
-                    <span class="tag"><a href="https://arxiv.org/abs/2305.13826">Paper</a></span>  
-                </div>
-            </div>
-            </div>
-        </li>
-
-
-
-
-        <li>
-            <div class="publication">
-            <div class="text">
-                <div class="title">
-                    Annotation Imputation to Individualize Predictions: Initial Studies on Distribution Dynamics and Model Predictions
-                </div>
-                <div class="authors">
-                    London Lowmanstone, Ruyuan Wan, Risako Owan, Jaehyung Kim, Dongyeop Kang
-
-                </div>
-                <div>
-                    <span class="tag"><a href="https://arxiv.org/abs/2305.15070">Paper</a></span> 
-                </div>
-            </div>
-            </div>
-        </li>
-
-
-        <li>
-            <div class="publication">
-            <div class="text">
-                <div class="title">
-                    An Analysis of Reader Engagement in Literary Fiction through Eye Tracking and Linguistic Features
-                </div>
-                <div class="authors">
-                    Rose Neis, Karin de Langis, Zae Myung Kim, Dongyeop Kang
-                </div>
-                <div>
-                    <span class="venue"><a href="https://sites.google.com/umass.edu/wnu2023">Workshop on Narrative Understanding (WNU) @ACL 2023</a> </span> / 
-                    <span class="tag"><a href="https://arxiv.org/abs/2306.04043">Paper</a></span> 
-                </div>
-            </div>
-            </div>
-        </li>
-
-
-
-        <li>
-            <div class="publication">
-            <div class="text">
-                <div class="title">
-                    Rebuilding Social Connection and Enhancing Advertising Effects Through the Nostalgic Appeal during the Pandemic
-                </div>
-                <div class="authors">
-                    Katie Kim, Bugil Chang, Debarati Das, Smitha Muthya, Jisu Huh, Dongyeop Kang, Jaideep Srivastava
-                </div>
-                <div>
-                    <span class="venue"><a href="https://www.aejmc.com/home/events/future-conferences/">AEJMC 2023</a></span> / 
-                    <span class="tag">Paper</span> 
-                </div>
-            </div>
-            </div>
-        </li>
-
-
-        <li>
-            <div class="publication">
-            <div class="text">
-                <div class="title">
-                    infoVerse: A Universal Framework for Dataset Characterization with Multidimensional Meta-information
-                </div>
-                <div class="authors">
-                    Jaehyung Kim, Yekyung Kim, Karin De Langis, Jinwoo Shin, and Dongyeop Kang
-                </div>
-                <div>
-                    <span class="venue"><a href="https://2023.aclweb.org/">ACL 2023</a></span> / 
-                    <span class="tag"><a href="https://arxiv.org/abs/2305.19344">Paper</a></span> /
-                    <span class="tag"><a href="https://github.com/minnesotanlp/infoVerse">Code</a></span>
-                </div>
-            </div>
-            </div>
-        </li>
-
-
-
-        <li>
-            <div class="publication">
-            <div class="text">
-                <div class="title">
-                Rethinking Annotation: Can Language Learners Contribute?
-
-                </div>
-                <div class="authors">
-                    <span class="author">Haneul Yoo</span>,		
-                    <span class="author">Rifki Afina Putri</span>,
-                    <span class="author">Changyoon Lee</span>,
-                    <span class="author">Youngin Lee</span>,
-                    <span class="author">So-Yeon Ahn</span>,
-                    <span class="author">Dongyeop Kang</span>,
-                    <span class="author">Alice Oh</span>
-                    
-                </div>
-                <div>
-                    <span class="venue"><a href="https://2023.aclweb.org/">ACL 2023</a></span> / 
-                <span class="tag"><a href="https://arxiv.org/abs/2210.06828">Paper</a></span> 
-                </div>
-            </div>
-            </div>
-        </li>
-
-        <li>
-            <div class="publication">
-            <div class="text">
-                <div class="title">
-                    Balancing Effect of Training Dataset Distribution of Multiple Styles for Multi-Style Text Transfer
-
-                </div>
-                <div class="authors">
-                    <span class="author">Debarati Das</span>,		
-                    <span class="author">David Ma</span>,
-                    <span class="author">Dongyeop Kang</span>
-                    
-                </div>
-                <div>
-                    <span class="venue"><a href="https://2023.aclweb.org/">ACL 2023 Findings</a></span> / 
-                <span class="tag"><a href="https://arxiv.org/abs/2305.15582">Paper</a></span> 
-                </div>
-            </div>
-            </div>
-        </li>
-
-
-
-        <li>
-            <div class="publication">
-            <div class="text">
-                <div class="title">
-                    Prefer to Classify: Improving Text Classifiers via Auxiliary Preference Learning
-                </div>
-                <div class="authors">
-                    Jaehyung Kim, Jinwoo Shin, Dongyeop Kang 
-                </div>
-                <div>
-                    <span class="venue"><a href="https://icml.cc/Conferences/2023/Dates">ICML 2023</a></span> / 
-                    <span class="tag"><a href="https://arxiv.org/abs/2306.04925">Paper</a></span> /
-                    <span class="tag"><a href="https://github.com/minnesotanlp/p2c">Code</a></span> 
-                </div>
-            </div>
-            </div>
-        </li>
-
-
-
-
-
-        <li>
-            <div class="publication">
-            <div class="text">
-                <div class="title">
-                    Decoding the End-to-end Writing Trajectory in Scholarly Manuscripts
-                </div>
-                <div class="authors">
-                    <span class="author">Ryan Hyunkyo Koo</span>*,		
-                    <span class="author">Anna Martin</span>*,
-                    <span class="author">Linghe Wang</span>,
-                    <span class="author">Dongyeop Kang</span>
-                </div>
-                <div>
-                    <span class="venue"><a href="https://in2writing.glitch.me/">In2Writing @CHI 2023</a></span> / 
-                    <span class="tag"><a href="https://arxiv.org/pdf/2304.00121">Paper</a></span> /
-                    <span class="tag"><a href="https://github.com/minnesotanlp/reward-system">Code</a></span> /
-                    <span class="tag"><a href="https://minnesotanlp.github.io/REWARD_demo/">Demo</a></span> 
-                </div>
-            </div>
-            </div>
-        </li>
-
-        <li>
-            <div class="publication">
-            <div class="text">
-                <div class="title">
-                Cluster-Guided Label Generation in Extreme Multi-Label Classification
-                
-                </div>
-                <div class="authors">
-                    <span class="author">Taehee Jung</span>,		
-                    <span class="author">Joo-Kyung Kim</span>,
-                    <span class="author">Sungjin Lee</span>,
-                    <span class="author">Dongyeop Kang</span>
-                </div>
-                <div>
-                    <span class="venue"><a href="https://2023.eacl.org/">EACL 2023</a></span> / 
-                    <span class="tag"><a href="https://arxiv.org/pdf/2302.09150.pdf">Paper</a></span> /
-                    <span class="tag"><a href="https://github.com/alexa/xlgen-eacl-2023">Code</a></span> 
-                </div>
-            </div>
-            </div>
-        </li>
-
-        <li>
-            <div class="publication">
-            <div class="text">
-                <div class="title">
-                StyLEx: Explaining Styles with Lexicon-Based Human Perception
-
-                
-                </div>
-                <div class="authors">
-                    <span class="author">Shirley Anugrah Hayati</span>,		
-                    <span class="author">Kyumin Park</span>,
-                    <span class="author">Dheeraj Rajagopal</span>,
-                    <span class="author">Lyle Ungar</span>,
-                    <span class="author">Dongyeop Kang</span>
-                </div>
-                <div>
-                    <span class="venue"><a href="https://2023.eacl.org/">EACL 2023</a></span> / 
-                    <span class="tag"><a href="https://arxiv.org/abs/2210.07469">Paper</a></span> /
-                    <span class="tag"><a href="https://github.com/minnesotanlp/stylex">Code</a></span> 
-                </div>
-            </div>
-            </div>
-        </li>
-
-
-        <li>
-            <div class="publication">
-            <div class="text">
-                <div class="title">Everyone's Voice Matters: Quantifying Annotation Disagreement Using Demographic Information
-                </div>
-                <div class="authors">
-                    <span class="author">Ruyuan Wan</span>,
-                    <span class="author">Jaehyung Kim</span>,
-                    <span class="author">Dongyeop Kang</span>
-                    
-                </div>
-                <div>
-                <span class="venue"><a href="https://aaai.org/Conferences/AAAI-23/">AAAI 2023</a></span> 
-                <span class="highlight">(Oral)</span>
-                / 
-                <span class="tag"><a href="https://arxiv.org/abs/2301.05036">Paper</a></span> /
-                <span class="tag"><a href="https://github.com/minnesotanlp/Quantifying-Annotation-Disagreement">Code</a></span> 
-                </div>
-                
-            </div>
-            </div>
-        </li>
-
-        <li>
-            <div class="publication">
-            <div class="text">
-                <div class="title">
-                    The Semantic Reader Project: Augmenting Scholarly Documents through AI-Powered Interactive Reading Interfaces
-                </div>
-                <div class="authors">
-                    Kyle Lo, Joseph Chee Chang, Andrew Head, Jonathan Bragg, Amy X. Zhang, Cassidy Trier, Chloe Anastasiades, Tal August, Russell Authur, Danielle Bragg, Erin Bransom, Isabel Cachola, Stefan Candra, Yoganand Chandrasekhar, Yen-Sung Chen, Evie Yu-Yen Cheng, Yvonne Chou, Doug Downey, Rob Evans, Raymond Fok, Fangzhou Hu, Regan Huff, Dongyeop Kang, Tae Soo Kim, Rodney Kinney, Aniket Kittur, Hyeonsu Kang, Egor Klevak, Bailey Kuehl, Michael Langan, Matt Latzke, Jaron Lochner, Kelsey MacMillan, Eric Marsh, Tyler Murray, Aakanksha Naik, Ngoc-Uyen Nguyen, Srishti Palani, Soya Park, Caroline Paulic, Napol Rachatasumrit, Smita Rao, Paul Sayre, Zejiang Shen, Pao Siangliulue, Luca Soldaini, Huy Tran, Madeleine van Zuylen, Lucy Lu Wang, Christopher Wilhelm, Caroline Wu, Jiangjiang Yang, Angele Zamarron, Marti A. Hearst, Daniel S. Weld
-                </div>
-                <div>
-                    <span class="tag"><a href="https://arxiv.org/abs/2303.14334">Paper</a></span> 
-                </div>
-            </div>
-            </div>
-        </li>
-
-
-    </ul>
-    <div class="text anchor">2022</div>
-    <ul>
-
-
-        <li>
-            <div class="publication">
-            <div class="text">
-                <div class="title">
-                Improving Iterative Text Revision by Learning Where to Edit from other Revision Tasks
-
-                </div>
-                <div class="authors">
-                    <span class="author">Zae Myung Kim</span>,		
-                    <span class="author">Wanyu Du</span>,
-                    <span class="author">Vipul Raheja</span>,
-                    <span class="author">Dhruv Kumar</span>,
-                    <span class="author">Dongyeop Kang</span>
-                    
-                </div>
-                <div>
-                <span class="venue"><a href="https://2022.emnlp.org/">EMNLP 2022</a></span> / 
-                <span class="tag"><a href="https://arxiv.org/abs/2212.01350">Paper</a></span> /
-                <span class="tag"><a href="https://github.com/vipulraheja/iterater">Code</a></span> / 
-                <span class="tag">HuggingFace Model+Data</span>
-                </div>
-            </div>
-            </div>
-        </li>
-
-        <li>
-            <div class="publication">
-            <div class="text">
-                <div class="title">
-                User or Labor: An Interaction Framework for Human-Machine
-                    Relationships in NLP
-                </div>
-                <div class="authors">
-                    <span class="author">Ruyuan Wan</span>,
-                    <span class="author">Naome Etori</span>,
-                    <span class="author">Karla Badillo-Urquiola</span>,
-                    <span class="author">Dongyeop Kang</span>
-                    
-                </div>
-                <div>
-                <span class="venue"><a href="https://www.dashworkshops.org/">DaSH @EMNLP 2022</a></span> / 
-                <span class="tag"><a href="https://arxiv.org/abs/2211.01553">Paper</a></span>   
-                </div>
-            </div>
-            </div>
-        </li>
-
-        <li>
-            <div class="publication">
-            <div class="text">
-                <div class="title">
-                Read, Revise, Repeat: A System Demonstration for Human-in-the-loop Iterative Text Revision
-                </div>
-                <div class="authors">
-                    <span class="author">Wanyu Du*</span>,
-                    <span class="author">Zae Myung Kim*</span>,				
-                    <span class="author">Vipul Raheja</span>,
-                    <span class="author">Dhruv Kumar</span>,
-                    <span class="author">Dongyeop Kang</span>
-                </div>
-                <div>
-                <span class="venue"><a href="https://in2writing.glitch.me/">In2Writing @ACL 2022</a></span> / 
-                <span class="tag"><a href="https://arxiv.org/abs/2204.03685">Paper</a></span> /
-                <span class="tag"><a href="https://github.com/vipulraheja/IteraTeR/">Code</a></span> / 
-                <span class="tag"><a href="https://www.youtube.com/watch?v=lK08tIpEoaE">Demo</a></span> 
-                </div>
-                <span class="highlight">Best paper award</span>
-            </div>
-            </div>
-        </li>
-        <li>
-            <div class="publication">
-            <div class="text">
-                <div class="title">
-                Understanding Iterative Revision from Human-Written Text
-                </div>
-                <div class="authors">
-                    <span class="author">Wanyu Du</span>,
-                    <span class="author">Vipul Raheja</span>,
-                    <span class="author">Dhruv Kumar</span>,
-                    <span class="author">Zae Myung Kim</span>,
-                    <span class="author">Melissa Lopez</span>,
-                    <span class="author">Dongyeop Kang</span>
-                </div>
-                <div>
-                <span class="venue"><a href="https://2022.aclweb.org/">ACL 2022</a></span> / 
-                <span class="tag"><a href="https://arxiv.org/abs/2203.03802">Paper</a></span> /
-                <span class="tag"><a href="https://github.com/vipulraheja/IteraTeR">Code</a></span> / 
-                <span class="tag"><a href="https://www.youtube.com/watch?v=peRc2SE31OQ">Video</a></span> / 
-                <span class="tag"><a href="https://huggingface.co/wanyu">HuggingFace Model+Data</a></span> / 			
-                <span class="tag"><a href="https://twitter.com/WanyuDu/status/1506374148964200453">Tweet</a></span>
-                </div>
-            </div>
-            </div>
-        </li>
-
-        <li>
-            <div class="publication">
-            <div class="text">
-                <div class="title">
-                What Makes Better Augmentation Strategies? Augment Difficult but Not too Different
-                </div>
-                <div class="authors">
-                    <span class="author">Jaehyung Kim</span>,
-                    <span class="author">Dongyeop Kang</span>,
-                    <span class="author">Sungsoo Ahn</span>,
-                    <span class="author">Jinwoo Shin</span>
-                </div>
-                <div>
-                <span class="venue"><a href="https://iclr.cc/">ICLR 2022</a></span> / 
-                <span class="tag"><a href="https://openreview.net/pdf?id=Ucx3DQbC9GH">Paper</a></span> /
-                <span class="tag"><a href="https://github.com/bbuing9/DND">Code</a></span>
-                </div>
-            </div>
-            </div>
-        </li>
-        <li>
-            <div class="publication">
-            <div class="text">
-                <div class="title">
-                A Comparative Study on Textual Saliency of Styles from Eye Tracking, Annotations, and Language Models
-                </div>
-                <div class="authors">
-                    <span class="author">Karin de Langis</span>,		
-                    <span class="author">Dongyeop Kang</span>
-                </div>
-                <div>
-                <span class="tag"><a href="https://arxiv.org/abs/2212.09873v1">Paper</a></span>
-                </div>
-            </div>
-            </div>
-        </li>
-
-        <li>
-            <div class="publication">
-            <div class="text">
-                <div class="title">
-                Quirk or Palmer: A Comparative Study of Modal Verb Frameworks with Annotated Datasets
-
-                </div>
-                <div class="authors">
-                    <span class="author">Risako Owan</span>,		
-                    <span class="author">Maria Gini</span>,
-                    <span class="author">Dongyeop Kang</span>
-                </div>
-                <div>
-                <span class="tag"><a href="https://arxiv.org/abs/2212.10152v1">Paper</a></span> 
-                </div>
-            </div>
-            </div>
-        </li>
-        <li>
-            <div class="publication">
-            <div class="text">
-                <div class="title">
-                RedPen: Region- and Reason-Annotated Dataset of Unnatural Speech
-
-                </div>
-                <div class="authors">
-                    <span class="author">Kyumin Park</span>,
-                    <span class="author">Keon Lee</span>,
-                    <span class="author">Daeyoung Kim</span>,
-                    <span class="author">Dongyeop Kang</span>
-                    
-                </div>
-                <div>
-                <span class="tag"><a href="https://arxiv.org/abs/2210.14406">Paper</a></span>  
-                
-                </div>
-            </div>
-            </div>
-        </li>
-
-        </ul>
-
-        <div class="text anchor">2021</div>
-        <ul>
-            <li>
-                <div class="publication">
-                <div class="text">
-                    <div class="title">
-                    Does BERT Learn as Humans Perceive? Understanding Linguistic Styles through Lexica
-                    </div>
-                    <div class="authors">
-                        <span class="author">Shirley Anugrah Hayati</span>,
-                        <span class="author">Dongyeop Kang</span>,
-                        <span class="author">Lyle Ungar</span>
-                    </div>
-                    <div>
-                    <span class="venue"><a href="https://2021.emnlp.org/papers">EMNLP 2021</a></span> / 
-                    <span class="tag"><a href="https://arxiv.org/abs/2109.02738">Paper</a></span> /
-                    <span class="tag"><a href="https://github.com/sweetpeach/hummingbird">Code</a></span> / 
-                    <span class="tag"><a href="https://twitter.com/shirley_ah_/status/1439905091578994692">Tweet</a></span> 
-                    </div>
-                </div>
-                </div>
-            </li>
-            <li>
-                <div class="publication">
-                <div class="text">
-                    <div class="title">
-                    Zero-Shot Natural Language Video Localization
-                    </div>
-                    <div class="authors">
-                        <span class="author">Jinwoo Nam</span>,
-                        <span class="author">Daechul Ahn</span>,
-                        <span class="author">Dongyeop Kang</span>,
-                        <span class="author">Seong Jong Ha</span>,
-                        <span class="author">Jonghyun Choi</span>
-                    </div>
-                    <div>
-                    <span class="venue"><a href="https://openaccess.thecvf.com/content/ICCV2021/papers/Nam_Zero-Shot_Natural_Language_Video_Localization_ICCV_2021_paper.pdf">ICCV 2021</a></span> (<span class="highlight">Oral</span>) / 
-                    <span class="tag"><a href="https://arxiv.org/abs/2110.00428">Paper</a></span> /
-                    <span class="tag"><a href="https://openaccess.thecvf.com/content/ICCV2021/supplemental/Nam_Zero-Shot_Natural_Language_ICCV_2021_supplemental.zip">Suppl</a></span> 
-                    </div>
-                </div>
-                </div>
-            </li>
-
-            <li>
-                <div class="publication">
-                <div class="text">
-                    <div class="title">
-                    Style is NOT a single variable: Case Studies for Cross-Stylistic Language Understanding
-                    </div>
-                    <div class="authors">
-                        <span class="author">Dongyeop Kang</span>,
-                        <span class="author"><a href="https://www.cs.cmu.edu/~hovy/">Eduard Hovy</a></span>
-                    </div>
-                    <div>
-                    <span class="venue"><a href="">ACL 2021</a> (<span class="highlight">Oral</span>)</span> / 
-                    <span class="tag"><a href="https://arxiv.org/pdf/1911.03663.pdf">Paper</a></span> /
-                    <span class="tag"><a href="https://github.com/dykang/xslue">Code</a></span> / 
-                    <span class="tag"><a href="http://xslue.com/">Project Page</a></span> 
-                    </div>
-                </div>
-                </div>
-            </li>
-            <li>
-                <div class="publication">
-                <div class="text">
-                    <div class="title">
-                    Augmenting Scientific Papers with Just-in-Time, Position-Sensitive Definitions of Terms and Symbols
-                    </div>
-                    <div class="authors">
-                        <span class="author"><a href="https://andrewhead.info/">Andrew Head</a></span>, 
-                        <span class="author"><a href="https://kyleclo.github.io/">Kyle Lo</a></span>, 
-                        <span class="author">Dongyeop Kang</span>, 
-                        <span class="author"><a href="https://rayfok.github.io/">Raymond Fok</a></span>, 
-                        <span class="author"><a href="">Sam Skjonsberg</a></span>, 
-                        <span class="author"><a href="https://www.cs.washington.edu/people/faculty/weld">Daniel S. Weld</a></span>, 
-                        <span class="author"><a href="https://people.ischool.berkeley.edu/~hearst/">Marti A. Hearst</a></span>
-                    </div>
-                    <div>
-                    <span class="venue"><a href="">CHI 2021</a></span> / 
-                    <span class="tag"><a href="https://arxiv.org/abs/2009.14237">Paper</a></span> /
-                    <span class="tag"><a href="https://www.youtube.com/watch?v=yYcQf-Yq8B0">Video</a></span> / 			
-                    <span class="tag"><a href="https://github.com/allenai/scholarphi">Code</a></span> / 
-                    <span class="tag"><a href="https://scholarphi.org/">Project Page</a></span> 
-                    </div>
-                </div>
-                </div>
-            </li>
-
-            <li>
-                <div class="publication">
-                <div class="text">
-                    <div class="title">
-                    Modeling Mathematical Notation Semantics in Academic Papers
-                    </div>
-                    <div class="authors">
-                        <span class="author">Hwiyeol Jo</span>,
-                        <span class="author">Dongyeop Kang</span>,
-                        <span class="author">Andrew Head</span>,
-                        <span class="author"><a href="https://people.ischool.berkeley.edu/~hearst/">Marti A. Hearst</a></span>
-                        
-                    </div>
-                    <div>
-                    <span class="venue"><a href="https://2021.emnlp.org/papers">EMNLP 2021 Findings</a></span> / 
-                    <span class="tag"><a href="https://dykang.github.io/papers/EMNLP2021_MathBERT.pdf">Paper</a></span> 
-                    </div>
-                </div>
-                </div>
-            </li>
-            <li>
-                <div class="publication">
-                <div class="text">
-                    <div class="title">
-                    Visualizing Cross-Lingual Discourse Relations in Multilingual TED Corpora
-                    </div>
-                    <div class="authors">
-                        <span class="author">Zae Myung Kim</span>,
-                        <span class="author">Vassilina Nikoulina</span>,
-                        <span class="author">Dongyeop Kang</span>,
-                        <span class="author">Didier Schwab</span>,
-                        <span class="author">Laurent Besacier</span>
-                    </div>
-                    <div>
-                    <span class="venue"><a href="https://sites.google.com/view/codi-2021">CODI @EMNLP 2021</a></span> / 
-                    <span class="tag"><a href="https://aclanthology.org/2021.codi-main.16/">Paper</a></span> /
-                    <span class="tag"><a href="https://github.com/zaemyung/Visualizing-Cross-Lingual-Discourse-Relations">Code</a></span> 
-                    </div>
-                </div>
-                </div>
-            </li>
-            <li>
-                <div class="publication">
-                <div class="text">
-                    <div class="title">
-                    Understanding Out-of-distribution: A Perspective of Data Dynamics
-                    </div>
-                    <div class="authors">
-                        <span class="author">Dyah Adila</span>,
-                        <span class="author">Dongyeop Kang</span>
-                    </div>
-                    <div>
-                    <span class="venue"><a href="https://2021.emnlp.org/papers">ICBINB @NeurIPS 2021 </a></span> / 
-                    <span class="tag"><a href="https://proceedings.mlr.press/v163/adila22a.html">Paper</a></span>
-                    </div>
-                </div>
-                </div>
-            </li>	
-        </ul>
-        <div class="text anchor">2020</div>
-        <ul>
-            <li>
-                <div class="publication">
-                <div class="text">
-                    <div class="title">
-                    GenAug: Data Augmentation for Finetuning Text Generators
-                    </div>
-                    <div class="authors">
-                        <span class="author"><a href="">Steven Y. Feng*</a></span>, 
-                        <span class="author"><a href="">Varun Gangal*</a></span>, 
-                        <span class="author">Dongyeop Kang</span>,
-                        <span class="author"><a href="">Teruko Mitamura</a></span>, 
-                        <span class="author"><a href="https://www.cs.cmu.edu/~hovy/">Eduard Hovy</a></span>
-                    </div>
-                    <div>
-                    <span class="venue"><a href="">DeeLIO Workshop @EMNLP 2020</a></span> / 
-                    <span class="tag"><a href="https://www.aclweb.org/anthology/2020.deelio-1.4.pdf">Paper</a></span> /
-                    <span class="tag"><a href="https://github.com/styfeng/GenAug">Code</a></span> 
-                    </div>
-                </div>
-                </div>		
-            </li>	
-            <li>
-                <div class="publication">
-                <div class="text">
-                    <div class="title">
-                    Document-Level Definition Detection in Scholarly Documents: Existing Models, Error Analyses, and Future Directions
-                    </div>
-                    <div class="authors">
-                        <span class="author">Dongyeop Kang</span>,
-                        <span class="author"><a href="https://andrewhead.info/">Andrew Head</a></span>, 
-                        <span class="author"><a href="">Risham Sidhu</a></span>, 
-                        <span class="author"><a href="https://kyleclo.github.io/">Kyle Lo</a></span>, 
-                        <span class="author"><a href="">Daniel Weld</a></span>, 
-                        <span class="author"><a href="https://people.ischool.berkeley.edu/~hearst/">Marti A. Hearst</a></span>
-                    </div>
-                    <div>
-                    <span class="venue"><a href="">SDP Workshop @EMNLP 2020</a></span> / 
-                    <span class="tag"><a href="https://www.aclweb.org/anthology/2020.sdp-1.22.pdf">Paper</a></span> /
-                    <span class="tag"><a href="https://github.com/allenai/scholarphi">Code</a></span> / 
-                    <span class="tag"><a href="https://scholarphi.org/">Project Page</a></span>
-                    </div>
-                </div>
-                </div>			
-            </li>
-            <li>
-                <div class="publication">
-                <div class="text">
-                    <div class="title">
-                    Plan ahead: Self-Supervised Text Planning for Paragraph Completion Task
-                    </div>
-                    <div class="authors">
-                        <span class="author">Dongyeop Kang</span>,
-                        <span class="author"><a href="https://www.cs.cmu.edu/~hovy/">Eduard Hovy</a></span>
-                    </div>
-                    <div>
-                    <span class="venue"><a href="">EMNLP 2020</a> (<span class="highlight">Oral</span>)</span> / 
-                    <span class="tag"><a href="https://www.aclweb.org/anthology/2020.emnlp-main.529.pdf">Paper</a></span>  
-                    </div>
-                </div>
-                </div>			
-            </li>
-            <li>
-                <div class="publication">
-                <div class="text">
-                    <div class="title">
-                    INSPIRED: Toward Sociable Recommendation Dialog Systems
-                    </div>
-                    <div class="authors">
-                        <span class="author"><a href="https://www.shirley.id/">Shirley Anugrah Hayati</a></span>,			
-                        <span class="author">Dongyeop Kang</span>,
-                        <span class="author"><a href="">Qingxiaoyang Zhu</a></span>,
-                        <span class="author"><a href="">Weiyan Shi</a></span>,
-                        <span class="author"><a href="http://www.cs.columbia.edu/~zhouyu/">Zhou Yu</a></span>
-                    </div>
-                    <div>
-                    <span class="venue"><a href="">EMNLP 2020</a></span> / 
-                    <span class="tag"><a href="https://www.aclweb.org/anthology/2020.emnlp-main.654.pdf">Paper</a></span> /
-                    <span class="tag"><a href="https://github.com/sweetpeach/Inspired">Code</a></span>
-                    </div>
-                </div>
-                </div>	
-            </li>
-            <li>
-                <div class="publication">
-                <div class="text">
-                    <div class="title">
-                    Posterior Calibrated Training on Sentence Classification Tasks
-                    </div>
-                    <div class="authors">
-                        <span class="author"><a href="http://theejung.github.io/">Taehee Jung</a></span>,			
-                        <span class="author">Dongyeop Kang</span>,
-                        <span class="author"><a href="">Hua Cheng</a></span>,
-                        <span class="author"><a href="https://lucasmentch.com/index.html">Lucas Mentch</a></span>,
-                        <span class="author"><a href="https://scholar.google.com/citations?user=gyDVO1IAAAAJ&hl=en">Thomas Schaaf</a></span>
-                    </div>
-                    <div>
-                    <span class="venue"><a href="">ACL 2020</a></span> / 
-                    <span class="tag"><a href="https://www.aclweb.org/anthology/2020.acl-main.242.pdf">Paper</a></span> /
-                    <span class="tag"><a href="https://github.com/THEEJUNG/PosCal">Code</a></span> 
-                    </div>
-                </div>
-                </div>			
-            </li>
-        </ul>
-    </script>
-    <!--publication code end-->
-
-        <p>
-            <a href="/bib/pubs.bib">Download BibTeX.</a>
-        </p>
+        </div>
     </div>
-
-    <hr></hr>
-
-    <div id="funding">
-        <h2>Funding</h2>
-        Our research is supported by the following organizations/companies:
-        <br>
-        <a href="https://twin-cities.umn.edu/"><img src="img/umn.png" style="width:130px;padding-right: 20px;"></img></a> 
-        <a href="https://www.grammarly.com/blog/engineering/category/nlp-ml/"><img src="img/grammarly_icon.png" style="width:100px;padding-right: 20px;"></img></a> 
-        <a href="https://www.sony.com/en/SonyInfo/research-award-program/"><img src="img/sony_icon.png" style="width:90px;position:relative;padding-right: 20px;"></img></a> 
-        <a href="https://news.3m.com/"><img src="img/3m_icon.png" style="width:130px;position:relative;padding-right: 5px;;"></img></a>.
-        <a href="https://cse.umn.edu/mnri"><img src="img/mnri_icon.jpg" style="width:150px;padding-right: 20px;"></img></a>
-
-    </div>
-
     <hr>
 
     <div class="footer">
@@ -1096,7 +341,11 @@
     </div>
 
 </div> <!-- /container -->
-<script src="js/slider.js"></script>
-<script src="js/myscript_footer.js"></script>
+<script type="text/javascript" src="js/slider.js"></script>
+<script type="text/javascript" src="js/myscript_footer.js"></script>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+<script type="text/javascript" src="js/gh-profile-card.min.js"></script>
+<script async type="text/javascript" src="js/widget.js"></script>
+
 </body>
 </html>

@@ -2,7 +2,7 @@
 body {
 	padding-top: 80px;
 	overflow-y:scroll;
-	font-size:16px
+	font-size:17px
 }
 
 .jumbotron{text-align:justify;
@@ -15,6 +15,26 @@ body {
 	width:200px;
 	height:60px;
 	margin:0px 0 2px 0}
+	
+.navbar-custom {
+	background-color: #900021;
+	color: #FFCC33;
+}
+
+/* change the brand and text color */
+.navbar-custom .navbar-brand,
+.navbar-custom .navbar-text {
+    color: #FFCC33;
+}
+/* change the link color */
+.navbar-custom .navbar-nav .nav-link {
+    color: #FFCC33;
+}
+/* change the color of active or hovered links */
+.navbar-custom .nav-item.active .nav-link,
+.navbar-custom .nav-item:hover .nav-link {
+    color: #eeb305;
+}
 
 #members_wrapper {
 	display: flex;
@@ -26,8 +46,8 @@ body {
 
 .member_figure {
 	margin: 0;
-	min-width: 150px;
-	max-width: 150px;
+	min-width: 200px;
+	max-width: 200px;
   }
   
 .member_image {
@@ -95,18 +115,11 @@ div.authors{font-size:100%;color:#777777}
 span.author{white-space:nowrap}
 div.publication{padding-top:0px;padding-bottom:20px}
 div.publication div.img{padding-right:0px;padding-top:5px}
-div.publication div.text{text-align:left;vertical-align:top;margin-bottom:-0.1em}
+div.publication div.text{text-align:left;vertical-align:top;}
 span.venue,span.highlight,div.publication span.tag{padding-right:0px;font-size:100%}
 
 
-
-ul#datalist_news li:nth-child(n+6) {
-    display:none;
-}
-ul#datalist_talks li:nth-child(n+6) {
-    display:none;
-}
-ul#datalist_awards li:nth-child(n+6) {
+ul#datalist_alumni li:nth-child(n+10) {
     display:none;
 }
 
