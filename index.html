@@ -19,6 +19,8 @@
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
         <script  type="text/javascript" src="js/pub_loader.js"></script>
+        <script  type="text/javascript" src="js/member_loader.js"></script>
+
         <script type="text/javascript" src="js/gh-profile-card.min.js"></script>
 
 
@@ -130,9 +132,8 @@
         <div class="col-md-7">
 
 
-            <div class="row">
+            <!-- <div class="row">
                 <div class="col-md-7" style="text-align:center">
-                <!-- <blockquote class="twitter-tweet"><a href="https://twitter.com/x/status/807811447862468608"></a></blockquote> -->
                 <a class="twitter-timeline" href="https://twitter.com/MinnesotaNLP" 
                     data-height="550"
                     data-chrome="noheader	 nofooter transparent"
@@ -146,7 +147,6 @@
                         data-header-text="Most starred repositories" style="align:center">
                     </div>
                     <br>
-
                     <iframe src="https://www.youtube.com/embed/videoseries?list=PLg6vSm3Aw78-UD-OhSYIn0FAXar2U7w2f" 
                         width="100%" 
                         title="YouTube video player" 
@@ -154,7 +154,7 @@
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
                 </div>
-            </div>
+            </div> -->
 
 
             <br>
@@ -187,119 +187,18 @@
                 </div>
                 <div class="col-md-1"></div>
                 <div class="col-md-9">
+                    <h5> Current  Students </h5>
                     <div class="row">
-                        <h5> Current  Students </h5>
-
-                        <br><br>
-                        <div id="members_wrapper">
-                            <figure class="member_figure">
-                                <img class="member_image" src="img/members/karin.png" alt="Karin de Langis">
-                                <figcaption class="member_image_caption">
-                                <a href="https://karinjd.github.io/">Karin de Langis</a>
-                                <br>
-                                PhD
-                                </figcaption>
-                            </figure>
-                            <figure class="member_figure">
-                                <img class="member_image" src="img/members/deb.jpg" alt="Debarati Das">
-                                <figcaption class="member_image_caption">
-                                <a href="https://scholar.google.co.in/citations?user=NpoVjbMAAAAJ&hl=en">Debarati Das</a>
-                                <br>
-                                PhD, w/ <a href="https://scholar.google.com/citations?user=Y4J5SOwAAAAJ&hl=en">Jaideep Srivastava</a>
-                                </figcaption>
-                            </figure>
-                            <figure class="member_figure">
-                                <img class="member_image" src="img/members/risako.jpg" alt="Risako Owan">
-                                <figcaption class="member_image_caption">
-                                    Risako Owan
-                                <br>
-                                PhD, w/ <a href="https://www-users.cse.umn.edu/~gini/">Maria Gini</a>
-                                </figcaption>
-                            </figure>
-
-                            <figure class="member_figure">
-                                <img class="member_image" src="img/members/london.jpeg" alt="London Lowmanstone">
-                                <figcaption class="member_image_caption">
-                                    London Lowmanstone
-                                <br>
-                                PhD, w/ <a href="https://www-users.cse.umn.edu/~gini/">Maria Gini</a>, CSE fellow
-                                </figcaption>
-                            </figure>
-                            <figure class="member_figure">
-                                <img class="member_image" src="img/members/zaemyung.jpg" alt="Zae Myung Kim">
-                                <figcaption class="member_image_caption">
-                                <a href="https://zaemyung.github.io/">Zae Myung Kim</a>
-                                <br>
-                                PhD, 3M fellow
-                                </figcaption>
-                            </figure>		  
-                            <figure class="member_figure">
-                                <img class="member_image" src="img/members/shirley.jpeg" alt="Shirley Anugrah Hayati">
-                                <figcaption class="member_image_caption">
-                                <a href="https://www.shirley.id/">Shirley Anugrah Hayati</a>
-                                <br>
-                                PhD <br/>
-                                </figcaption>
-                            </figure>
-                            <figure class="member_figure">
-                                <img class="member_image" src="img/members/anna.png" alt="Anna Martin">
-                                <figcaption class="member_image_caption">
-                                <a href="https://anmartin94.github.io/">Anna Martin</a>
-                                <br>
-                                PhD, CSE fellow
-                                </figcaption>
-                            </figure>
-
-                            <figure class="member_figure">
-                                <img class="member_image" src="img/members/hao.JPG" alt="Hao Zou">
-                                <figcaption class="member_image_caption">
-                                <a href="https://haozou-official.github.io/">Hao Zou</a>
-                                <br>
-                                Undergraduate
-                                </figcaption>
-                            </figure>		
-                            <figure class="member_figure">
-                                <img class="member_image" src="img/members/ryan.jpg" alt="Ryan Koo">
-                                <figcaption class="member_image_caption">
-                                <a href="https://github.com/kooryan
-                                ">Ryan Koo</a>
-                                <br>
-                                Undergraduate
-                                </figcaption>
-                            </figure>			  	
-                            <figure class="member_figure">
-                                <img class="member_image" src="img/members/linghe.jpeg" alt="Linghe Wang">
-                                <figcaption class="member_image_caption">
-                                <a href="">Linghe Wang</a>
-                                <br>
-                                Undergraduate
-                                </figcaption>
-                            </figure>		
-                            <figure class="member_figure">
-                                <img class="member_image" src="img/members/ishaan.jpg" alt="Ishaan Gupta">
-                                <figcaption class="member_image_caption">
-                                <a href="">Ishaan Gupta</a>
-                                <br>
-                                Undergraduate
-                                </figcaption>
-                            </figure>	                            
-                        </div>
+                        <div id="members_current"></div>
                     </div>
-                    <br><br>
+                    <br>
+                    <br>
                     <div class="row">
-                        <!-- <h6> <a href="/people.html">Alumni</a> </h6> -->
                         <div align="left" >
 
                         <h5 onclick="show_alumni()">Alumni</h5>
                         <ul id="datalist_alumni" style="display:block">
-                            <li><a href="https://github.com/kelseyneis">Rose Neis</a> (UMN Data Science Master, 2023) </li>
-                            <li><a href="https://sites.google.com/view/jaehyungkim">Jaehyung Kim</a> (Visiting Ph.D, 2022 Spring) &rarr; Intern @Meta AI &rarr; Ph.D @KAIST AI</li>
-                            <li><a href="https://goucejia.github.io/">Yu Fang</a> (UMN CS Master, 2022) &rarr; <a href="https://www.bimsa.cn/">BIMSA</a></li>
-                            <li>David Ma (UMN CS Master, 2022) &rarr; <a href="https://optiver.com/">Optiver</a></li>
-                            <li><a href="https://ruyuanwan.github.io/">Ruyuan Wan</a> (UMN Linguistics/Data Science Master, 2022) &rarr; CS Ph.D @University of Notre Dame </li>
-                            <li>Petros Karypis (UMN CS Undergrad, 2022) &rarr; UCSD Master</li>
-                            <li>Miguel Miguélez Díaz (UMN Data Science Master, 2022) &rarr; Amazon</li>
-                            <li>Yang He (UMN CS Master, 2022) &rarr; Google</li>
+                            <div id="members_alumni"></div>
                         </ul>
                         </div>
                         <br><br>

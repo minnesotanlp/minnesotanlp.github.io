@@ -1,5 +1,3 @@
-var jsonRequestUrl = 'https://dykang.github.io/assets/publication.json';
-// var decoder = $('<div />');
 
 function render_pub(elements, filter=null){
     // var elements = result;

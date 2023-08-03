@@ -5,6 +5,14 @@ body {
 	font-size:17px
 }
 
+.gh-profile-card{
+	width: 100%;
+}
+
+.members_current{
+	width: 100%;
+}
+
 .jumbotron{text-align:justify;
 	padding-top:1em;
 	padding-bottom:1em;
@@ -36,7 +44,7 @@ body {
     color: #eeb305;
 }
 
-#members_wrapper {
+.members_wrapper {
 	display: flex;
 	flex-wrap: wrap;
 	max-width: 100%;
