@@ -4,6 +4,7 @@ gtag('js', new Date());
 gtag('config', 'UA-166307709-1');
 
 var json_pub_url = 'https://dykang.github.io/assets/publication.json';
+$.getJSON(json_pub_url, function foo(result) { render_pub(result, filter=2024); });
 $.getJSON(json_pub_url, function foo(result) { render_pub(result, filter=2023); });
 $.getJSON(json_pub_url, function foo(result) { render_pub(result, filter=2022); });
 $.getJSON(json_pub_url, function foo(result) { render_pub(result, filter=2021); });

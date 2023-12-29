@@ -1,7 +1,23 @@
 
+function shuffleArray(array) {
+    for (var i = array.length - 1; i > 0; i--) { 
+   
+        // Generate random number 
+        var j = Math.floor(Math.random() * (i + 1));
+                   
+        var temp = array[i];
+        array[i] = array[j];
+        array[j] = temp;
+    }
+       
+    return array;
+ }
+
 function render_member(elements, filter=null){
 
     var decodedText = '';
+    var decodedTextList = [];
+
     var counter = 0;
     // console.log(elements);
 
@@ -52,11 +68,14 @@ function render_member(elements, filter=null){
 
 
         decodedText += decodedVar;
-
+        decodedTextList.push(decodedVar);
     });
+
+    shuffleArray(decodedTextList);
    
     if (counter > 0){
-        decodedText = '<div class="members_wrapper" style="width:100%">' + decodedText + '</div>';
+        // decodedText = '<div class="members_wrapper" style="width:100%">' + decodedText + '</div>';
+        decodedText = '<div class="members_wrapper" style="width:100%">' + decodedTextList.join('') + '</div>';
         // decodedText = decodedText ;
 
     }
