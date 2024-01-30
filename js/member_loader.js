@@ -36,6 +36,32 @@ function render_member(elements, filter=null){
                         return;
                 }
             }
+
+            if (filter === 'phd'){
+                if (value.position != `PhD`){
+                    // console.log('Pass');
+                        return;
+                }
+            }
+            if (filter === 'mastersundergraduate'){
+                if (value.position != `Masters` && value.position != `Undergraduate`){
+                    // console.log('Pass');
+                        return;
+                }          
+            }               
+            if (filter === 'masters'){
+                if (value.position != `Masters`){
+                    // console.log('Pass');
+                        return;
+                }
+            }
+            if (filter === 'undergraduate'){
+                if (value.position != `Undergraduate`){
+                    // console.log('Pass');
+                        return;
+                }
+            }                        
+ 
             if (value.position === 'Assistant Professor'){
                 // console.log('Pass');
                     return;
@@ -64,7 +90,12 @@ function render_member(elements, filter=null){
             member_fellow = ', ' + value.fellow + '';
         }
 
-        var decodedVar = '<figure class="member_figure">' + member_figure + '<figcaption class="member_image_caption">' + member_name + member_coadvisor + member_fellow + '</figcaption></figure>';
+        member_interest = '';
+        if (value.interest != null){
+            member_interest = '<br><i>' + value.interest + '</i>';
+        }
+
+        var decodedVar = '<figure class="member_figure">' + member_figure + '<figcaption class="member_image_caption">' + member_name + member_coadvisor + member_fellow + member_interest + '</figcaption></figure>';
 
 
         decodedText += decodedVar;
@@ -84,7 +115,7 @@ function render_member(elements, filter=null){
     if (filter != null){
         div_tag += '_' + filter;
     }
-    
+    console.log('Filter: ' + div_tag + decodedText);
 
     $('#'+div_tag).append(decodedText);
 }

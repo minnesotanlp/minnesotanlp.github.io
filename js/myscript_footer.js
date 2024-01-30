@@ -16,7 +16,8 @@ $.getJSON(json_pub_url, function foo(result) { render_pub(result, filter=2021); 
 // $.getJSON(json_pub_url, function foo(result) { render_pub(result, filter=2011); });
 
 var json_member_url = 'https://dykang.github.io/assets/members.json';
-$.getJSON(json_member_url, function foo(result) { render_member(result, filter='current'); });
+$.getJSON(json_member_url, function foo(result) { render_member(result, filter='phd'); });
+$.getJSON(json_member_url, function foo(result) { render_member(result, filter='mastersundergraduate'); });
 
 var json_alumni_url = 'https://dykang.github.io/assets/alumni.json';
 $.getJSON(json_alumni_url, function foo(result) { render_alumni(result, filter='alumni'); });
