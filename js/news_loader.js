@@ -7,11 +7,20 @@ function render_news(elements=null, filter=null){
         if (value.date != null && value.description != null){
             var decodedVar = '<li>(' + value.date + ') ' + value.description + '</li>';
         }
-        decoded_text += decoded_var;
+
+
+
+        decoded_text += decodedVar;
     });
+
+
+
     if (counter > 0){
-        decoded_text = decoded_text ;
+        decoded_text = '<ul>' + decoded_text + '</ul>';
     }
+
+
+
     console.log( decoded_text );
 
     $('#datalist_news').append(decoded_text);

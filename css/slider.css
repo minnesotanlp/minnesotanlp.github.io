@@ -11,10 +11,11 @@ img {vertical-align: middle;}
 .slideshow-container {
   width:100%; 
   max-width: 1000px;
-  height: 360px;
-
+  height: 320px;
   position: relative;
   margin: auto;
+  vertical-align: top; /* here */
+
 }
 
 /* Caption text */
