@@ -8,12 +8,10 @@ $.getJSON(json_pub_url, function foo(result) { render_pub(result, filter=2024); 
 $.getJSON(json_pub_url, function foo(result) { render_pub(result, filter=2023); });
 $.getJSON(json_pub_url, function foo(result) { render_pub(result, filter=2022); });
 $.getJSON(json_pub_url, function foo(result) { render_pub(result, filter=2021); });
-// $.getJSON(json_pub_url, function foo(result) { render_pub(result, filter=2020); });
-// $.getJSON(json_pub_url, function foo(result) { render_pub(result, filter=2019); });
-// $.getJSON(json_pub_url, function foo(result) { render_pub(result, filter=2018); });
-// $.getJSON(json_pub_url, function foo(result) { render_pub(result, filter=2017); });
-// $.getJSON(json_pub_url, function foo(result) { render_pub(result, filter=2014); });
-// $.getJSON(json_pub_url, function foo(result) { render_pub(result, filter=2011); });
+
+var json_news_url = 'https://minnesotanlp.github.io/assets/news.json';
+console.log(json_news_url);
+$.getJSON(json_news_url, function foo(result) { render_news(result); });
 
 var json_member_url = 'https://dykang.github.io/assets/members.json';
 $.getJSON(json_member_url, function foo(result) { render_member(result, filter='phd'); });

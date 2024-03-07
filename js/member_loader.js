@@ -115,7 +115,7 @@ function render_member(elements, filter=null){
     if (filter != null){
         div_tag += '_' + filter;
     }
-    console.log('Filter: ' + div_tag + decodedText);
+    // console.log('Filter: ' + div_tag + decodedText);
 
     $('#'+div_tag).append(decodedText);
 }

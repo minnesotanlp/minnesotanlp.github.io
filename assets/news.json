@@ -1,5 +1,22 @@
-{"date": "March 2024", "description": "Zae Myung Kim is co-organizing the running of Textgroup, a reading group and academic community for people broadly interested in language.<br/><a href='https://www.youtube.com/@textgroup'>https://www.youtube.com/@textgroup</a><br/><a href='https://textgroup.github.io/'>https://textgroup.github.io/</a>"}
-{"date": "February 2024", "description": "We had our first escape room lab event!"}
-{"date": "January 2024", "description": "<a href='https://cse.umn.edu/cs/news/ryan-koo-earns-honorable-mention-cra-outstanding-undergraduate-researcher-award'>Ryan Koo Earns Honorable Mention for CRA Outstanding Undergraduate Researcher Award<a/>"}
-{"date": "January 2024", "description": "We submitted our first lab-wide project, <a href='https://arxiv.org/abs/2401.14698'>Under the Surface: Tracking the Artifactuality of LLM-Generated Data<a/>, to arxiv!"}
-{"date": "October 2023", "description": "Jaehyung Kim (our visiting PhD student in Spring 2022) got a postdoc offer from CMU ML/LTI!"}
+[
+    {
+        "date": "March 2024", 
+        "description": "Zae Myung Kim is co-organizing the running of Textgroup, a reading group and academic community for people broadly interested in language.<br/><a href='https://www.youtube.com/@textgroup'>https://www.youtube.com/@textgroup</a><br/><a href='https://textgroup.github.io/'>https://textgroup.github.io/</a>"
+    },
+    {
+        "date": "February 2024", 
+        "description": "We had our first escape room lab event!"
+    },
+    {
+        "date": "January 2024", 
+        "description": "<a href='https://cse.umn.edu/cs/news/ryan-koo-earns-honorable-mention-cra-outstanding-undergraduate-researcher-award'>Ryan Koo Earns Honorable Mention for CRA Outstanding Undergraduate Researcher Award<a/>"
+    },
+    {
+        "date": "January 2024", 
+        "description": "We submitted our first lab-wide project, <a href='https://arxiv.org/abs/2401.14698'>Under the Surface: Tracking the Artifactuality of LLM-Generated Data<a/>, to arxiv!"
+    },
+    {
+        "date": "October 2023", 
+        "description": "Jaehyung Kim (our visiting PhD student in Spring 2022) got a postdoc offer from CMU ML/LTI!"
+    }
+]
