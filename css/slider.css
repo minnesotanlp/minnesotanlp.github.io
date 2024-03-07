@@ -14,8 +14,6 @@ img {vertical-align: middle;}
   height: 320px;
   position: relative;
   margin: auto;
-  vertical-align: top; /* here */
-
 }
 
 /* Caption text */
