@@ -10,6 +10,7 @@ $.getJSON(json_pub_url, function foo(result) { render_pub(result, filter=2022); 
 $.getJSON(json_pub_url, function foo(result) { render_pub(result, filter=2021); });
 
 var json_news_url = 'https://minnesotanlp.github.io/assets/news.json';
+// var json_news_url = '../assets/news.json'; #for testing locally
 console.log(json_news_url);
 $.getJSON(json_news_url, function foo(result) { render_news(result); });
 
