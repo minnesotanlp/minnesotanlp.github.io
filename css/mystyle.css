@@ -134,7 +134,7 @@ div.publication div.text{text-align:left;vertical-align:top;}
 span.venue,span.highlight,div.publication span.tag{padding-right:0px;font-size:100%}
 
 
-ul#datalist_alumni li:nth-child(n+10) {
+ul#datalist_alumni li:nth-child(n+30) {
     display:none;
 }
 
