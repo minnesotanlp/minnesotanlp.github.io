@@ -48,7 +48,13 @@ function render_member(elements, filter=null){
                     // console.log('Pass');
                         return;
                 }          
-            }               
+            }          
+            if (filter === 'staff'){
+                if (value.position != `Research Engineer` && value.position != `Postdoc`){
+                    // console.log('Pass');
+                        return;
+                }          
+            }                     
             if (filter === 'masters'){
                 if (value.position != `Masters`){
                     // console.log('Pass');
