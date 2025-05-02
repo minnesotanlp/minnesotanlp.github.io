@@ -3,7 +3,7 @@ function render_news(elements=null, filter=null){
     var counter = 0;
     $.each(elements, function (index, value) {
         counter += 1;
-        console.log( value );
+        // console.log( value );
         if (value.date != null && value.description != null){
             var decodedVar = '<li>(' + value.date + ') ' + value.description + '</li>';
         }
@@ -16,12 +16,12 @@ function render_news(elements=null, filter=null){
 
 
     if (counter > 0){
-        decoded_text = '<ul>' + decoded_text + '</ul>';
+        decoded_text =  decoded_text ;
     }
 
 
 
-    console.log( decoded_text );
+    // console.log( decoded_text );
 
     $('#datalist_news').append(decoded_text);
 }

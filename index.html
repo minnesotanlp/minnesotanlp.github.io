@@ -78,18 +78,18 @@
     <br>
     <div class="jumbotron2">
         <div class="col-md-12">
-            We recruit graduate and undergraduate students as well as faculty members who could lead the NLP group together with DK. 
-  
-            If you are a student, please read this <a href="https://dykang.github.io/recruit.html">page</a> and fill out this <a href="https://docs.google.com/forms/d/e/1FAIpQLScobSL16fduikXgxn_swD1Mau7kgR21dNNwBOXMjUSrpzmrZA/viewform">form</a>. 
-            If you are interested in a postdoc or faculty position at UMN CS, please contact DK directly.               
+            We recruit graduate and undergraduate students. Please read this <a href="https://dykang.github.io/recruit.html">page</a> and fill out this <a href="https://docs.google.com/forms/d/e/1FAIpQLScobSL16fduikXgxn_swD1Mau7kgR21dNNwBOXMjUSrpzmrZA/viewform">form</a>. 
         </div>
-        </div>
+    </div>
+    <br>
     <hr>
-
+    <br>
     <h2>News</h2>
     <br>
     <div class="row">
-        <div class="col-md-5">
+
+        <div class="col-md-7">
+            <br><br>  <br><br> <br><br> 
             <!-- Slideshow container -->
             <div class="slideshow-container">
                 <!-- Full-width images with number and caption text -->
@@ -152,29 +152,20 @@
 
             </div>
 
-            <br>
-            Youtube (<a href="https://www.youtube.com/channel/UCtZN01zrrX4WYKRaoDt_rLA/playlists"><i class="fa fa-youtube-play" style="font-size:20px;color:red;position:relative; top:1px;margin-right:2px"></i></a>)
-            Github (<span class="icon" onclick="window.open('https://github.com/minnesotanlp')" style="cursor: pointer"> 
-                <i class="fa fa-github ai-lg" aria-hidden="true" style="margin-right:2px"></i>
-            </span>)
-            Twitter (<span class="icon" onclick="window.open('https://twitter.com/MinnesotaNLP')" style="cursor: pointer">
-                <i class="fa fa-twitter ai-lg" aria-hidden="true" style="margin-right:0px;margin-right:2px"></i>
-            </span>)
         </div>
-        <div class="col-md-7">
-
-
+        <div class="col-md-1"></div>
+        <div class="col-md-4">
             <div class="row">
-                <div class="col-md-6" style="text-align:center">
+                <!-- <div class="col-md-6" style="text-align:center">
                 <a class="twitter-timeline" href="https://twitter.com/MinnesotaNLP" 
                     data-height="410"
                     data-chrome="noheader	 nofooter transparent"
                     data-tweet-limit="3"></a>
-                </div>
-                <div class="col-md-6" style="text-align:center">
+                </div> -->
+                <div class="col-md-12" style="text-align:center">
                     <div id="github-card"
                         data-username="minnesotanlp"
-                        data-max-repos="5"
+                        data-max-repos="6"
                         data-sort-by="stars"
                         data-header-text="Most starred repositories" style="align:center">
                     </div>
@@ -184,8 +175,25 @@
                         title="YouTube video player" 
                         frameborder="0" 
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> -->
+                    <div class="divider" style="text-align:center">
+                        <span>
+                            <a href="https://www.youtube.com/channel/UCtZN01zrrX4WYKRaoDt_rLA/playlists"><i class="fa fa-youtube-play" style="font-size:20px;color:red;position:relative; top:1px;margin-right:2px"></i></a>
+                        </span>
+                        <span class="icon" onclick="window.open('https://github.com/minnesotanlp')" style="cursor: pointer"> 
+                            <i class="fa fa-github ai-lg" aria-hidden="true" style="margin-right:2px"></i>
+                        </span>
+                        <span class="icon" onclick="window.open('https://twitter.com/MinnesotaNLP')" style="cursor: pointer">
+                            <i class="fa fa-twitter ai-lg" aria-hidden="true" style="margin-right:0px;margin-right:2px"></i>
+                        </span>
+                        <span>
+                            <a href="https://huggingface.co/minnesotanlp"><img src="img/hf-logo.png" alt="home icon" style="width: 24px; height: 24px;" /></a>
+                        </span>
+                    </div>
 
                 </div>
+
+                
+
             </div>
         </div>
     </div>
@@ -203,7 +211,9 @@
     </div>
 
     </div>
+    <br>
     <hr>
+    <br>
     <div class="row">
         <div id="people" >
             <h2>People</h2>
@@ -252,21 +262,33 @@
 
             <br>
             <div class="row justify-content-between">
-                <div></div>
                 <div class="col-12">
 
-                <h5 onclick="show_alumni()">Alumni</h5>
-                <ul id="datalist_alumni" style="display:block;margin-left:30px;">
-                    <div id="members_alumni"></div>
-                </ul>
+                    <h4>Alumni</h4>    
+                    <!-- <h5 onclick="show_alumni()">Alumni</h5> 
+                    <ul id="datalist_alumni" style="display:block;margin-left:30px;">
+                        <div id="members_alumni"></div>
+                    </ul> -->
+
+                    <h6>PhD</h6>
+                    <div class="divider" id="members_alumni_phd"></div>
+                    <br><br>
+                    <h6>Masters</h6>
+                    <div class="divider" id="members_alumni_masters"></div>
+                    <br><br>
+                    <h6>Undergraduate</h6>
+                    <div class="divider" id="members_alumni_undergraduate"></div>
+
+
                 </div>
-                <br><br>
+                <br>
             </div>
            
         </div>
     </div>
-    
+    <br>
     <hr>
+    <br>
     <div class="row">
         <div id="funding">
             <h2>Funding</h2>
@@ -289,7 +311,9 @@
 
         </div>
     </div>
+    <br>
     <hr>
+    <br>
     <div class="row" >
         <div id="publication">
             <h2>Publications</h2>
@@ -311,7 +335,7 @@
 					<a href="https://cse.umn.edu/cs">Computer Science & Engineering</a>, <a href="https://twin-cities.umn.edu/">University of Minnesota - Twin Cities</a>
 				</p>
 				<p class="alignright" >
-					Last updated in July 2023
+					Last updated in 2025
 				</p>		
 			</div>
 			<br>

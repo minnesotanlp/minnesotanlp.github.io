@@ -133,26 +133,50 @@ function render_alumni(elements, filter=null){
     var decodedText = '';
     var counter = 0;
     // console.log(elements);
+    var filter_second = null;
 
+    
+    const myArry = filter.split("_");
+    if (myArry.length > 1){
+        filter_second = myArry[1];
+    }
 
     $.each(elements, function (index, value) {
     //    console.log(value.name + ' / ' + value.position + ' : ' + filter + ' / ' + index + ' : ' + counter);
 
         // filters
         if (filter != null){
-            if (filter === 'alumni'){
+            if (filter === 'alumni' | filter === 'alumni_phd' | filter === 'alumni_masters' | filter === 'alumni_undergraduate'){
                 if (value.current === true){
-                    // console.log('Pass');
+                        // console.log('Pass');
                         return;
+                }
+
+                // filter_second = filter.split("_");
+                // // console.log(filter, value.position);
+                // if (myArray.length ==2  && value.position != null){
+                //     // filter_second = value.position.toString().
+                //     // console.log('++++++++++',value.position);
+                //     // .toString().includes(myArray[1])
+                //     return;
+                // }
+                // console.log('>>>>>>>>>>>>>> Filtering:',filter_second,value.position);
+                if (filter_second != null && value.position != null){
+                    if (! value.position.toString().toLowerCase().includes(filter_second)){
+                        // console.log('%%%%% Filtering:',value.position.toString().toLowerCase(), filter_second);
+                        return;
+                    }else{
+                        // console.log(value.position, filter_second, value);
+                    }
                 }
             }
         }
         counter += 1;
 
         member_name = value.name;
-        if (value.homepage != null){
-            member_name = '<a href="' + value.homepage + '">' + value.name + '</a>';
-        } 
+        // if (value.homepage != null){
+        member_name = '<a href="' + value.homepage + '">' + value.name + '</a>';
+        // } 
         
         member_description = '';
         if (value.description != null){
@@ -161,31 +185,38 @@ function render_alumni(elements, filter=null){
 
         member_next_position = '';
         if (value.next_position != null){
-            if (value.next_position_homepage != null){
-                member_next_position = ' → <a href="' + value.next_position_homepage + '">' + value.next_position + '</a>';
-            }else{
-                member_next_position = ' → ' + value.next_position;
-            }
+            member_next_position = '→' +  value.next_position ;
+        }else{
+            member_next_position = '';
         }
 
-        var decodedVar = '<li>' + member_name+ member_description + member_next_position + '</li>';
+        var decodedVar = null;
+        if (filter_second == null){
+            decodedVar = '<li>' + member_name + member_description + member_next_position + '</li>';
+        } else{
+            decodedVar = '<span>' + member_name+ member_description +  member_next_position + '</span>';
+        }
 
+        console.log(decodedVar, value.position, filter_second);
 
         decodedText += decodedVar;
 
     });
+    // console.log(decodedText,counter);
    
     if (counter > 0){
-        decodedText = decodedText ;
+        decodedText =  decodedText ;
 
     }
 
     div_tag = 'members';
     if (filter != null){
         div_tag += '_' + filter;
+        
     }
     
 
+    // console.log(div_tag,'==========================', decodedText);
     $('#'+div_tag).append(decodedText);
 }
 

@@ -1,5 +1,13 @@
 [
     {
+        "date": "Apr 2025", 
+        "description": "Welcome a new Ph.D. student, <a href='https://shuyugan.github.io/'>Shuyu Gan</a>, joining Minnesota NLP group in Fall 2025!"
+    },      
+    {
+        "date": "Apr 2025", 
+        "description": "<a href='https://zaemyung.github.io/'>Zae Myung Kim</a> won the <a href='https://grad.umn.edu/funding/current-students/doctoral-dissertation-fellowship'>Doctoral Dissertation Fellowship</a>, focusing on meta-scaffolding of LLMs."
+    },     
+    {
         "date": "Jan 2025", 
         "description": "<a href='https://jimtmooney.github.io/'>James Mooney</a> won the Amazon MLSys Fellowship for 2025-2026. He works on algorithmic and agentic efficiency."
     },       
@@ -9,7 +17,7 @@
     },
     {
         "date": "Aug 2024", 
-        "description": "Our alumni (visiting phd), <a href='https://sites.google.com/view/jaehyungkim'>Jaehyung Kim</a>, completed his postdoc at CMU and started faculty position in Yonsei Univeristy. Congratulations, JK! Please contact him if you are interested in LLM alignment, adaptation (e.g., personalization), and development"
+        "description": "Our alumni (visiting phd), <a href='https://sites.google.com/view/jaehyungkim'>Jaehyung Kim</a>, completed his postdoc at CMU and started faculty position in Yonsei Univeristy. Congratulations, JK! Please contact him if you are interested in LLM alignment, adaptation, and personalization."
     },    
     {
         "date": "May 2024", 
@@ -17,7 +25,7 @@
     },
     {
         "date": "May 2024", 
-        "description": "Congratulations, <a href='https://www.shirley.id/'>Shirley Anugrah Hayati</a>, <a href='https://zaemyung.github.io/'>Zae Myung Kim</a>for passing written and oral preliminary exams!"
+        "description": "Congratulations, <a href='https://www.shirley.id/'>Shirley Anugrah Hayati</a> and <a href='https://zaemyung.github.io/'>Zae Myung Kim</a> for passing written and oral preliminary exams!"
     },
     {
         "date": "May 2024", 

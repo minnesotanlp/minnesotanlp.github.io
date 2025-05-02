@@ -22,6 +22,9 @@ $.getJSON(json_member_url, function foo(result) { render_member(result, filter='
 
 var json_alumni_url = 'https://dykang.github.io/assets/alumni.json';
 $.getJSON(json_alumni_url, function foo(result) { render_alumni(result, filter='alumni'); });
+$.getJSON(json_alumni_url, function foo(result) { render_alumni(result, filter='alumni_phd'); });
+$.getJSON(json_alumni_url, function foo(result) { render_alumni(result, filter='alumni_masters'); });
+$.getJSON(json_alumni_url, function foo(result) { render_alumni(result, filter='alumni_undergraduate'); });
 
 
 $(function () {
