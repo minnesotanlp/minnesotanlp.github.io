@@ -185,7 +185,7 @@ function render_alumni(elements, filter=null){
 
         member_next_position = '';
         if (value.next_position != null){
-            member_next_position = '→' +  value.next_position ;
+            member_next_position = ' → ' +  value.next_position ;
         }else{
             member_next_position = '';
         }
