@@ -151,16 +151,6 @@ function render_alumni(elements, filter=null){
                         // console.log('Pass');
                         return;
                 }
-
-                // filter_second = filter.split("_");
-                // // console.log(filter, value.position);
-                // if (myArray.length ==2  && value.position != null){
-                //     // filter_second = value.position.toString().
-                //     // console.log('++++++++++',value.position);
-                //     // .toString().includes(myArray[1])
-                //     return;
-                // }
-                // console.log('>>>>>>>>>>>>>> Filtering:',filter_second,value.position);
                 if (filter_second != null && value.position != null){
                     if (! value.position.toString().toLowerCase().includes(filter_second)){
                         // console.log('%%%%% Filtering:',value.position.toString().toLowerCase(), filter_second);
@@ -185,18 +175,17 @@ function render_alumni(elements, filter=null){
 
         member_next_position = '';
         if (value.next_position != null){
-            member_next_position = ' → ' +  value.next_position ;
+            member_next_position = value.next_position ;
         }else{
             member_next_position = '';
         }
 
         var decodedVar = null;
-        if (filter_second == null){
-            decodedVar = '<li>' + member_name + member_description + member_next_position + '</li>';
+        if (filter_second == null || member_next_position == ''){
+            decodedVar = '<div class="col-sm-4">' + member_name +  '</div>';
         } else{
-            decodedVar = '<span>' + member_name+ member_description +  member_next_position + '</span>';
+            decodedVar = '<div class="col-sm-4">' + member_name+ ' (' + member_next_position + ')</div>';
         }
-
         console.log(decodedVar, value.position, filter_second);
 
         decodedText += decodedVar;
@@ -205,7 +194,8 @@ function render_alumni(elements, filter=null){
     // console.log(decodedText,counter);
    
     if (counter > 0){
-        decodedText =  decodedText ;
+        // decodedText =  decodedText ;
+        decodedText = '<div class="members_wrapper" style="width:100%">' + decodedText + '</div>';
 
     }
 
@@ -214,7 +204,7 @@ function render_alumni(elements, filter=null){
         div_tag += '_' + filter;
         
     }
-    
+
 
     // console.log(div_tag,'==========================', decodedText);
     $('#'+div_tag).append(decodedText);
