@@ -16,8 +16,12 @@ body {
 .jumbotron{text-align:justify;
 	padding-top:1em;
 	padding-bottom:1em;
+	background-color: white;
+	  border: 0.1rem outset #900021;
 	margin:auto;
-	font-size:110%}
+	font-size:110%
+
+}
 
 .jumbotron2{text-align:justify;
 	padding-top:1em;
@@ -172,34 +176,27 @@ footer {
 
 
 
-/* 전체 줄(컨테이너) */
 .divider {
-	display: inline;          /* 텍스트를 수평으로 배치 */
-	align-items: center;    /* 수직 가운데 정렬 */
-	gap: 1.1rem;            /* 텍스트들 사이 기본 간격 */
-	font-size:17px
- }
-  
-  /* 각 텍스트 요소 */
-  .divider span {
-	position: relative;     /* ::after 를 span 기준으로 배치하기 위해 */
-	padding-left:0; 
-	padding-right:18px; 
-  }
-  
-  /* 마지막 요소를 제외한 나머지 뒤에 선 추가 */
-  .divider span:not(:last-child)::after {
-	content: '';
-	display: inline-block;
-	width: 2.5rem;            /* 선 길이 (원하는 길이로 조절) */
-	height: 0.1px;            /* 선 두께 */
-	background-color: #c0c0c0;  /* 회색 (#ccc 나 #c0c0c0 정도) */
-	margin-left: 0.8rem;    /* 텍스트와 선 사이 간격 */
+  display: inline;
+  align-items: center;
+  gap: 1.1rem;
+  font-size: 17px;
+}
 
-	vertical-align: middle; /* 글자 높이에 맞춰 정렬 */
-	
-	/* 귀여운 ‘네모 단자’를 넣고 싶다면 아래 두 줄 활성화 */
-	border-radius: 3px;      /* 네모 모서리 살짝 둥글게      */
-	box-shadow: 0 0 0 2px #c0c0c0; /* 굵은 네모 느낌 만들기
-  }
+.divider span {
+  position: relative;
+  padding-left: 0;
+  padding-right: 18px;
+}
 
+.divider span:not(:last-child)::after {
+  content: '';
+  display: inline-block;
+  width: 2.5rem;
+  height: 0.1px;
+  background-color: #c0c0c0;
+  margin-left: 0.8rem;
+  vertical-align: middle;
+  border-radius: 3px;
+  box-shadow: 0 0 0 2px #c0c0c0;
+}
