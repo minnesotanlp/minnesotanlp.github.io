@@ -4,6 +4,7 @@ gtag('js', new Date());
 gtag('config', 'UA-166307709-1');
 
 var json_pub_url = 'https://dykang.github.io/assets/publication.json';
+$.getJSON(json_pub_url, function foo(result) { render_pub(result, filter=2026); });
 $.getJSON(json_pub_url, function foo(result) { render_pub(result, filter=2025); });
 $.getJSON(json_pub_url, function foo(result) { render_pub(result, filter=2024); });
 $.getJSON(json_pub_url, function foo(result) { render_pub(result, filter=2023); });
@@ -16,6 +17,7 @@ console.log(json_news_url);
 $.getJSON(json_news_url, function foo(result) { render_news(result); });
 
 var json_member_url = 'https://dykang.github.io/assets/members.json';
+$.getJSON(json_member_url, function foo(result) { render_member(result, filter='faculty'); });
 $.getJSON(json_member_url, function foo(result) { render_member(result, filter='phd'); });
 $.getJSON(json_member_url, function foo(result) { render_member(result, filter='mastersundergraduate'); });
 $.getJSON(json_member_url, function foo(result) { render_member(result, filter='staff'); });

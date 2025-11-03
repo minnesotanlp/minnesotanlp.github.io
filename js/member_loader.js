@@ -37,6 +37,13 @@ function render_member(elements, filter=null){
                 }
             }
 
+            if (filter === 'faculty'){
+                if (value.position != `Assistant Professor` && value.position != `Associate Professor` && value.position != `Professor`){
+                    // console.log('Pass');
+                        return;
+                }
+                console.log('Pass (faculty): ' + value);
+            }
             if (filter === 'phd'){
                 if (value.position != `PhD`){
                     // console.log('Pass');
@@ -67,11 +74,7 @@ function render_member(elements, filter=null){
                         return;
                 }
             }                        
- 
-            if (value.position === 'Assistant Professor'){
-                // console.log('Pass');
-                    return;
-            }
+
         }
         counter += 1;
 
@@ -186,7 +189,7 @@ function render_alumni(elements, filter=null){
         } else{
             decodedVar = '<div class="col-sm-4">' + member_name+ ' (' + member_next_position + ')</div>';
         }
-        console.log(decodedVar, value.position, filter_second);
+        // console.log(decodedVar, value.position, filter_second);
 
         decodedText += decodedVar;
 
