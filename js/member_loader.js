@@ -184,11 +184,14 @@ function render_alumni(elements, filter=null){
         }
 
         var decodedVar = null;
+
+
         if (filter_second == null || member_next_position == ''){
-            decodedVar = '<div class="col-sm-4">' + member_name +  '</div>';
+            decodedVar = '<div class="col-2 justify-content-left" style="text-align: center">' + member_name +  '</div>';
         } else{
-            decodedVar = '<div class="col-sm-4">' + member_name+ ' (' + member_next_position + ')</div>';
+            decodedVar = '<div class="col-2 justify-content-left" style="text-align: center">' + member_name+ '<br> (' + member_next_position + ')</div>';
         }
+
         // console.log(decodedVar, value.position, filter_second);
 
         decodedText += decodedVar;

@@ -82,11 +82,23 @@
         </div>
     </div> -->
     <h2>News</h2>
-    <br>
-    <div class="row">
 
-        <div class="col-md-7">
-            <br><br>  <br><br> <br><br> 
+    <div class="jumbotron">
+       
+        <div class="row">
+            <div class="col-md-12">
+                <h4>Recent Highlights</h4>
+                <ul id="datalist_news" style="display:block; overflow: scroll; scrollbar-color: lightgray transparent; height: 250px;">
+                    <div id="items_news"></div>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+    <div style="margin-top: 480px;"></div>
+
+    <div class="row">
+        <div class="col-md-11 mx-auto">
             <!-- Slideshow container -->
             <div class="slideshow-container">
                 <!-- Full-width images with number and caption text -->
@@ -155,15 +167,15 @@
             </div>
 
         </div>
-        <div class="col-md-1"></div>
-        <div class="col-md-4">
+        <!-- <div class="col-md-1"></div> -->
+        <!-- <div class="col-md-4">
             <div class="row">
-                <!-- <div class="col-md-6" style="text-align:center">
+                <div class="col-md-6" style="text-align:center">
                 <a class="twitter-timeline" href="https://twitter.com/MinnesotaNLP" 
                     data-height="410"
                     data-chrome="noheader	 nofooter transparent"
                     data-tweet-limit="3"></a>
-                </div> -->
+                </div> 
                 <div class="col-md-12" style="text-align:center">
                     <div id="github-card"
                         data-username="minnesotanlp"
@@ -172,119 +184,86 @@
                         data-header-text="Most starred repositories" style="align:center">
                     </div>
                     <br>
-                    <!-- <iframe src="https://www.youtube.com/embed/videoseries?list=PLg6vSm3Aw78-UD-OhSYIn0FAXar2U7w2f" 
+                    <iframe src="https://www.youtube.com/embed/videoseries?list=PLg6vSm3Aw78-UD-OhSYIn0FAXar2U7w2f" 
                         width="95%" 
                         title="YouTube video player" 
                         frameborder="0" 
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> -->
-                    <div style="text-align:center">
-                        <span>
-                            <a href="https://www.youtube.com/channel/UCtZN01zrrX4WYKRaoDt_rLA/playlists"><i class="fa fa-youtube-play" style="font-size:20px;color:red;position:relative; top:1px;margin-right:2px"></i></a>
-                        </span>
-                        &nbsp;&nbsp;
-                        <span class="icon" onclick="window.open('https://github.com/minnesotanlp')" style="cursor: pointer"> 
-                            <i class="fa fa-github ai-lg" aria-hidden="true" style="margin-right:2px"></i>
-                        </span>
-                        &nbsp;&nbsp;
-                        <span class="icon" onclick="window.open('https://twitter.com/MinnesotaNLP')" style="cursor: pointer">
-                            <i class="fa fa-twitter ai-lg" aria-hidden="true" style="margin-right:0px;margin-right:2px"></i>
-                        </span>
-                        &nbsp;&nbsp;
-                        <span>
-                            <a href="https://huggingface.co/minnesotanlp"><img src="img/hf-logo.png" alt="home icon" style="width: 24px; height: 24px;" /></a>
-                        </span>
-                    </div>
-
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> 
                 </div>
-
-                
-
             </div>
-        </div>
+        </div> -->
     </div>
-    <br>
-
-    <div class="jumbotron">
-       
     <div class="row">
         <div class="col-md-12">
-            <h4>Recent Highlights</h4>
-            <ul id="datalist_news" style="display:block; overflow: scroll; scrollbar-color: lightgray transparent; height: 250px;">
-                <div id="items_news"></div>
-            </ul>
+                    <div style="text-align:center">
+            <span>
+                <a href="https://www.youtube.com/channel/UCtZN01zrrX4WYKRaoDt_rLA/playlists"><i class="fa fa-youtube-play" style="font-size:20px;color:red;position:relative; top:1px;margin-right:2px"></i></a>
+            </span>
+            &nbsp;&nbsp;
+            <span class="icon" onclick="window.open('https://github.com/minnesotanlp')" style="cursor: pointer"> 
+                <i class="fa fa-github ai-lg" aria-hidden="true" style="margin-right:2px"></i>
+            </span>
+            &nbsp;&nbsp;
+            <span class="icon" onclick="window.open('https://twitter.com/MinnesotaNLP')" style="cursor: pointer">
+                <i class="fa fa-twitter ai-lg" aria-hidden="true" style="margin-right:0px;margin-right:2px"></i>
+            </span>
+            &nbsp;&nbsp;
+            <span>
+                <a href="https://huggingface.co/minnesotanlp"><img src="img/hf-logo.png" alt="home icon" style="width: 24px; height: 24px;" /></a>
+            </span>
         </div>
-    </div>
+        </div>
+    <br>
 
-    </div>
+
     <br>
     <hr>
     <br>
-    <div class="row">
-        <div id="people" >
-            <h2>People</h2>
-            <br>
-            <div class="row justify-content-between">
-                
-                <div class="col-md-2">
-                    
-                    <h5> Faculty </h5>
-                    <br>
-                    <div class="row">
-                        <div id="members_faculty"></div>
-                    </div>
-                    <!-- <br><br>
-                    <h5> Postdocs & Staff </h5>
-                    <br>
-                    <div class="row">
-                        <div id="members_staff"></div>
-                    </div> -->
 
-                </div>
-                <div class="col-md-1"></div>
-                <div class="col-md-9">
-                    <h5> Ph.D. Students </h5>
-                    <br>
-                    <div class="row">
-                        <div id="members_phd"></div>
-                    </div>
-                    <br>
-                    <br>
-                    <h5> Masters and Undergraduate Students </h5>
-                    <br>
-                    <div class="row">
-                        <div id="members_mastersundergraduate"></div>
-                    </div>
-                    <br>
-                </div>
-            </div>
+<div class="row" id="people">
+  <div class="col-12 text-center">
+    <h2>People</h2>
+  </div>
 
-            <br>
-            <div class="row justify-content-between">
-                <div class="col-12">
+  <!-- Faculty Row -->
+  <div class="col-12 my-4">
+    <h4 class="section-title">Faculty</h4>
+    <div class="row justify-content-center" id="members_faculty"></div>
+  </div>
 
-                    <h4>Alumni</h4>    
+  <!-- Ph.D. Students Row -->
+  <div class="col-12 my-4">
+    <h4 class="section-title">Ph.D. Students</h4>
+    <div class="row justify-content-center" id="members_phd"></div>
+  </div>
 
-                    <h6>PhD</h6>
-                    <div class="row">
-                        <div id="members_alumni_phd" style="width:100%"></div>
-                    </div>
-                    <br>
-                    <h6>Masters</h6>
-                     <div class="row">
-                        <div id="members_alumni_masters" style="width:100%"></div>
-                    </div>
-                    <br>
-                    <h6>Undergraduate</h6>
-                    <div class="row">
-                        <div id="members_alumni_undergraduate" style="width:100%"></div>
-                    </div>
+  <!-- Masters & Undergraduate Students Row -->
+  <div class="col-12 my-4">
+    <h4 class="section-title">Masters and Undergraduate Students</h4>
+    <div class="row justify-content-center" id="members_mastersundergraduate"></div>
+  </div>
 
-                </div>
-                <br>
-            </div>
-           
-        </div>
-    </div>
+  <!-- Alumni Section -->
+<!-- Alumni Section -->
+<div class="col-12 my-5">
+  <h3 class="section-title">Alumni</h3>
+
+  <!-- PhD Alumni -->
+  <h5>Ph.D.</h5>
+  <div class="row" id="members_alumni_phd"></div>
+
+  <!-- Masters Alumni -->
+  <h5 class="mt-4">Masters</h5>
+  <div class="row" id="members_alumni_masters"></div>
+
+  <!-- Undergraduate Alumni -->
+  <h5 class="mt-4">Undergraduate</h5>
+  <div class="row" id="members_alumni_undergraduate"></div>
+</div>
+
+</div>
+
+
     <br>
     <hr>
     <br>
