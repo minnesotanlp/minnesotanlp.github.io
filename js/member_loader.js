@@ -187,9 +187,9 @@ function render_alumni(elements, filter=null){
 
 
         if (filter_second == null || member_next_position == ''){
-            decodedVar = '<div class="col-2 justify-content-left" style="text-align: center">' + member_name +  '</div>';
+            decodedVar = '<div class="col-3" style="text-align: center;">' + member_name +  '</div>';
         } else{
-            decodedVar = '<div class="col-2 justify-content-left" style="text-align: center">' + member_name+ '<br> (' + member_next_position + ')</div>';
+            decodedVar = '<div class="col-3" style="text-align: center;">' + member_name+ '<br> (' + member_next_position + ')</div>';
         }
 
         // console.log(decodedVar, value.position, filter_second);
@@ -201,7 +201,7 @@ function render_alumni(elements, filter=null){
    
     if (counter > 0){
         // decodedText =  decodedText ;
-        decodedText = '<div class="members_wrapper" style="width:100%">' + decodedText + '</div>';
+        decodedText = '<div class="members_wrapper row" style="width:100%">' + decodedText + '</div>';
 
     }
 
