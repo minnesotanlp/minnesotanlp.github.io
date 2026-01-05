@@ -3,7 +3,7 @@ function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'UA-166307709-1');
 
-var json_pub_url = 'https://dykang.github.io/assets/publication.json';
+var json_pub_url = 'https://dykang.github.io/assets/publication_with_abstract.json';
 $.getJSON(json_pub_url, function foo(result) { render_pub(result, filter=2026); });
 $.getJSON(json_pub_url, function foo(result) { render_pub(result, filter=2025); });
 $.getJSON(json_pub_url, function foo(result) { render_pub(result, filter=2024); });
