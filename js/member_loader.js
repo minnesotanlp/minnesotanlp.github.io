@@ -56,9 +56,9 @@ function render_member(elements, filter=null){
                         return;
                 }          
             }          
-            if (filter === 'staff'){
-                if (value.position != `Research Engineer` && value.position != `Postdoc`){
-                    // console.log('Pass');
+            if (filter === 'visitors'){
+                if (value.position != `Research Engineer` && value.position != `Postdoc` && value.position != `Visiting Scholar`){
+                    console.log('Pass');
                         return;
                 }          
             }                     
