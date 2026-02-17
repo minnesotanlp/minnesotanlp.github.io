@@ -45,7 +45,7 @@ function render_member(elements, filter=null){
                 console.log('Pass (faculty): ' + value);
             }
             if (filter === 'phd'){
-                if (value.position != `PhD`){
+                if (value.position != `PhD` && value.position != `Visiting PhD`){
                     // console.log('Pass');
                         return;
                 }
