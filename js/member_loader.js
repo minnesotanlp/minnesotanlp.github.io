@@ -204,11 +204,8 @@ function render_alumni(elements, filter=null){
 
             // Right column: next position and description/interest
             var right_column_content = '';
-            if (member_next_position != ''){
-                right_column_content += '<strong>Next Position:</strong> ' + member_next_position + '<br>';
-            }
-            if (value.interest != null){
-                right_column_content += '<strong>PhD Work:</strong> <i>' + value.interest + '</i>';
+            if (value.note != null){
+                right_column_content += value.note;
             }
 
             var right_column = '<div style="flex: 1; padding-left: 20px; display: flex; align-items: center;">' + right_column_content + '</div>';
