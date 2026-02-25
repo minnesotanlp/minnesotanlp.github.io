@@ -61,10 +61,10 @@ function render_pub(elements, filter=null){
             appendix_text = '<span class="tag"> / <a href="' + value.appendix + '">Appendix</a></span>';
         }
 
-        var decodedVar = '<li><div class="publication"><div class="text"> \
-            <div class="title">' + value.title + '</div> \
-            <div class="authors">' + value.author + '</div> \
-            <div>' + venue_text + paper_text + code_text + data_text + demo_text + project_text + tweet_text + appendix_text + 
+        var decodedVar = '<li><div class="publication pub-card"><div class="text"> \
+            <div class="title pub-title">' + value.title + '</div> \
+            <div class="authors pub-authors">' + value.author + '</div> \
+            <div class="pub-links">' + venue_text + paper_text + code_text + data_text + demo_text + project_text + tweet_text + appendix_text + 
             '</div></div></div></li>';
 
 
@@ -73,14 +73,14 @@ function render_pub(elements, filter=null){
     });
    
     if (counter > 0){
-        decodedText = '<ul>' + decodedText + '</ul>';
+        decodedText = '<ul class="pub-list">' + decodedText + '</ul>';
     }
 
     div_tag = 'publication';
     if (filter != null){
         div_tag += '_' + filter;
         if (typeof filter === "number"){
-            decodedText = '<div class="text anchor"><h4>' + filter + '</h4>' + decodedText + '</div>'
+            decodedText = '<div class="text anchor"><h4 class="pub-year-header">' + filter + '</h4>' + decodedText + '</div>'
         }else{
             decodedText = '<div class="text anchor">' + decodedText + '</div>'
         }

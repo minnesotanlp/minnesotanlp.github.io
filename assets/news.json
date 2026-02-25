@@ -1,94 +1,146 @@
 [
     {
-        "date": "Jan 2026", 
+        "date": "Feb 2026",
+        "category": "defense",
+        "importance": "high",
+        "description": "<a href='https://debaratidas94.github.io/'>Debarati Das</a> passed her Ph.D. defense on ``LMs as Sociotechnical Actors: A Scaffolding Framework for Recovering Context Lost in Text Only Settings.'' Congratulations, Dr. Das! She joined the <a href='https://www.microsoft.com/en-us/research/people/debaratidas/'>Microsoft IDEAS Research group</a> led by <a href='https://www.microsoft.com/en-us/research/people/counts/'>Scott Counts</a> as a senior applied scientist, working on measuring and steering the impact of Generative AI on Productivity."
+    },  
+    {
+        "date": "Jan 2026",
+        "category": "award",
+        "importance": "high",
         "description": "<a href='https://www.shirley.id/'>Shirley Anugrah Hayati</a> won the <a href='https://grad.umn.edu/funding/current-students/interdisciplinary-doctoral-fellowship'>Interdisciplinary Doctoral Fellowship</a>, focusing on ``Towards Pluralistic AI: Modeling Social Diversity with Large Language Models''"
     },  
     {
-        "date": "Dec 2025", 
+        "date": "Dec 2025",
+        "category": "milestone",
+        "importance": "normal",
         "description": "<a href='https://karinjd.github.io/'>Karin de Langis</a> passed her thesis proposal on 'Cognitive Signals and Assessments for LLMs!' Congratulations, Karin!"
     },      
     {
-        "date": "Dec 2025", 
+        "date": "Dec 2025",
+        "category": "announcement",
+        "importance": "normal",
         "description": "Check out our <a href='https://dykang.github.io/project.html'>research gallery page</a>!!"
     },  
-     {
-        "date": "Dec 2025", 
-        "description": "Khanh Chi Le was selected for Honorable Mention for the 2025-2026 CRA’s <a href=`https://cra.org/crae/awards/cra-outstanding-undergraduate-researchers/`>Outstanding Undergraduate Researcher Award (URA)</a>. Well deserved, Chi!"
+    {
+        "date": "Dec 2025",
+        "category": "award",
+        "importance": "high",
+        "description": "Khanh Chi Le was selected for Honorable Mention for the 2025-2026 CRA's <a href='https://cra.org/crae/awards/cra-outstanding-undergraduate-researchers/'>Outstanding Undergraduate Researcher Award (URA)</a>. Well deserved, Chi!"
     },  
-     {
-        "date": "Nov 2025", 
+    {
+        "date": "Nov 2025",
+        "category": "recruitment",
+        "importance": "high",
         "description": "Welcome our new incoming faculty, <a href='https://www.alexander-spangher.com/'>Alexander Spangher</a>, joining Minnesota NLP group in Fall 2026 after a postdoc at Stanford! Alex's research lies in the intersection of NLP, planning and creativity. Please contact him (alexspan@stanford.edu) directly if you are interested in modeling how humans execute creative and open-ended tasks (e.g. writing news stories) to build AI systems that align better with our goals."
     },  
     {
-        "date": "Apr 2025", 
+        "date": "Apr 2025",
+        "category": "recruitment",
+        "importance": "normal",
         "description": "Welcome a new Ph.D. student, <a href='https://shuyugan.github.io/'>Shuyu Gan</a>, joining Minnesota NLP group in Fall 2025!"
     },      
     {
-        "date": "Apr 2025", 
+        "date": "Apr 2025",
+        "category": "award",
+        "importance": "high",
         "description": "<a href='https://zaemyung.github.io/'>Zae Myung Kim</a> won the <a href='https://grad.umn.edu/funding/current-students/doctoral-dissertation-fellowship'>Doctoral Dissertation Fellowship</a>, focusing on meta-scaffolding of LLMs."
     },     
     {
-        "date": "Jan 2025", 
+        "date": "Jan 2025",
+        "category": "award",
+        "importance": "high",
         "description": "<a href='https://jimtmooney.github.io/'>James Mooney</a> won the Amazon MLSys Fellowship for 2025-2026. He works on algorithmic and agentic efficiency."
     },       
     {
-        "date": "Nov 2024", 
-        "description": "We are very grateful to invite Prof. <a href='https://nasmith.github.io/'>Noah Smith</a> as <a href='https://cse.umn.edu/cs/events/cray-distinguished-speaker-olmo-tulu-and-friends-accelerating-science-language-modeling'>Cray Speaker series</a>. Thank you for your wonderful talk and discussion, Noah! "
+        "date": "Nov 2024",
+        "category": "event",
+        "importance": "normal",
+        "description": "We are very grateful to invite Prof. <a href='https://nasmith.github.io/'>Noah Smith</a> as <a href='https://cse.umn.edu/cs/events/cray-distinguished-speaker-olmo-tulu-and-friends-accelerating-science-language-modeling'>Cray Speaker series</a>. Thank you for your wonderful talk and discussion, Noah!"
     },
     {
-        "date": "Aug 2024", 
+        "date": "Aug 2024",
+        "category": "career",
+        "importance": "high",
         "description": "Our alumni (visiting phd), <a href='https://sites.google.com/view/jaehyungkim'>Jaehyung Kim</a>, completed his postdoc at CMU and started faculty position in Yonsei Univeristy. Congratulations, JK! Please contact him if you are interested in LLM alignment, adaptation, and personalization."
     },    
     {
-        "date": "May 2024", 
-        "description": "Our PhD students will be interning in different places over summer: <a href='https://debaratidas94.github.io/'>Debarati Das</a> at Microsoft Research,  <a href='https://zaemyung.github.io/'>Zae Myung Kim</a> at Amazon AGI, <a href='https://www.shirley.id/'>Shirley Anugrah Hayati</a> at Amazon AGI, <a href='https://jimtmooney.github.io/'>James Mooney</a> at Grammarly Research, and <a href='https://github.com/owanr/'>Risako Owan</a> at Intuit AI. "
+        "date": "May 2024",
+        "category": "internship",
+        "importance": "normal",
+        "description": "Our PhD students will be interning in different places over summer: <a href='https://debaratidas94.github.io/'>Debarati Das</a> at Microsoft Research,  <a href='https://zaemyung.github.io/'>Zae Myung Kim</a> at Amazon AGI, <a href='https://www.shirley.id/'>Shirley Anugrah Hayati</a> at Amazon AGI, <a href='https://jimtmooney.github.io/'>James Mooney</a> at Grammarly Research, and <a href='https://github.com/owanr/'>Risako Owan</a> at Intuit AI."
     },
     {
-        "date": "May 2024", 
+        "date": "May 2024",
+        "category": "milestone",
+        "importance": "normal",
         "description": "Congratulations, <a href='https://www.shirley.id/'>Shirley Anugrah Hayati</a> and <a href='https://zaemyung.github.io/'>Zae Myung Kim</a> for passing written and oral preliminary exams!"
     },
     {
-        "date": "May 2024", 
+        "date": "May 2024",
+        "category": "graduation",
+        "importance": "high",
         "description": "Congratulations to our new graduates: <a href='https://amruthashetty3899.wixsite.com/amruthaslittleworld'>Amrutha Shetty</a> (Masters), <a href='https://github.com/taahan0810'>Aahan Tyagi</a> (Masters), <a href='https://github.com/RitikParkar'>Ritik Parkar</a> (Masters), <a href='https://github.com/jong-inn/'>Jong Inn Park</a> (Masters), and <a href='https://github.com/London-Lowmanstone'>London Lowmanstone</a> (Masters)!"
     },
     {
-        "date": "Apr 2024", 
+        "date": "Apr 2024",
+        "category": "announcement",
+        "importance": "normal",
         "description": "<a href='https://amruthashetty3899.wixsite.com/amruthaslittleworld'>Amrutha Shetty</a>'s work is highlighted on the department website: <a href='https://cse.umn.edu/cs/news/cspotlight-learning-wonders-data-science'>CSpotlight: Learning The Wonders of Data Science</a>"
     },
     {
-        "date": "Apr 2024", 
+        "date": "Apr 2024",
+        "category": "event",
+        "importance": "normal",
         "description": "DK's NLP course holds final presentations (<a href='https://cse.umn.edu/cs/events/natural-language-processing-poster-presentations-0'>Group A</a>, <a href='https://cse.umn.edu/cs/events/natural-language-processing-poster-presentations'>Group B</a>)."
     },
     {
-        "date": "Apr 2024", 
+        "date": "Apr 2024",
+        "category": "award",
+        "importance": "high",
         "description": "<a href='https://karinjd.github.io/'>Karin de Langis</a> won the <a href='https://grad.umn.edu/funding/current-students/doctoral-dissertation-fellowship'>Doctoral Dissertation Fellowship</a>!"
     },
     {
-        "date": "Apr 2024", 
+        "date": "Apr 2024",
+        "category": "milestone",
+        "importance": "normal",
         "description": "<a href='https://debaratidas94.github.io/'>Debarati Das</a> passed her thesis proposal and will now be working on a mental health assistant project!"
     },
     {
-        "date": "Mar 2024", 
+        "date": "Mar 2024",
+        "category": "announcement",
+        "importance": "normal",
         "description": "<a href='https://zaemyung.github.io/'>Zae Myung Kim</a> is co-organizing the running of <a href='https://textgroup.github.io/'>Textgroup</a>, a reading group and academic community for people broadly interested in language."
     },
     {
-        "date": "Mar 2024", 
+        "date": "Mar 2024",
+        "category": "announcement",
+        "importance": "normal",
         "description": "Some of <a href='https://cse.umn.edu/cs/news/dongyeop-kang-developed-ai-based-text-editing-system-high-level-writing'>our recent work</a> on writing assistant, human-vs-AI writing, and expert-level AI are featured in UMN CS"
     },    
     {
-        "date": "Feb 2024", 
+        "date": "Feb 2024",
+        "category": "event",
+        "importance": "low",
         "description": "We had our first escape room lab event! (<a href='https://minnesotanlp.github.io/img/group/escaperoom.jpg'>pic</a>)"
     },
     {
-        "date": "Jan 2024", 
-        "description": "<a href='https://kooryan.netlify.app/'>Ryan Koo</a> Earns <a href='https://cse.umn.edu/cs/news/ryan-koo-earns-honorable-mention-cra-outstanding-undergraduate-researcher-award'>Honorable Mention for CRA Outstanding Undergraduate Researcher Award<a/>"
+        "date": "Jan 2024",
+        "category": "award",
+        "importance": "high",
+        "description": "<a href='https://kooryan.netlify.app/'>Ryan Koo</a> Earns <a href='https://cse.umn.edu/cs/news/ryan-koo-earns-honorable-mention-cra-outstanding-undergraduate-researcher-award'>Honorable Mention for CRA Outstanding Undergraduate Researcher Award</a>"
     },
     {
-        "date": "Jan 2024", 
-        "description": "We submitted our first lab-wide project, <a href='https://arxiv.org/abs/2401.14698'>Under the Surface: Tracking the Artifactuality of LLM-Generated Data<a/>, to arxiv!"
+        "date": "Jan 2024",
+        "category": "announcement",
+        "importance": "normal",
+        "description": "We submitted our first lab-wide project, <a href='https://arxiv.org/abs/2401.14698'>Under the Surface: Tracking the Artifactuality of LLM-Generated Data</a>, to arxiv!"
     },
     {
-        "date": "Oct 2023", 
+        "date": "Oct 2023",
+        "category": "career",
+        "importance": "normal",
         "description": "<a href='https://sites.google.com/view/jaehyungkim'>Jaehyung Kim</a> (our visiting PhD student) got a postdoc offer from CMU LTI!"
     }
 ]

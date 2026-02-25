@@ -81,11 +81,13 @@ function render_member(elements, filter=null){
         member_figure = '';
         if (value.photo != null){
             member_figure = '<img class="member_image" src="' + value.photo + '" alt="' + value.name + '">';
+        } else {
+            member_figure = '<img class="member_image" src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22120%22 height=%22120%22%3E%3Crect width=%22120%22 height=%22120%22 fill=%22%23e0e0e0%22/%3E%3C/svg%3E" alt="No photo available for ' + value.name + '">';
         }
 
         member_name = '';
         if (value.homepage != null){
-            member_name = '<a href="' + value.homepage + '">' + value.name + '</a><br>';
+            member_name = '<a href="' + value.homepage + '" title="Visit homepage">' + value.name + '</a><br>';
         } else{
             member_name = value.name  + '<br>';
         }
@@ -95,7 +97,7 @@ function render_member(elements, filter=null){
             member_coadvisor = ', w/ <a href="' + value.coadvisor_homepage + '">' + value.coadvisor + '</a>';
         }
         member_fellow = '';
-        if (value.fellow != null){
+        if (value.fellow != null && value.name !== 'Young-Jun Lee' && value.name !== 'Seungyeon Jwa'){
             member_fellow = ', ' + value.fellow + '';
         }
 
@@ -115,7 +117,7 @@ function render_member(elements, filter=null){
    
     if (counter > 0){
         // decodedText = '<div class="members_wrapper" style="width:100%">' + decodedText + '</div>';
-        decodedText = '<div class="members_wrapper" style="width:100%">' + decodedTextList.join('') + '</div>';
+        decodedText = '<div class="members_wrapper" style="width:110%">' + decodedTextList.join('') + '</div>';
         // decodedText = decodedText ;
 
     }
@@ -185,11 +187,50 @@ function render_alumni(elements, filter=null){
 
         var decodedVar = null;
 
+        // PhD alumni format - one per row with left column (image + name) and right column (next position + description)
+        if (filter === 'alumni_phd'){
+            member_figure = '';
+            if (value.photo != null){
+                member_figure = '<img class="member_image" src="' + value.photo + '" alt="' + value.name + '" style="width: 100px; height: 100px;">';
+            }
 
-        if (filter_second == null || member_next_position == ''){
-            decodedVar = '<div class="col-3" style="text-align: center;">' + member_name +  '</div>';
+            var phd_name_link = '<a href="' + value.homepage + '">' + value.name + '</a>';
+            
+            // Left column: photo and name
+            var left_column = '<div style="flex: 0 0 150px; display: flex; flex-direction: column; align-items: center; gap: 10px;">' + 
+                              member_figure + 
+                              '<div style="text-align: center;">' + phd_name_link + '</div>' +
+                              '</div>';
+
+            // Right column: next position and description/interest
+            var right_column_content = '';
+            if (member_next_position != ''){
+                right_column_content += '<strong>Next Position:</strong> ' + member_next_position + '<br>';
+            }
+            if (value.interest != null){
+                right_column_content += '<strong>PhD Work:</strong> <i>' + value.interest + '</i>';
+            }
+
+            var right_column = '<div style="flex: 1; padding-left: 20px; display: flex; align-items: center;">' + right_column_content + '</div>';
+
+            decodedVar = '<div style="display: flex; margin-bottom: 20px; border-bottom: 1px solid #ddd; padding-bottom: 20px;">' + 
+                         left_column + 
+                         right_column + 
+                         '</div>';
+        }
+        // Condensed layout for masters and undergraduate alumni
+        else if (filter === 'alumni_masters' || filter === 'alumni_undergraduate'){
+            if (member_next_position == ''){
+                decodedVar = '<span style="margin-right: 15px; display: inline-block;">' + member_name + '</span>';
+            } else{
+                decodedVar = '<span style="margin-right: 15px; display: inline-block;">' + member_name+ ' (' + member_next_position + ')</span>';
+            }
         } else{
-            decodedVar = '<div class="col-3" style="text-align: center;">' + member_name+ '<br> (' + member_next_position + ')</div>';
+            if (filter_second == null || member_next_position == ''){
+                decodedVar = '<div class="col-3" style="text-align: center;">' + member_name +  '</div>';
+            } else{
+                decodedVar = '<div class="col-3" style="text-align: center;">' + member_name+ '<br> (' + member_next_position + ')</div>';
+            }
         }
 
         // console.log(decodedVar, value.position, filter_second);
@@ -201,7 +242,15 @@ function render_alumni(elements, filter=null){
    
     if (counter > 0){
         // decodedText =  decodedText ;
-        decodedText = '<div class="members_wrapper row" style="width:100%">' + decodedText + '</div>';
+        // Use condensed wrapper for masters and undergraduate alumni
+        if (filter === 'alumni_masters' || filter === 'alumni_undergraduate'){
+            decodedText = '<div class="members_wrapper_condensed" style="width:100%; display: flex; flex-wrap: wrap; gap: 5px;">' + decodedText + '</div>';
+        } else if (filter === 'alumni_phd'){
+            // PhD alumni: full-width rows with left/right layout
+            decodedText = '<div style="width:100%;">' + decodedText + '</div>';
+        } else{
+            decodedText = '<div class="members_wrapper row" style="width:100%">' + decodedText + '</div>';
+        }
 
     }
 
