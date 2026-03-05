@@ -40,9 +40,9 @@
     <div class="container-fluid" id="main-container" style="padding-left: 1.5rem; padding-right: 1.5rem;">
 
         <nav class="navbar navbar-expand-lg fixed-top justify-content-between navbar-custom" >
-            <div class="container">
-                <a class="navbar-brand d-lg-none" href="#">
-                    <img src="img/UMN_NLP_logo_final_circle.png" width="30" height="30" class="d-inline-block align-top" alt="">
+            <div class="container-body-aligned">
+                <a class="navbar-brand" href="#">
+                    <img src="img/UMN_NLP_logo_final_circle.png" width="30" height="30" class="d-inline-block align-top" alt="Minnesota NLP">
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -72,12 +72,12 @@
 
         <div class="row" width="100%">
             <!-- Left column: Main content (col-md-8) -->
-             <div class="col-1"></div>
-            <div class="col-8">
+             <div class="col-1 col-order-left"></div>
+            <div class="col-7 col-order-main">
                 <div class="jumbotron">
                     <div class="row">
                         <div class="col-md-3">
-                            <img src="img/UMN_NLP_logo_final_circle.png" width="170" height="170" >
+                            <img src="img/UMN_NLP_logo_final_circle.png" width="100%" >
                         </div>
                         <div class="col-md-9">
                             Welcome to the Minnesota NLP group! 
@@ -89,7 +89,7 @@
                     </div>
                 </div>
 
-                <div style="margin-bottom: 35rem;"></div>
+                <div style="margin-bottom: 20rem;"></div>
 
                 <!-- Slideshow container -->
                 <div class="slideshow-container">
@@ -182,9 +182,7 @@
 
                 <br>
 
-                <br>
-                <hr aria-hidden="true">
-                <br>
+ 
 
                 <main id="main-content">
                     <div id="people">
@@ -224,17 +222,11 @@
                             <h5>Ph.D. Students and Visitors</h5>
                             <div id="members_alumni_phd"></div>
 
-                            <!-- Masters Alumni -->
+                            <!-- Masters & Undergraduate Alumni (combined, inline) -->
                             <h5 class="mt-4">Masters and Undergraduate</h5>
-                            <div id="members_alumni_masters"></div>
-                            <div id="members_alumni_undergraduate"></div>
+                            <div id="members_alumni_mastersundergraduate"></div>
                         </div>
 
-                        <br>
-                        <hr aria-hidden="true">
-                        <br>
-                        <br>
-                        <hr aria-hidden="true">
                         <br>
                         <div class="row" id="publication">
                             <div>
@@ -246,10 +238,7 @@
                                 <div id="publication_2022"></div>
                                 <div id="publication_2021"></div>	
                             </div>
-
-                            <hr aria-hidden="true">
                         </div>
-                        <hr aria-hidden="true">
 
                     </div>
                 </main>
@@ -257,36 +246,23 @@
 
 
             <!-- Right column: News and Sponsors (col-1) -->
-            <div class="col-2">
+            <div class="col-3 col-order-sidebar">
                 <h2 style="font-size: 1.3rem; margin-top: 0;">News</h2>
 
                 <div class="jumbotron" style="padding: 1rem;">
                     <div id="items_news"></div>
                 </div>
-
-                <div id="funding" style="position: sticky; top: 200px;">
+                <div style="margin-bottom: 10rem;"></div>
+                <div id="funding" style="top: 200px;">
                     <h2 style="font-size: 1.3rem; margin-top: 0;">Funding</h2>
-                    <div style="display: flex; flex-direction: column; gap: 1rem;">
-                        <a href="https://twin-cities.umn.edu/"><img src="img/sponsors/umn.png" style="max-width: 100px; object-fit: contain;"></a> 
-                        <a href="https://www.grammarly.com/blog/engineering/category/nlp-ml/"><img src="img/sponsors/grammarly_icon.png" style="max-width: 100px; object-fit: contain;"></a> 
-                        <a href="https://research.google/"><img src="img/sponsors/google.png" style="max-width: 100px; object-fit: contain;"></a> 
-                        <a href="https://new.nsf.gov/focus-areas/artificial-intelligence"><img src="img/sponsors/NSF_Official_logo_Med_Res.png" style="max-width: 100px; object-fit: contain;"></a> 
-                        <a href="https://www.cisco.com/site/us/en/solutions/artificial-intelligence/index.html"><img src="img/sponsors/cisco.png" style="max-width: 100px; object-fit: contain;"></a> 
-                        <a href="https://www.navercorp.com/"><img src="img/sponsors/Naver_Logotype.svg.png" style="max-width: 100px; object-fit: contain;"></a> 
-                        <a href="https://www.sony.com/en/SonyInfo/research-award-program/"><img src="img/sponsors/sony_icon.png" style="max-width: 100px; object-fit: contain;"></a> 
-                        <a href="https://www.openphilanthropy.org/"><img src="img/sponsors/openphilanthropy.jpg" style="max-width: 100px; object-fit: contain;"></a>
-                        <a href="https://new.nsf.gov/focus-areas/artificial-intelligence"><img src="img/sponsors/tr.png" style="max-width: 100px; object-fit: contain;"></a> 
-                        <a href="https://www.accenture.com/us-en/about/accenture-labs-index"><img src="img/sponsors/accenture.png" style="max-width: 100px; object-fit: contain;"></a>
-                        <a href="https://news.3m.com/"><img src="img/sponsors/3m_icon.png" style="max-width: 100px; object-fit: contain;"></a>
-                        <a href="https://cse.umn.edu/mnri"><img src="img/sponsors/mnri_icon.jpg" style="max-width: 100px; object-fit: contain;"></a>
-                    </div>
+                    <div id="funding-logos" style="display: flex; flex-direction: column; gap: 0.75rem; width: 100%;"></div>
                 </div>
             </div>
-            <div class="col-1"></div>
+            <div class="col-1 col-order-right"></div>
         </div>
 
     <footer class="footer" role="contentinfo">
-        <div class="container">
+        <div class="container-body-aligned">
             <div class="footer-content">
                 <!-- Quick Links -->
                 <div class="footer-section">
@@ -344,6 +320,7 @@
 
     <script type="text/javascript" src="js/slider.js"></script>
     <script type="text/javascript" src="js/myscript_footer.js"></script>
+    <script type="text/javascript" src="js/sponsor_loader.js"></script>
     <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
     <script async type="text/javascript" src="js/widget.js"></script>
 

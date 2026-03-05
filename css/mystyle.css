@@ -231,8 +231,6 @@ h2 {
   margin-top: 2.5rem;
   margin-bottom: 1.5rem;
   font-weight: 600;
-  border-bottom: 2px solid #f0f0f0;
-  padding-bottom: 1rem;
 }
 
 h3 {
@@ -253,8 +251,6 @@ h4, h5 {
   font-weight: 600;
   margin-bottom: 1.5rem;
   color: #333;
-  border-bottom: 2px solid #f0f0f0;
-  padding-bottom: 0.8rem;
 }
 
 /* Container improvements */
@@ -443,8 +439,29 @@ h4, h5 {
     padding: 0.5rem 0;
   }
 
+  /* Make toggler icon visible on dark background */
+  .navbar-custom .navbar-toggler {
+    border-color: rgba(255, 255, 255, 0.5);
+  }
+  .navbar-custom .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255,255,255,0.9)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+  }
+
+  /* Dropdown menu panel on mobile */
+  .navbar-custom .navbar-collapse {
+    background-color: #900021;
+    padding: 0.5rem 1rem 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    margin-top: 0.25rem;
+  }
+
   .navbar-custom .navbar-nav .nav-link {
-    font-size: 14px;
+    font-size: 16px;
+    padding: 0.6rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  }
+  .navbar-custom .navbar-nav .nav-item:last-child .nav-link {
+    border-bottom: none;
   }
 
   .jumbotron {
@@ -725,6 +742,13 @@ html {
   font-weight: 600;
 }
 
+/* Aligns navbar/footer width to match the body row (col-1 offset each side) */
+.container-body-aligned {
+  width: 100%;
+  padding-left: calc(8.333% + 1.5rem);
+  padding-right: calc(8.333% + 1.5rem);
+}
+
 /* Footer Enhancement */
 .footer {
   background: #f8f9fa;
@@ -786,11 +810,12 @@ html {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 40px;
-  height: 40px;
+  width: 56px;
+  height: 56px;
   background: white;
   border-radius: 50%;
   color: #900021;
+  font-size: 1.5rem;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
 }
@@ -816,6 +841,26 @@ html {
   margin: 0;
   font-size: 14px;
   color: #666;
+}
+
+/* Mobile layout: stack all columns full-width, one by one, in reading order */
+@media (max-width: 767px) {
+  .col-order-left,
+  .col-order-right  { display: none; }         /* hide empty spacer columns */
+
+  .col-order-main,
+  .col-order-sidebar {
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+
+  .col-order-main   { order: 1; }
+  .col-order-sidebar{ order: 2; }              /* News + Funding after main content */
+
+  /* Remove sticky on sidebar so it scrolls naturally */
+  #funding { position: static !important; top: auto !important; }
 }
 
 @media (max-width: 768px) {

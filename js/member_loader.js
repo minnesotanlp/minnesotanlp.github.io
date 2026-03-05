@@ -151,12 +151,16 @@ function render_alumni(elements, filter=null){
 
         // filters
         if (filter != null){
-            if (filter === 'alumni' | filter === 'alumni_phd' | filter === 'alumni_masters' | filter === 'alumni_undergraduate'){
+            if (filter === 'alumni' | filter === 'alumni_phd' | filter === 'alumni_masters' | filter === 'alumni_undergraduate' | filter === 'alumni_mastersundergraduate'){
                 if (value.current === true){
                         // console.log('Pass');
                         return;
                 }
-                if (filter_second != null && value.position != null){
+                if (filter === 'alumni_mastersundergraduate'){
+                    if (value.position !== 'Masters' && value.position !== 'Undergraduate'){
+                        return;
+                    }
+                } else if (filter_second != null && value.position != null){
                     if (! value.position.toString().toLowerCase().includes(filter_second)){
                         // console.log('%%%%% Filtering:',value.position.toString().toLowerCase(), filter_second);
                         return;
@@ -216,7 +220,7 @@ function render_alumni(elements, filter=null){
                          '</div>';
         }
         // Condensed layout for masters and undergraduate alumni
-        else if (filter === 'alumni_masters' || filter === 'alumni_undergraduate'){
+        else if (filter === 'alumni_masters' || filter === 'alumni_undergraduate' || filter === 'alumni_mastersundergraduate'){
             if (member_next_position == ''){
                 decodedVar = '<span style="margin-right: 15px; display: inline-block;">' + member_name + '</span>';
             } else{
@@ -240,7 +244,7 @@ function render_alumni(elements, filter=null){
     if (counter > 0){
         // decodedText =  decodedText ;
         // Use condensed wrapper for masters and undergraduate alumni
-        if (filter === 'alumni_masters' || filter === 'alumni_undergraduate'){
+        if (filter === 'alumni_masters' || filter === 'alumni_undergraduate' || filter === 'alumni_mastersundergraduate'){
             decodedText = '<div class="members_wrapper_condensed" style="width:100%; display: flex; flex-wrap: wrap; gap: 5px;">' + decodedText + '</div>';
         } else if (filter === 'alumni_phd'){
             // PhD alumni: full-width rows with left/right layout
