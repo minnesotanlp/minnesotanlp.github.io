@@ -16,34 +16,34 @@ var SPONSORS = [
 function render_sponsors() {
     var container = $('#funding-logos');
     container.empty();
+    container.addClass('sponsor-list').css('gap', '0');
+
+    var wideLogoSponsors = {
+        'Cisco': true,
+        'NSF': true,
+        'NSF (TR)': true,
+        'MNRI': true
+    };
 
     $.each(SPONSORS, function (index, sponsor) {
         var img = $('<img>')
             .attr('src', sponsor.img)
             .attr('alt', sponsor.name)
-            .css({
-                'width': '100%',
-                'max-height': '100px',
-                'max-width': '250px',
+            .addClass('sponsor-logo');
 
-                'object-fit': 'contain',
-                'display': 'block'
-            });
+        if (wideLogoSponsors[sponsor.name]) {
+            img.addClass('sponsor-logo-wide');
+        }
 
         var link = $('<a>')
             .attr('href', sponsor.url)
             .attr('target', '_blank')
             .attr('rel', 'noopener')
             .attr('title', sponsor.name)
-            .css({
-                'display': 'flex',
-                'justify-content': 'center',
-                'align-items': 'center',
-                'margin-bottom': '0.75rem'
-            })
+            .addClass('sponsor-link')
             .append(img);
 
-        container.append(link);
+        container.append($('<div>').addClass('sponsor-item').append(link));
     });
 }
 

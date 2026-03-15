@@ -102,7 +102,7 @@ function render_member(elements, filter=null){
         }
 
         member_interest = '';
-        if (value.interest != null){
+        if (value.interest != null && (value.position === 'PhD' || value.position === 'Visiting PhD')){
             member_interest = '<br><i>' + value.interest + '</i>';
         }
 
