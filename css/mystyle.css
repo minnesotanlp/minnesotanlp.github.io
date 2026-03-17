@@ -2,7 +2,7 @@
 body {
 	padding-top: 80px;
 	overflow-y:scroll;
-	font-size:17px
+	font-size:15px
 }
 
 .gh-profile-card{
@@ -14,15 +14,14 @@ body {
 }
 
 .jumbotron{text-align:justify;
-	padding-top:1.5em;
-	padding-bottom:1.5em;
+	padding:1rem 1.1rem;
 	background-color: white;
 	border: none;
 	border-radius: 8px;
 	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 	margin:auto;
-	font-size:110%;
-	margin-bottom: 1rem;
+	font-size:100%;
+	margin-bottom: 0.75rem;
 }
 
 .jumbotron2{text-align:justify;
@@ -54,8 +53,10 @@ body {
 /* change the link color */
 .navbar-custom .navbar-nav .nav-link {
     color: #FFCC33;
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 500;
+    padding-top: 0.55rem;
+    padding-bottom: 0.55rem;
 }
 /* change the color of active or hovered links */
 .navbar-custom .nav-item.active .nav-link,
@@ -68,19 +69,19 @@ body {
 	flex-wrap: wrap;
 	max-width: 100%;
 	justify-content: space-evenly;
-	gap: 10px;
+	gap: 8px;
   }
 
 .member_figure {
 	margin: 0;
-	min-width: 200px;
-	max-width: 240px;
+	min-width: 170px;
+	max-width: 190px;
 	border-radius: 12px;
 	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 	transition: all 0.3s ease;
 	overflow: hidden;
 	background: white;
-	padding: 8px;
+	padding: 6px;
   }
 
 .member_figure:hover {
@@ -92,8 +93,8 @@ body {
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
-	width: 100px;
-	height: 100px;
+	width: 84px;
+	height: 84px;
 	border-radius: 50%;
 	object-fit: cover;
 	border: 3px solid #f0f0f0;
@@ -101,9 +102,9 @@ body {
 
 .member_image_caption {
 	text-align: center;
-	font-size: 100%;
-	line-height: 150%;
-	padding: 10px 4px 4px 4px;
+	font-size: 94%;
+	line-height: 1.4;
+	padding: 8px 2px 2px 2px;
 }
 
 .member_social_links {
@@ -147,22 +148,22 @@ body {
   justify-content: center;
   align-items: center;
   width: 100%;
-  min-height: 72px;
+  min-height: 60px;
   text-decoration: none;
 }
 
 .sponsor-logo {
   display: block;
-  max-width: min(180px, 100%);
-  max-height: 52px;
+  max-width: min(150px, 100%);
+  max-height: 46px;
   width: auto;
   height: auto;
   object-fit: contain;
 }
 
 .sponsor-logo-wide {
-  max-width: min(230px, 100%);
-  max-height: 64px;
+  max-width: min(190px, 100%);
+  max-height: 54px;
 }
 
 .member_social_links a:hover {
@@ -196,16 +197,16 @@ ul{
   display: flex;
   flex-direction: column;
   gap: 5px;
-  max-height: 800px;
+  max-height: 680px;
   overflow-y: auto;
-  padding-right: 8px;
+  padding-right: 4px;
 }
 
 .news-card {
   background: white;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  padding: 16px;
+  padding: 12px;
   transition: all 0.3s ease;
   border-left: 4px solid #ddd;
 }
@@ -223,8 +224,8 @@ ul{
 .news-header {
   display: flex;
   align-items: center;
-  gap: 12px;
-  margin-bottom: 10px;
+  gap: 10px;
+  margin-bottom: 8px;
 }
 
 .news-badge {
@@ -239,15 +240,15 @@ ul{
 
 .news-date {
   color: #666;
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 500;
   margin-left: auto;
 }
 
 .news-content {
   color: #333;
-  line-height: 1.6;
-  font-size: 15px;
+  line-height: 1.5;
+  font-size: 14px;
 }
 
 /* Second Level */
@@ -264,28 +265,38 @@ ul ul ul{
 
 /* Section Spacing */
 h2 {
-  margin-top: 2.5rem;
-  margin-bottom: 1.5rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0.85rem;
   font-weight: 600;
+  font-size: 1.55rem;
 }
 
 h3 {
-  margin-top: 2rem;
-  margin-bottom: 1.2rem;
+  margin-top: 1.3rem;
+  margin-bottom: 0.8rem;
   font-weight: 600;
+  font-size: 1.3rem;
 }
 
 h4, h5 {
-  margin-top: 1.5rem;
-  margin-bottom: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 0.65rem;
   font-weight: 600;
+}
+
+h4 {
+  font-size: 1.08rem;
+}
+
+h5 {
+  font-size: 0.98rem;
 }
 
 /* Section Title Styling */
 .section-title {
   text-align: left;
   font-weight: 600;
-  margin-bottom: 1.5rem;
+  margin-bottom: 0.75rem;
   color: #333;
 }
 
@@ -297,16 +308,16 @@ h4, h5 {
 
 /* Row and Column spacing */
 .row {
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 /* Alumni Search and Filter */
 .alumni-search-container {
   background: white;
-  padding: 1.5rem;
+  padding: 1rem;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-  margin-bottom: 2rem;
+  margin-bottom: 1.25rem;
 }
 
 .alumni-search-input {
@@ -385,8 +396,8 @@ h4, h5 {
   background: white;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-  padding: 1.2rem;
-  margin-bottom: 1rem;
+  padding: 0.95rem 1rem;
+  margin-bottom: 0.75rem;
   transition: all 0.3s ease;
   border-left: 4px solid #f0f0f0;
 }
@@ -398,11 +409,11 @@ h4, h5 {
 }
 
 .pub-title {
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 600;
   color: #333;
-  line-height: 1.5;
-  margin-bottom: 0.5rem;
+  line-height: 1.4;
+  margin-bottom: 0.35rem;
 }
 
 .pub-title a {
@@ -414,17 +425,17 @@ h4, h5 {
 }
 
 .pub-authors {
-  font-size: 14px;
+  font-size: 13px;
   color: #666;
-  margin-bottom: 0.8rem;
+  margin-bottom: 0.55rem;
   font-style: italic;
 }
 
 .pub-links {
   display: flex;
   flex-wrap: wrap;
-  gap: 12px;
-  font-size: 13px;
+  gap: 10px;
+  font-size: 12px;
 }
 
 .pub-links .venue {
@@ -458,16 +469,16 @@ h4, h5 {
 .pub-year-header {
   color: #333;
   font-weight: 600;
-  padding-top: 1.5rem;
+  padding-top: 1rem;
   border-top: 2px solid #f0f0f0;
-  margin-top: 2rem;
-  margin-bottom: 1.5rem;
+  margin-top: 1.25rem;
+  margin-bottom: 0.85rem;
 }
 
 /* Mobile Responsiveness */
 @media (max-width: 768px) {
   body {
-    font-size: 15px;
+    font-size: 14px;
     padding-top: 70px;
   }
 
@@ -492,8 +503,8 @@ h4, h5 {
   }
 
   .navbar-custom .navbar-nav .nav-link {
-    font-size: 16px;
-    padding: 0.6rem 0;
+    font-size: 15px;
+    padding: 0.45rem 0;
     border-bottom: 1px solid rgba(255, 255, 255, 0.15);
   }
   .navbar-custom .navbar-nav .nav-item:last-child .nav-link {
@@ -517,13 +528,13 @@ h4, h5 {
   }
 
   .member_figure {
-    min-width: 150px;
-    max-width: 150px;
+    min-width: 140px;
+    max-width: 140px;
   }
 
   .member_image {
-    width: 90px;
-    height: 90px;
+    width: 76px;
+    height: 76px;
   }
 
   .members_wrapper {
@@ -554,20 +565,20 @@ h4, h5 {
   }
 
   h2 {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
   }
 
   h4, h5 {
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
 
   .section-title {
-    font-size: 1.2rem;
+    font-size: 1.05rem;
   }
 
   #people img:not(.member_image) {
-    width: 150px;
-    height: 150px;
+    width: 132px;
+    height: 132px;
   }
 
   .alumni-search-container {
@@ -596,13 +607,13 @@ h4, h5 {
   }
 
   .member_figure {
-    min-width: 130px;
-    max-width: 130px;
+    min-width: 120px;
+    max-width: 120px;
   }
 
   .member_image {
-    width: 80px;
-    height: 80px;
+    width: 70px;
+    height: 70px;
   }
 
   .member_image_caption {
@@ -623,12 +634,12 @@ h4, h5 {
   }
 
   .news-content {
-    font-size: 14px;
+    font-size: 13px;
     line-height: 1.5;
   }
 
   .pub-title {
-    font-size: 14px;
+    font-size: 13px;
   }
 
   .pub-authors {
@@ -636,9 +647,9 @@ h4, h5 {
   }
 
   h2 {
-    font-size: 1.3rem;
-    margin-top: 2rem;
-    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    margin-top: 1.25rem;
+    margin-bottom: 0.75rem;
   }
 
   h4, h5 {
@@ -651,8 +662,8 @@ h4, h5 {
   }
 
   #people img:not(.member_image) {
-    width: 120px;
-    height: 120px;
+    width: 110px;
+    height: 110px;
     margin: 5px;
   }
 }
@@ -721,11 +732,11 @@ body {
 /* Readable font sizes and line heights */
 body {
   line-height: 1.6;
-  letter-spacing: 0.3px;
+  letter-spacing: 0.15px;
 }
 
 p, li, .news-content, .pub-authors {
-  line-height: 1.8;
+  line-height: 1.55;
 }
 
 /* Reduced motion support */
@@ -748,15 +759,15 @@ html {
   right: 30px;
   background: #900021;
   color: white;
-  width: 50px;
-  height: 50px;
+  width: 44px;
+  height: 44px;
   border-radius: 50%;
   border: none;
   cursor: pointer;
   display: none;
   align-items: center;
   justify-content: center;
-  font-size: 20px;
+  font-size: 17px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   transition: all 0.3s ease;
   z-index: 99;
@@ -781,27 +792,29 @@ html {
 /* Aligns navbar/footer width to match the body row (col-1 offset each side) */
 .container-body-aligned {
   width: 100%;
-  padding-left: calc(8.333% + 1.5rem);
-  padding-right: calc(8.333% + 1.5rem);
+  max-width: 1400px;
+  margin: 0 auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 /* Footer Enhancement */
 .footer {
   background: #f8f9fa;
   border-top: 1px solid #e0e0e0;
-  padding: 3rem 0;
-  margin-top: 4rem;
+  padding: 2rem 0;
+  margin-top: 2.5rem;
 }
 
 .footer-content {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
-  margin-bottom: 2rem;
+  gap: 1.5rem;
+  margin-bottom: 1.25rem;
 }
 
 .footer-section {
-  padding-right: 2rem;
+  padding-right: 1rem;
 }
 
 .footer-section h4 {
@@ -837,8 +850,8 @@ html {
 
 .footer-social {
   display: flex;
-  gap: 15px;
-  margin: 1rem 0;
+  gap: 12px;
+  margin: 0.8rem 0;
   align-items: center;
 }
 
@@ -846,12 +859,12 @@ html {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 56px;
-  height: 56px;
+  width: 44px;
+  height: 44px;
   background: white;
   border-radius: 50%;
   color: #900021;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
 }
@@ -864,8 +877,8 @@ html {
 
 .footer-bottom {
   border-top: 1px solid #e0e0e0;
-  padding-top: 2rem;
-  margin-top: 2rem;
+  padding-top: 1.25rem;
+  margin-top: 1.25rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -990,7 +1003,7 @@ footer {
   display: inline;
   align-items: center;
   gap: 1.1rem;
-  font-size: 17px;
+  font-size: 15px;
 }
 
 .divider span {
@@ -1021,14 +1034,90 @@ footer {
 
 /* Increase image size and make them responsive */
 #people img:not(.member_image) {
-  width: 200px;       /* Increase or adjust as needed */
-  height: 200px;       /* Keep aspect ratio */
+  width: 150px;
+  height: 150px;
   border-radius: 12px; /* Rounded corners (optional) */
-  margin: 10px;       /* Space between images */
+  margin: 8px;
   object-fit: cover;  /* Ensures consistent appearance */
 }
 
 /* Optional: center member cards/images nicely in rows */
 #people .row.justify-content-center {
   gap: 1.5rem; /* adds consistent spacing between items */
+}
+
+#main-container {
+  max-width: 1420px;
+  margin: 0 auto;
+  padding-left: 0.85rem !important;
+  padding-right: 0.85rem !important;
+}
+
+.main-layout {
+  margin-bottom: 0.5rem;
+}
+
+.col-order-main,
+.col-order-sidebar {
+  padding-left: 0.65rem;
+  padding-right: 0.65rem;
+}
+
+.page-top-gap {
+  height: 0.75rem;
+}
+
+.section-gap {
+  height: 1.5rem;
+}
+
+.sidebar-gap {
+  height: 1.5rem;
+}
+
+.intro-logo {
+  display: block;
+  width: 100%;
+  max-width: 120px;
+  margin: 0 auto;
+}
+
+.intro-copy {
+  font-size: 0.97rem;
+}
+
+.social-row {
+  margin-top: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.people-group {
+  margin-bottom: 1rem;
+}
+
+.alumni-section {
+  margin-bottom: 1.25rem;
+}
+
+.sidebar-heading {
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+  font-size: 1.15rem !important;
+}
+
+.sidebar-panel {
+  padding: 0.85rem !important;
+}
+
+@media (max-width: 991px) {
+  .intro-logo {
+    max-width: 100px;
+    margin-bottom: 0.75rem;
+  }
+
+  .col-order-main,
+  .col-order-sidebar {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
 }
