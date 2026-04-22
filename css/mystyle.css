@@ -2,7 +2,11 @@
 body {
 	padding-top: 80px;
 	overflow-y:scroll;
-	font-size:15px
+  font-size:17px;
+  font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  line-height: 1.65;
+  color: #1f2937;
+  background: #f7f9fc;
 }
 
 .gh-profile-card{
@@ -14,14 +18,15 @@ body {
 }
 
 .jumbotron{text-align:justify;
-	padding:1rem 1.1rem;
+	padding-top:1.5em;
+	padding-bottom:1.5em;
 	background-color: white;
-	border: none;
+  border: 1px solid #e7ebf0;
 	border-radius: 8px;
-	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.06);
 	margin:auto;
-	font-size:100%;
-	margin-bottom: 0.75rem;
+	font-size:110%;
+	margin-bottom: 1rem;
 }
 
 .jumbotron2{text-align:justify;
@@ -43,6 +48,7 @@ body {
 .navbar-custom {
 	background-color: #900021;
 	color: #FFCC33;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.12);
 }
 
 /* change the brand and text color */
@@ -53,10 +59,8 @@ body {
 /* change the link color */
 .navbar-custom .navbar-nav .nav-link {
     color: #FFCC33;
-    font-size: 16px;
+    font-size: 20px;
     font-weight: 500;
-    padding-top: 0.55rem;
-    padding-bottom: 0.55rem;
 }
 /* change the color of active or hovered links */
 .navbar-custom .nav-item.active .nav-link,
@@ -69,19 +73,19 @@ body {
 	flex-wrap: wrap;
 	max-width: 100%;
 	justify-content: space-evenly;
-	gap: 8px;
+	gap: 10px;
   }
 
 .member_figure {
 	margin: 0;
-	min-width: 170px;
-	max-width: 190px;
+	min-width: 200px;
+	max-width: 240px;
 	border-radius: 12px;
 	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 	transition: all 0.3s ease;
 	overflow: hidden;
 	background: white;
-	padding: 6px;
+	padding: 8px;
   }
 
 .member_figure:hover {
@@ -93,8 +97,8 @@ body {
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
-	width: 84px;
-	height: 84px;
+	width: 100px;
+	height: 100px;
 	border-radius: 50%;
 	object-fit: cover;
 	border: 3px solid #f0f0f0;
@@ -102,9 +106,9 @@ body {
 
 .member_image_caption {
 	text-align: center;
-	font-size: 94%;
-	line-height: 1.4;
-	padding: 8px 2px 2px 2px;
+	font-size: 100%;
+	line-height: 150%;
+	padding: 10px 4px 4px 4px;
 }
 
 .member_social_links {
@@ -128,42 +132,6 @@ body {
 	text-decoration: none;
 	transition: all 0.2s ease;
 	font-size: 13px;
-}
-
-.sponsor-list {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  gap: 0;
-}
-
-.sponsor-item {
-  display: flex;
-  justify-content: center;
-  padding: 0.5rem 0;
-}
-
-.sponsor-link {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  min-height: 60px;
-  text-decoration: none;
-}
-
-.sponsor-logo {
-  display: block;
-  max-width: min(150px, 100%);
-  max-height: 46px;
-  width: auto;
-  height: auto;
-  object-fit: contain;
-}
-
-.sponsor-logo-wide {
-  max-width: min(190px, 100%);
-  max-height: 54px;
 }
 
 .member_social_links a:hover {
@@ -197,16 +165,16 @@ ul{
   display: flex;
   flex-direction: column;
   gap: 5px;
-  max-height: 680px;
+  max-height: 800px;
   overflow-y: auto;
-  padding-right: 4px;
+  padding-right: 8px;
 }
 
 .news-card {
   background: white;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  padding: 12px;
+  padding: 16px;
   transition: all 0.3s ease;
   border-left: 4px solid #ddd;
 }
@@ -224,8 +192,8 @@ ul{
 .news-header {
   display: flex;
   align-items: center;
-  gap: 10px;
-  margin-bottom: 8px;
+  gap: 12px;
+  margin-bottom: 10px;
 }
 
 .news-badge {
@@ -240,15 +208,15 @@ ul{
 
 .news-date {
   color: #666;
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 500;
   margin-left: auto;
 }
 
 .news-content {
   color: #333;
-  line-height: 1.5;
-  font-size: 14px;
+  line-height: 1.6;
+  font-size: 15px;
 }
 
 /* Second Level */
@@ -265,39 +233,29 @@ ul ul ul{
 
 /* Section Spacing */
 h2 {
-  margin-top: 1.5rem;
-  margin-bottom: 0.85rem;
+  margin-top: 2.5rem;
+  margin-bottom: 1.5rem;
   font-weight: 600;
-  font-size: 1.55rem;
 }
 
 h3 {
-  margin-top: 1.3rem;
-  margin-bottom: 0.8rem;
+  margin-top: 2rem;
+  margin-bottom: 1.2rem;
   font-weight: 600;
-  font-size: 1.3rem;
 }
 
 h4, h5 {
-  margin-top: 1rem;
-  margin-bottom: 0.65rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
   font-weight: 600;
-}
-
-h4 {
-  font-size: 1.08rem;
-}
-
-h5 {
-  font-size: 0.98rem;
 }
 
 /* Section Title Styling */
 .section-title {
   text-align: left;
   font-weight: 600;
-  margin-bottom: 0.75rem;
-  color: #333;
+  margin-bottom: 1.5rem;
+  color: #7a0019;
 }
 
 /* Container improvements */
@@ -308,16 +266,16 @@ h5 {
 
 /* Row and Column spacing */
 .row {
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
 }
 
 /* Alumni Search and Filter */
 .alumni-search-container {
   background: white;
-  padding: 1rem;
+  padding: 1.5rem;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-  margin-bottom: 1.25rem;
+  margin-bottom: 2rem;
 }
 
 .alumni-search-input {
@@ -396,8 +354,8 @@ h5 {
   background: white;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-  padding: 0.95rem 1rem;
-  margin-bottom: 0.75rem;
+  padding: 1.2rem;
+  margin-bottom: 1rem;
   transition: all 0.3s ease;
   border-left: 4px solid #f0f0f0;
 }
@@ -409,11 +367,11 @@ h5 {
 }
 
 .pub-title {
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 600;
   color: #333;
-  line-height: 1.4;
-  margin-bottom: 0.35rem;
+  line-height: 1.5;
+  margin-bottom: 0.5rem;
 }
 
 .pub-title a {
@@ -425,17 +383,17 @@ h5 {
 }
 
 .pub-authors {
-  font-size: 13px;
+  font-size: 14px;
   color: #666;
-  margin-bottom: 0.55rem;
+  margin-bottom: 0.8rem;
   font-style: italic;
 }
 
 .pub-links {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
-  font-size: 12px;
+  gap: 12px;
+  font-size: 13px;
 }
 
 .pub-links .venue {
@@ -469,16 +427,16 @@ h5 {
 .pub-year-header {
   color: #333;
   font-weight: 600;
-  padding-top: 1rem;
+  padding-top: 1.5rem;
   border-top: 2px solid #f0f0f0;
-  margin-top: 1.25rem;
-  margin-bottom: 0.85rem;
+  margin-top: 2rem;
+  margin-bottom: 1.5rem;
 }
 
 /* Mobile Responsiveness */
 @media (max-width: 768px) {
   body {
-    font-size: 14px;
+    font-size: 15px;
     padding-top: 70px;
   }
 
@@ -503,8 +461,8 @@ h5 {
   }
 
   .navbar-custom .navbar-nav .nav-link {
-    font-size: 15px;
-    padding: 0.45rem 0;
+    font-size: 16px;
+    padding: 0.6rem 0;
     border-bottom: 1px solid rgba(255, 255, 255, 0.15);
   }
   .navbar-custom .navbar-nav .nav-item:last-child .nav-link {
@@ -528,13 +486,13 @@ h5 {
   }
 
   .member_figure {
-    min-width: 140px;
-    max-width: 140px;
+    min-width: 150px;
+    max-width: 150px;
   }
 
   .member_image {
-    width: 76px;
-    height: 76px;
+    width: 90px;
+    height: 90px;
   }
 
   .members_wrapper {
@@ -565,20 +523,20 @@ h5 {
   }
 
   h2 {
-    font-size: 1.3rem;
+    font-size: 1.4rem;
   }
 
   h4, h5 {
-    font-size: 1rem;
+    font-size: 1.1rem;
   }
 
   .section-title {
-    font-size: 1.05rem;
+    font-size: 1.2rem;
   }
 
-  #people img:not(.member_image) {
-    width: 132px;
-    height: 132px;
+  #people img {
+    width: 150px;
+    height: 150px;
   }
 
   .alumni-search-container {
@@ -607,13 +565,13 @@ h5 {
   }
 
   .member_figure {
-    min-width: 120px;
-    max-width: 120px;
+    min-width: 130px;
+    max-width: 130px;
   }
 
   .member_image {
-    width: 70px;
-    height: 70px;
+    width: 80px;
+    height: 80px;
   }
 
   .member_image_caption {
@@ -634,12 +592,12 @@ h5 {
   }
 
   .news-content {
-    font-size: 13px;
+    font-size: 14px;
     line-height: 1.5;
   }
 
   .pub-title {
-    font-size: 13px;
+    font-size: 14px;
   }
 
   .pub-authors {
@@ -647,9 +605,9 @@ h5 {
   }
 
   h2 {
-    font-size: 1.2rem;
-    margin-top: 1.25rem;
-    margin-bottom: 0.75rem;
+    font-size: 1.3rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
   }
 
   h4, h5 {
@@ -661,9 +619,9 @@ h5 {
     font-size: 14px;
   }
 
-  #people img:not(.member_image) {
-    width: 110px;
-    height: 110px;
+  #people img {
+    width: 120px;
+    height: 120px;
     margin: 5px;
   }
 }
@@ -732,11 +690,11 @@ body {
 /* Readable font sizes and line heights */
 body {
   line-height: 1.6;
-  letter-spacing: 0.15px;
+  letter-spacing: 0.3px;
 }
 
 p, li, .news-content, .pub-authors {
-  line-height: 1.55;
+  line-height: 1.8;
 }
 
 /* Reduced motion support */
@@ -759,15 +717,15 @@ html {
   right: 30px;
   background: #900021;
   color: white;
-  width: 44px;
-  height: 44px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
   border: none;
   cursor: pointer;
   display: none;
   align-items: center;
   justify-content: center;
-  font-size: 17px;
+  font-size: 20px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   transition: all 0.3s ease;
   z-index: 99;
@@ -792,29 +750,27 @@ html {
 /* Aligns navbar/footer width to match the body row (col-1 offset each side) */
 .container-body-aligned {
   width: 100%;
-  max-width: 1400px;
-  margin: 0 auto;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  padding-left: calc(8.333% + 1.5rem);
+  padding-right: calc(8.333% + 1.5rem);
 }
 
 /* Footer Enhancement */
 .footer {
   background: #f8f9fa;
   border-top: 1px solid #e0e0e0;
-  padding: 2rem 0;
-  margin-top: 2.5rem;
+  padding: 3rem 0;
+  margin-top: 4rem;
 }
 
 .footer-content {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1.5rem;
-  margin-bottom: 1.25rem;
+  gap: 2rem;
+  margin-bottom: 2rem;
 }
 
 .footer-section {
-  padding-right: 1rem;
+  padding-right: 2rem;
 }
 
 .footer-section h4 {
@@ -850,8 +806,8 @@ html {
 
 .footer-social {
   display: flex;
-  gap: 12px;
-  margin: 0.8rem 0;
+  gap: 15px;
+  margin: 1rem 0;
   align-items: center;
 }
 
@@ -859,12 +815,12 @@ html {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 44px;
-  height: 44px;
+  width: 56px;
+  height: 56px;
   background: white;
   border-radius: 50%;
   color: #900021;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
 }
@@ -877,8 +833,8 @@ html {
 
 .footer-bottom {
   border-top: 1px solid #e0e0e0;
-  padding-top: 1.25rem;
-  margin-top: 1.25rem;
+  padding-top: 2rem;
+  margin-top: 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -890,6 +846,57 @@ html {
   margin: 0;
   font-size: 14px;
   color: #666;
+}
+
+#funding {
+  position: sticky;
+  top: 96px;
+}
+
+#funding h2 {
+  margin-bottom: 0.85rem;
+}
+
+#funding-logos.sponsor-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  width: 100%;
+}
+
+.sponsor-item {
+  width: 100%;
+}
+
+.sponsor-link {
+  width: 100%;
+  min-height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  border: 1px solid #e6eaf0;
+  border-radius: 10px;
+  padding: 8px 10px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.sponsor-link:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 14px rgba(15, 23, 42, 0.10);
+  border-color: #d4dbe4;
+}
+
+.sponsor-logo {
+  width: 100%;
+  max-width: 100%;
+  max-height: 46px;
+  object-fit: contain;
+  display: block;
+}
+
+.sponsor-logo-wide {
+  max-height: 42px;
 }
 
 /* Mobile layout: stack all columns full-width, one by one, in reading order */
@@ -910,6 +917,15 @@ html {
 
   /* Remove sticky on sidebar so it scrolls naturally */
   #funding { position: static !important; top: auto !important; }
+
+  .sponsor-link {
+    min-height: 58px;
+    padding: 7px 8px;
+  }
+
+  .sponsor-logo {
+    max-height: 40px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -1003,7 +1019,7 @@ footer {
   display: inline;
   align-items: center;
   gap: 1.1rem;
-  font-size: 15px;
+  font-size: 17px;
 }
 
 .divider span {
@@ -1030,94 +1046,19 @@ footer {
   text-align: left;
   font-weight: 600;
   margin-bottom: 1rem;
+  color: #7a0019;
 }
 
 /* Increase image size and make them responsive */
-#people img:not(.member_image) {
-  width: 150px;
-  height: 150px;
+#people img {
+  width: 200px;       /* Increase or adjust as needed */
+  height: 200px;       /* Keep aspect ratio */
   border-radius: 12px; /* Rounded corners (optional) */
-  margin: 8px;
+  margin: 10px;       /* Space between images */
   object-fit: cover;  /* Ensures consistent appearance */
 }
 
 /* Optional: center member cards/images nicely in rows */
 #people .row.justify-content-center {
   gap: 1.5rem; /* adds consistent spacing between items */
-}
-
-#main-container {
-  max-width: 1420px;
-  margin: 0 auto;
-  padding-left: 0.85rem !important;
-  padding-right: 0.85rem !important;
-}
-
-.main-layout {
-  margin-bottom: 0.5rem;
-}
-
-.col-order-main,
-.col-order-sidebar {
-  padding-left: 0.65rem;
-  padding-right: 0.65rem;
-}
-
-.page-top-gap {
-  height: 0.75rem;
-}
-
-.section-gap {
-  height: 1.5rem;
-}
-
-.sidebar-gap {
-  height: 1.5rem;
-}
-
-.intro-logo {
-  display: block;
-  width: 100%;
-  max-width: 120px;
-  margin: 0 auto;
-}
-
-.intro-copy {
-  font-size: 0.97rem;
-}
-
-.social-row {
-  margin-top: 0.5rem;
-  margin-bottom: 0.75rem;
-}
-
-.people-group {
-  margin-bottom: 1rem;
-}
-
-.alumni-section {
-  margin-bottom: 1.25rem;
-}
-
-.sidebar-heading {
-  margin-top: 0;
-  margin-bottom: 0.75rem;
-  font-size: 1.15rem !important;
-}
-
-.sidebar-panel {
-  padding: 0.85rem !important;
-}
-
-@media (max-width: 991px) {
-  .intro-logo {
-    max-width: 100px;
-    margin-bottom: 0.75rem;
-  }
-
-  .col-order-main,
-  .col-order-sidebar {
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
-  }
 }

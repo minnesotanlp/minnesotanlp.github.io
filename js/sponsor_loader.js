@@ -16,7 +16,7 @@ var SPONSORS = [
 function render_sponsors() {
     var container = $('#funding-logos');
     container.empty();
-    container.addClass('sponsor-list').css('gap', '0');
+    container.addClass('sponsor-list');
 
     var wideLogoSponsors = {
         'Cisco': true,
