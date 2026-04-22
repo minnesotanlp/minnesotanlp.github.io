@@ -117,7 +117,7 @@ function render_member(elements, filter=null){
    
     if (counter > 0){
         // decodedText = '<div class="members_wrapper" style="width:100%">' + decodedText + '</div>';
-        decodedText = '<div class="members_wrapper" style="width:110%">' + decodedTextList.join('') + '</div>';
+        decodedText = '<div class="members_wrapper">' + decodedTextList.join('') + '</div>';
         // decodedText = decodedText ;
 
     }

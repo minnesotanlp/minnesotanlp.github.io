@@ -16,8 +16,9 @@ function render_news(elements=null, filter=null){
     };
 
     $.each(elements, function (index, value) {
+        if (counter >= 5) return false;
         counter += 1;
-        
+
         if (value.date != null && value.description != null){
             // Get category and importance
             var category = value.category || 'announcement';
