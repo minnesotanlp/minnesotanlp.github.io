@@ -25,6 +25,10 @@ function render_sponsors() {
         'MNRI': true
     };
 
+    var smallLogoSponsors = {
+        'Naver': true
+    };
+
     $.each(SPONSORS, function (index, sponsor) {
         var img = $('<img>')
             .attr('src', sponsor.img)
@@ -33,6 +37,9 @@ function render_sponsors() {
 
         if (wideLogoSponsors[sponsor.name]) {
             img.addClass('sponsor-logo-wide');
+        }
+        if (smallLogoSponsors[sponsor.name]) {
+            img.addClass('sponsor-logo-small');
         }
 
         var link = $('<a>')

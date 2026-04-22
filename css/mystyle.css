@@ -534,9 +534,9 @@ h4, h5 {
     font-size: 1.2rem;
   }
 
-  #people img {
-    width: 150px;
-    height: 150px;
+  .member_image {
+    width: 90px;
+    height: 90px;
   }
 
   .alumni-search-container {
@@ -619,10 +619,9 @@ h4, h5 {
     font-size: 14px;
   }
 
-  #people img {
-    width: 120px;
-    height: 120px;
-    margin: 5px;
+  .member_image {
+    width: 80px;
+    height: 80px;
   }
 }
 
@@ -851,10 +850,20 @@ html {
 #funding {
   position: sticky;
   top: 96px;
+  margin-top: 2rem;
 }
 
 #funding h2 {
   margin-bottom: 0.85rem;
+}
+
+/* Sidebar top alignment */
+.col-order-sidebar {
+  padding-top: 0;
+}
+
+.col-order-sidebar > h2:first-child {
+  margin-top: 0;
 }
 
 #funding-logos.sponsor-list {
@@ -1049,16 +1058,569 @@ footer {
   color: #7a0019;
 }
 
-/* Increase image size and make them responsive */
-#people img {
-  width: 200px;       /* Increase or adjust as needed */
-  height: 200px;       /* Keep aspect ratio */
-  border-radius: 12px; /* Rounded corners (optional) */
-  margin: 10px;       /* Space between images */
-  object-fit: cover;  /* Ensures consistent appearance */
+/* Hero jumbotron accent */
+.jumbotron-hero {
+  border-left: 4px solid #900021;
+  padding-left: 1.5rem;
 }
 
-/* Optional: center member cards/images nicely in rows */
-#people .row.justify-content-center {
-  gap: 1.5rem; /* adds consistent spacing between items */
+.jumbotron-hero .col-md-3 img {
+  max-width: 140px;
+  width: 100%;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Social icons row below slideshow */
+.slideshow-social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.2rem;
+  padding: 0.75rem 0 0.5rem;
+}
+
+.slideshow-social a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  background: white;
+  border-radius: 50%;
+  color: #555;
+  font-size: 16px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.slideshow-social a:hover {
+  background: #900021;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+/* ============================================================
+   VISUAL REDESIGN — OVERRIDE BLOCK
+   ============================================================ */
+
+/* --- Navbar --- */
+.navbar-custom {
+  background: linear-gradient(90deg, #6d0017 0%, #900021 100%);
+  border-bottom: 3px solid #FFCC33;
+  box-shadow: 0 3px 14px rgba(0,0,0,0.22);
+  padding: 0.5rem 0;
+}
+.navbar-custom .navbar-nav .nav-link {
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: background 0.2s, color 0.2s;
+}
+.navbar-custom .nav-item:hover .nav-link {
+  background: rgba(255,204,51,0.15);
+  color: #fff;
+}
+
+/* --- Hero Banner --- */
+.hero-banner {
+  display: flex;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 36px rgba(122,0,25,0.13);
+  border: 1px solid #f0e0e5;
+  margin-bottom: 1.5rem;
+  background: white;
+}
+.hero-banner-left {
+  background: linear-gradient(160deg, #7a0019 0%, #3e000d 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2.5rem 1.6rem;
+  flex: 0 0 176px;
+  gap: 0.9rem;
+}
+.hero-logo-img {
+  width: 108px;
+  height: 108px;
+  border-radius: 50%;
+  border: 3px solid rgba(255,204,51,0.65);
+  box-shadow: 0 4px 18px rgba(0,0,0,0.35);
+  display: block;
+}
+.hero-lab-label {
+  color: #FFCC33;
+  font-size: 0.7rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  text-align: center;
+  line-height: 1.4;
+}
+.hero-banner-right {
+  padding: 2rem 2.4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+}
+.hero-title {
+  font-size: 1.45rem;
+  font-weight: 800;
+  color: #1f2937;
+  margin: 0 0 0.65rem 0;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+}
+.hero-text {
+  color: #4b5563;
+  line-height: 1.78;
+  font-size: 0.96rem;
+  margin-bottom: 1.2rem;
+}
+.hero-text a {
+  color: #900021;
+  font-weight: 600;
+  text-decoration: none;
+}
+.hero-text a:hover {
+  color: #c0002d;
+  text-decoration: underline;
+}
+.hero-badges {
+  display: flex;
+  gap: 0.55rem;
+  flex-wrap: wrap;
+}
+.hero-badge {
+  background: #fff5f7;
+  color: #900021;
+  border: 1px solid #f8bfcc;
+  padding: 0.28rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.76rem;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  letter-spacing: 0.01em;
+}
+.hero-badge i { font-size: 0.7rem; }
+
+/* Hero responsive */
+@media (max-width: 767px) {
+  .hero-banner { flex-direction: column; }
+  .hero-banner-left { flex: unset; padding: 1.75rem; flex-direction: row; gap: 1.25rem; }
+  .hero-logo-img { width: 72px; height: 72px; }
+  .hero-banner-right { padding: 1.5rem; }
+  .hero-title { font-size: 1.2rem; }
+}
+
+/* --- Centered section heading with gradient underline --- */
+.section-heading-center {
+  text-align: center;
+  margin: 2.5rem 0 2rem;
+}
+.section-heading-center h2 {
+  display: inline-block;
+  font-size: 1.85rem;
+  font-weight: 800;
+  color: #1f2937;
+  letter-spacing: -0.02em;
+  border-bottom: none;
+  padding-bottom: 0;
+  position: relative;
+  margin-bottom: 0;
+}
+.section-heading-center h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 52px;
+  height: 4px;
+  background: linear-gradient(90deg, #900021, #FFCC33);
+  border-radius: 3px;
+}
+
+/* --- Publication section heading --- */
+#publication > h2 {
+  display: inline-block;
+  font-size: 1.85rem;
+  font-weight: 800;
+  color: #1f2937;
+  letter-spacing: -0.02em;
+  border-bottom: none;
+  padding-bottom: 0;
+  position: relative;
+  margin-bottom: 0;
+}
+#publication > h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 52px;
+  height: 4px;
+  background: linear-gradient(90deg, #900021, #FFCC33);
+  border-radius: 3px;
+}
+
+/* --- Section sub-titles (Faculty, PhD…) --- */
+.section-title {
+  font-size: 0.78rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #900021;
+  padding: 0.38rem 0.9rem;
+  border-left: 4px solid #FFCC33;
+  background: linear-gradient(90deg, rgba(255,204,51,0.12) 0%, transparent 100%);
+  margin-bottom: 1.4rem;
+  border-radius: 0 6px 6px 0;
+  text-align: left;
+}
+
+/* --- Member cards --- */
+.member_figure {
+  margin: 0;
+  min-width: 148px;
+  max-width: 168px;
+  border-radius: 14px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.07);
+  transition: all 0.28s ease;
+  overflow: hidden;
+  background: white;
+  padding: 1.2rem 0.7rem 0.7rem;
+  border: 1px solid #f3f0f1;
+}
+.member_figure:hover {
+  box-shadow: 0 12px 30px rgba(122,0,25,0.17);
+  transform: translateY(-5px);
+  border-color: #f8bfcc;
+}
+.member_image {
+  display: block;
+  margin: 0 auto;
+  width: 86px;
+  height: 86px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #fde8ec;
+  box-shadow: 0 2px 10px rgba(144,0,33,0.14);
+}
+.member_image_caption {
+  text-align: center;
+  font-size: 0.88rem;
+  line-height: 1.5;
+  padding: 10px 4px 4px;
+  color: #374151;
+}
+.member_image_caption a {
+  color: #900021;
+  font-weight: 700;
+}
+.member_social_links a {
+  background: #f9f0f2;
+  color: #900021;
+}
+.member_social_links a:hover {
+  background: #900021;
+  color: white;
+}
+
+/* --- Sidebar headings --- */
+.sidebar-section-heading {
+  font-size: 0.78rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #900021;
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.sidebar-section-heading::before {
+  content: '';
+  display: inline-block;
+  width: 16px;
+  height: 3px;
+  background: linear-gradient(90deg, #900021, #FFCC33);
+  border-radius: 3px;
+  flex-shrink: 0;
+}
+
+/* --- Sidebar card wrapper --- */
+.sidebar-card {
+  background: white;
+  border-radius: 12px;
+  border: 1px solid #ede8ea;
+  overflow: hidden;
+  padding: 0.75rem;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+}
+
+/* --- News cards --- */
+.news-card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: none;
+  padding: 10px 12px;
+  border: 1px solid #f0eeef;
+  border-left: 3px solid #ddd;
+  transition: border-left-color 0.2s, box-shadow 0.2s;
+}
+.news-card:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.07);
+  transform: none;
+}
+.news-container {
+  gap: 6px;
+}
+.news-badge {
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  padding: 2px 7px;
+  border-radius: 4px;
+}
+.news-date {
+  font-size: 11px;
+}
+.news-content {
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+/* --- Publication year header pill --- */
+.pub-year-header {
+  display: inline-flex;
+  align-items: center;
+  background: #900021;
+  color: white;
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  padding: 0.28rem 1.1rem;
+  border-radius: 20px;
+  margin-top: 2.5rem;
+  margin-bottom: 1.2rem;
+  border-top: none;
+}
+
+/* --- Publication cards --- */
+.pub-card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.06);
+  padding: 1.1rem 1.3rem;
+  margin-bottom: 0.85rem;
+  transition: all 0.22s ease;
+  border: 1px solid #f2f0f1;
+  border-left: 3px solid #e8e0e2;
+}
+.pub-card:hover {
+  box-shadow: 0 6px 20px rgba(122,0,25,0.11);
+  transform: translateY(-2px);
+  border-left-color: #900021;
+  border-color: #f8bfcc;
+}
+.pub-title {
+  font-size: 0.97rem;
+  font-weight: 700;
+  color: #1f2937;
+  line-height: 1.5;
+  margin-bottom: 0.35rem;
+}
+.pub-title a { color: #900021; }
+.pub-authors {
+  font-size: 0.82rem;
+  color: #6b7280;
+  margin-bottom: 0.7rem;
+  font-style: italic;
+}
+.pub-links .tag a {
+  background: #fff0f3;
+  color: #900021;
+  padding: 3px 9px;
+  border-radius: 4px;
+  font-size: 0.76rem;
+  font-weight: 600;
+  border: 1px solid #fcc5d0;
+}
+.pub-links .tag a:hover {
+  background: #900021;
+  color: white;
+  border-color: #900021;
+}
+
+/* --- Sponsor cards (funding) --- */
+.sponsor-link {
+  background: white;
+  border: 1px solid #ede8ea;
+  border-radius: 10px;
+  transition: box-shadow 0.2s, border-color 0.2s;
+}
+.sponsor-link:hover {
+  box-shadow: 0 5px 16px rgba(122,0,25,0.1);
+  border-color: #f8bfcc;
+  transform: none;
+}
+
+/* --- Footer refinement --- */
+.footer {
+  background: #1f2937;
+  border-top: none;
+  padding: 3rem 0 2rem;
+  margin-top: 4rem;
+}
+.footer-section h4 {
+  color: #FFCC33;
+  border-bottom-color: #FFCC33;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+.footer-section a {
+  color: #9ca3af;
+}
+.footer-section a:hover {
+  color: #FFCC33;
+  padding-left: 4px;
+}
+.footer-social a {
+  background: rgba(255,255,255,0.08);
+  color: #d1d5db;
+}
+.footer-social a:hover {
+  background: #900021;
+  color: white;
+}
+.footer-bottom {
+  border-top-color: rgba(255,255,255,0.1);
+}
+.footer-bottom p {
+  color: #6b7280;
+}
+.footer-bottom a {
+  color: #9ca3af;
+}
+.footer-bottom a:hover {
+  color: #FFCC33;
+}
+
+/* --- Back to top button --- */
+#back-to-top {
+  background: #900021;
+  box-shadow: 0 4px 14px rgba(122,0,25,0.35);
+}
+#back-to-top:hover {
+  background: #6d0017;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(122,0,25,0.45);
+}
+
+/* --- Body background: subtle dot grid --- */
+body {
+  background-color: #f5f6f8;
+  background-image: radial-gradient(rgba(144,0,33,0.07) 1.2px, transparent 1.2px);
+  background-size: 22px 22px;
+}
+
+/* --- Navbar brand text --- */
+.navbar-brand-text {
+  color: #FFCC33 !important;
+  font-weight: 800;
+  font-size: 1rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+.navbar-brand-text:hover {
+  color: #fff !important;
+  text-decoration: none;
+}
+
+/* --- Larger member photos --- */
+.member_image {
+  width: 118px !important;
+  height: 118px !important;
+}
+.member_figure {
+  min-width: 170px !important;
+  max-width: 196px !important;
+  padding: 1.3rem 0.8rem 0.8rem !important;
+}
+
+/* --- Naver sponsor: smaller logo --- */
+.sponsor-logo-small {
+  max-height: 22px !important;
+}
+
+/* --- Professional section background bands --- */
+#people {
+  background: white;
+  border-radius: 14px;
+  padding: 1.5rem 1.75rem 2rem;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.05);
+  margin-bottom: 1.5rem;
+}
+
+#publication {
+  background: white;
+  border-radius: 14px;
+  padding: 1.5rem 1.75rem 2rem;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.05);
+}
+
+/* Slideshow: add a subtle drop shadow to make it feel lifted */
+.slideshow-container {
+  box-shadow: 0 12px 32px rgba(0,0,0,0.14);
+}
+
+/* Slideshow social icons: pill card */
+.slideshow-social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.55rem 1.5rem;
+  background: white;
+  border-radius: 40px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+  width: fit-content;
+  margin: 0.7rem auto 0;
+}
+.slideshow-social a {
+  box-shadow: none;
+  background: transparent;
+  width: 32px;
+  height: 32px;
+  font-size: 15px;
+  color: #555;
+}
+.slideshow-social a:hover {
+  background: #900021;
+  color: white;
+  transform: translateY(-1px);
+}
+
+/* Slideshow dots */
+.active {
+  background-color: #900021;
+}
+.dot { background-color: #c8c0c2; }
+
+/* Members wrapper fix */
+.members_wrapper {
+  width: 100% !important;
 }
