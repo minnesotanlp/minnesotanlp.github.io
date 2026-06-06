@@ -42,23 +42,19 @@ function render_member(elements, filter=null){
                     // console.log('Pass');
                         return;
                 }
-                console.log('Pass (faculty): ' + value);
             }
             if (filter === 'phd'){
                 if (value.position != `PhD` && value.position != `Visiting PhD`){
-                    // console.log('Pass');
                         return;
                 }
             }
             if (filter === 'mastersundergraduate'){
                 if (value.position != `Masters` && value.position != `Undergraduate`){
-                    // console.log('Pass');
                         return;
-                }          
-            }          
+                }
+            }
             if (filter === 'visitors'){
                 if (value.position != `Research Engineer` && value.position != `Postdoc` && value.position != `Visiting Scholar`){
-                    console.log('Pass');
                         return;
                 }          
             }                     

@@ -88,7 +88,6 @@ function render_pub(elements, filter=null){
     }
     
     // console.log(div_tag);
-    console.log( filter + ' / ' + div_tag + ' : ' + counter );
 
     $('#'+div_tag).append(decodedText);
 }
