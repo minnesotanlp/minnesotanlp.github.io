@@ -1,96 +1,63 @@
 
-function render_pub(elements, filter=null){
-    // var elements = result;
-    // console.log(elements);
+function render_pub(elements, filter = null) {
 
-
-
-    var decodedText = '';
+    var items = [];
     var counter = 0;
 
     $.each(elements, function (index, value) {
-        // decoder.html(value.title);
-        // console.log(value);
-        // decodedText += decoder.text();
-        // console.log(value.year + ' / ' + value.topic + ' : ' + filter + ' / ' + index + ' : ' + counter);
 
-        if (filter != null){
-            if (value.year != filter && value.topic != filter){
-                // console.log('Pass');
-                return;
-            }
+        if (filter != null) {
+            if (value.year != filter && value.topic != filter) { return; }
         }
-        
-
         counter += 1;
 
-        venue_text = '';
-        if (value.venue != null){
-            venue_text = '<span class="venue"><a href="' + value.venue_link + '">' + value.venue + ' ' + value.year + '</a>';
-            if (value.note != null){
-                venue_text += ' (' + '<span class="highlight">' + value.note + '</span>)'
+        // Venue line (italic) with optional highlight note.
+        var venue_text = '';
+        if (value.venue != null) {
+            venue_text = '<span class="venue"><a href="' + value.venue_link + '">' + value.venue + ' ' + value.year + '</a></span>';
+            if (value.note != null) {
+                venue_text += ' <span class="nt">' + value.note + '</span>';
             }
-            venue_text += ' / ' + '</span>';
-        }
-        paper_text = 'Paper';
-        if (value.paper != null){
-            paper_text = '<span class="tag"> <a href="' + value.paper + '">Paper</a></span>';
-        }        
-        code_text = '';
-        if (value.code != null){
-            code_text = '<span class="tag"> / <a href="' + value.code + '">Code</a></span>';
-        }
-        data_text = '';
-        if (value.data != null){
-            data_text = '<span class="tag"> / <a href="' + value.data + '">Data</a></span>';
-        }
-        demo_text = '';
-        if (value.demo != null){
-            demo_text = '<span class="tag"> / <a href="' + value.demo + '">Demo</a></span>';
-        }        
-        project_text = '';
-        if (value.project != null){
-            project_text = '<span class="tag"> / <a href="' + value.project + '">Project</a></span>';
-        }
-        tweet_text = '';
-        if (value.tweet != null){
-            tweet_text = '<span class="tag"> / <a href="' + value.tweet + '">Tweet</a></span>';
-        }
-        appendix_text = '';
-        if (value.appendix != null){
-            appendix_text = '<span class="tag"> / <a href="' + value.appendix + '">Appendix</a></span>';
         }
 
-        var decodedVar = '<li><div class="publication pub-card"><div class="text"> \
-            <div class="title pub-title">' + value.title + '</div> \
-            <div class="authors pub-authors">' + value.author + '</div> \
-            <div class="pub-links">' + venue_text + paper_text + code_text + data_text + demo_text + project_text + tweet_text + appendix_text + 
-            '</div></div></div></li>';
+        // Resource links (Paper / Code / Data / Demo / Project / Tweet / Appendix).
+        var links = [];
+        if (value.paper != null)    { links.push('<a href="' + value.paper + '">Paper</a>'); }
+        if (value.code != null)     { links.push('<a href="' + value.code + '">Code</a>'); }
+        if (value.data != null)     { links.push('<a href="' + value.data + '">Data</a>'); }
+        if (value.demo != null)     { links.push('<a href="' + value.demo + '">Demo</a>'); }
+        if (value.project != null)  { links.push('<a href="' + value.project + '">Project</a>'); }
+        if (value.tweet != null)    { links.push('<a href="' + value.tweet + '">Tweet</a>'); }
+        if (value.appendix != null) { links.push('<a href="' + value.appendix + '">Appendix</a>'); }
+        var links_text = links.length ? '<span class="tag"> &middot; ' + links.join(' · ') + '</span>' : '';
 
+        // Title links to the paper (or the next best available URL).
+        var title_url = value.paper || value.venue_link || value.project || null;
+        var title_html = title_url != null
+            ? '<a href="' + title_url + '">' + value.title + '</a>'
+            : value.title;
 
-        decodedText += decodedVar;
-
+        items.push(
+            '<div class="pit">' +
+                '<div class="t">' + title_html + '</div>' +
+                '<div class="a">' + value.author + '</div>' +
+                '<div class="v">' + venue_text + links_text + '</div>' +
+            '</div>'
+        );
     });
-   
-    if (counter > 0){
-        decodedText = '<ul class="pub-list">' + decodedText + '</ul>';
-    }
 
-    div_tag = 'publication';
-    if (filter != null){
-        div_tag += '_' + filter;
-        if (typeof filter === "number"){
-            decodedText = '<div class="text anchor"><h4 class="pub-year-header">' + filter + '</h4>' + decodedText + '</div>'
-        }else{
-            decodedText = '<div class="text anchor">' + decodedText + '</div>'
+    if (counter > 0) {
+        var div_tag = 'publication';
+        var block = items.join('');
+        if (filter != null) {
+            div_tag += '_' + filter;
+            if (typeof filter === 'number') {
+                block = '<div class="pblock">' +
+                            '<div class="pyr">' + filter + '</div>' +
+                            '<div class="pitems">' + block + '</div>' +
+                        '</div>';
+            }
         }
-        
+        $('#' + div_tag).append(block);
     }
-    
-    // console.log(div_tag);
-
-    $('#'+div_tag).append(decodedText);
 }
-
-
-
