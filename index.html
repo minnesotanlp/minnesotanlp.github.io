@@ -74,27 +74,11 @@ header.site .wrap{display:flex;align-items:center;justify-content:space-between;
 .hero-photo .stamp b{font-size:22px;font-weight:600;line-height:1;}
 .hero-photo .stamp span{font-size:9px;letter-spacing:.14em;text-transform:uppercase;margin-top:3px;}
 
-/* marquee strip */
-.strip{margin-top:36px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:16px 0;overflow:hidden;}
-.strip .wrap{display:flex;align-items:center;gap:34px;flex-wrap:wrap;justify-content:center;}
-.strip .label{color:var(--mute);}
-.strip .dom{font-size:24px;font-style:italic;color:var(--espresso);}
-.strip .dot{width:6px;height:6px;border-radius:50%;background:var(--clay);display:inline-block;}
-
 /* section */
 section{padding:66px 0;}
 .shead{margin-bottom:38px;max-width:720px;}
 .shead h2{font-size:clamp(30px,3.6vw,42px);font-weight:600;letter-spacing:-.01em;margin:10px 0 0;}
 .shead p{color:var(--brown);font-size:19px;margin:10px 0 0;}
-
-/* research cards */
-.tcards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
-.tcard{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:26px 24px;transition:transform .25s,box-shadow .25s;}
-.tcard:hover{transform:translateY(-4px);box-shadow:0 18px 36px -20px rgba(60,38,20,.4);}
-.tcard .tn{font-size:15px;font-style:italic;color:var(--clay);}
-.tcard h3{font-size:24px;font-weight:600;margin:6px 0 8px;}
-.tcard p{margin:0;color:var(--brown);font-size:16.5px;line-height:1.5;}
-.tcard:nth-child(4) .tn,.tcard:nth-child(5) .tn{color:var(--olive);}
 
 /* people */
 .psec{background:var(--cream-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
@@ -103,6 +87,9 @@ section{padding:66px 0;}
 .pgroup .ghead .label{color:var(--clay);}
 .pgroup .ghead .ln{flex:1;border-bottom:1px solid var(--line);transform:translateY(-4px);}
 .pgrid{display:grid;grid-template-columns:repeat(5,1fr);gap:24px;}
+.prow{display:grid;grid-template-columns:2fr 3fr;gap:24px;}
+.prow .pgrid{grid-template-columns:repeat(2,1fr);}
+.prow .pgroup:last-child .pgrid{grid-template-columns:repeat(3,1fr);}
 .pc{text-align:left;}
 .pc a.shot{display:block;text-decoration:none;}
 .pc .ph{position:relative;display:block;aspect-ratio:4/5;border-radius:14px;overflow:hidden;background:var(--olive);box-shadow:0 12px 24px -16px rgba(60,38,20,.5);}
@@ -208,8 +195,9 @@ footer.site a:hover{opacity:1;color:#fff;}
   .wrap{padding:0 24px;}
   .hero-grid{grid-template-columns:1fr;gap:40px;}
   .hero-photo{max-width:440px;margin:0 auto;}
-  .tcards{grid-template-columns:1fr 1fr;}
   .pgrid{grid-template-columns:repeat(3,1fr);}
+  .prow{grid-template-columns:1fr;gap:0;}
+  .prow .pgrid,.prow .pgroup:last-child .pgrid{grid-template-columns:repeat(3,1fr);}
   .afeat,.gal{grid-template-columns:1fr;}
   .gal{grid-template-rows:none;}
   .gtile{height:200px;}
@@ -226,7 +214,8 @@ footer.site a:hover{opacity:1;color:#fff;}
   .nlinks a{padding:12px 4px;border-bottom:1px solid var(--line);}
   .nlinks .pill{text-align:center;border-bottom:1px solid var(--clay);margin-top:8px;}
   .pgrid{grid-template-columns:repeat(2,1fr);}
-  .tcards,.alist{grid-template-columns:1fr;}
+  .prow .pgrid,.prow .pgroup:last-child .pgrid{grid-template-columns:repeat(2,1fr);}
+  .alist{grid-template-columns:1fr;}
   .nit,.news-card{grid-template-columns:1fr;gap:6px;}
   .news-header{flex-direction:row;align-items:center;gap:10px;}
   .pit .t{font-size:18px;}
@@ -240,7 +229,6 @@ footer.site a:hover{opacity:1;color:#fff;}
   <a class="brand" href="#top"><span class="mk"><img src="img/UMN_NLP_logo_final_circle.png" alt="Minnesota NLP logo"></span>Minnesota NLP</a>
   <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
   <nav class="nlinks" id="navLinks">
-    <a href="#research">Research</a>
     <a href="#people">People</a>
     <a href="#life">Lab Life</a>
     <a href="#publications">Papers</a>
@@ -274,29 +262,6 @@ footer.site a:hover{opacity:1;color:#fff;}
   </div>
 </div></section>
 
-<div class="strip"><div class="wrap">
-  <span class="label">We support experts in</span>
-  <span class="dom">Law</span> <span class="dot"></span>
-  <span class="dom">Science</span> <span class="dot"></span>
-  <span class="dom">Education</span> <span class="dot"></span>
-  <span class="dom">Journalism</span>
-</div></div>
-
-<section id="research"><div class="wrap">
-  <div class="shead">
-    <span class="eyebrow">What we work on</span>
-    <h2>Five questions we keep returning to.</h2>
-    <p>Our research spans modeling and alignment through to cognition and the messy, expert workflows where language really matters.</p>
-  </div>
-  <div class="tcards">
-    <div class="tcard"><div class="tn">01 — Modeling</div><h3>Modeling</h3><p>Controllable generation, structure-aware tuning, and efficient adaptation of large language models.</p></div>
-    <div class="tcard"><div class="tn">02 — Alignment</div><h3>Alignment</h3><p>Reward learning, preference modeling, and calibrated abstention so systems know what they don&rsquo;t know.</p></div>
-    <div class="tcard"><div class="tn">03 — Evaluation</div><h3>Evaluation</h3><p>LLM-as-judge bias, cognitive benchmarks, and principled assessment of model behavior.</p></div>
-    <div class="tcard"><div class="tn">04 — Cognition</div><h3>Cognition</h3><p>Reading processes, executive function, and eye-tracking signals that connect language and the mind.</p></div>
-    <div class="tcard"><div class="tn">05 — Expert Workflows</div><h3>Expert Workflows</h3><p>Legal reasoning, scientific writing, and journalism support built alongside the people who do the work.</p></div>
-  </div>
-</div></section>
-
 <section id="people" class="psec"><div class="wrap">
   <div class="shead">
     <span class="eyebrow">The people</span>
@@ -304,13 +269,15 @@ footer.site a:hover{opacity:1;color:#fff;}
     <p>Linguists, computer scientists, and cognitive scientists — advised by Dongyeop Kang, with Alexander Spangher joining in Fall 2026.</p>
   </div>
 
-  <div class="pgroup">
-    <div class="ghead"><span class="label">Faculty</span><span class="ln"></span></div>
-    <div class="pgrid" id="members_faculty"></div>
-  </div>
-  <div class="pgroup">
-    <div class="ghead"><span class="label">Postdocs &amp; Visitors</span><span class="ln"></span></div>
-    <div class="pgrid" id="members_visitors"></div>
+  <div class="prow">
+    <div class="pgroup">
+      <div class="ghead"><span class="label">Faculty</span><span class="ln"></span></div>
+      <div class="pgrid" id="members_faculty"></div>
+    </div>
+    <div class="pgroup">
+      <div class="ghead"><span class="label">Postdocs &amp; Visitors</span><span class="ln"></span></div>
+      <div class="pgrid" id="members_visitors"></div>
+    </div>
   </div>
   <div class="pgroup">
     <div class="ghead"><span class="label">Ph.D. Students</span><span class="ln"></span></div>
@@ -331,9 +298,7 @@ footer.site a:hover{opacity:1;color:#fff;}
 
 <section id="life"><div class="wrap">
   <div class="shead">
-    <span class="eyebrow">Lab life</span>
-    <h2>We take the work seriously — not ourselves.</h2>
-    <p>Picnics, escape rooms, paper clinics, and the occasional tennis drill. A research group is a community first.</p>
+    <h2>Lab life</h2>
   </div>
   <div class="gal">
     <figure class="gtile"><img src="img/group/acl_2026_san_diego.jpg" alt="Lab members at ACL 2026 in San Diego" loading="lazy"><figcaption>ACL 2026 — San Diego</figcaption></figure>
@@ -385,7 +350,6 @@ footer.site a:hover{opacity:1;color:#fff;}
       <p>We are an interdisciplinary research group developing human-centered language technologies. Drawing from linguistics, the social sciences, and cognitive science, we build state-of-the-art AI that supports expert workflows in law, science, education, and journalism.</p>
     </div>
     <div><h4>Explore</h4><ul>
-      <li><a href="#research">Research</a></li>
       <li><a href="#people">People</a></li>
       <li><a href="#publications">Papers</a></li>
       <li><a href="https://dykang.github.io/project.html">Research Gallery</a></li>
