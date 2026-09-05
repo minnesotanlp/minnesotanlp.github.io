@@ -148,6 +148,18 @@ section{padding:66px 0;}
 .pall{margin-top:26px;font-style:italic;font-size:17px;}
 .pall a{color:var(--clay);}
 
+/* layout: main column + sticky news column */
+.layout{display:grid;grid-template-columns:minmax(0,1fr) 340px;max-width:1480px;margin:0 auto;}
+.layout>main{min-width:0;}
+header.site .wrap,footer.site .wrap{max-width:1480px;}
+.newsbar{position:sticky;top:70px;max-height:calc(100vh - 70px);overflow-y:auto;padding:40px 30px 40px 26px;border-left:1px solid var(--line);background:var(--cream-2);}
+.newsbar .shead{margin-bottom:14px;}
+.newsbar .shead h2{font-size:24px;}
+.newsbar .news-card{grid-template-columns:1fr;gap:6px;padding:16px 0;}
+.newsbar .news-header{flex-direction:row;align-items:center;gap:10px;}
+.newsbar .news-content{font-size:15px;line-height:1.5;}
+.newsbar .news-card-important .news-content{padding-left:12px;}
+
 /* news */
 .nlist{max-width:860px;}
 .news-container{display:contents;}
@@ -190,8 +202,15 @@ footer.site a:hover{opacity:1;color:#fff;}
 #back-to-top.show{opacity:1;pointer-events:auto;}
 #back-to-top:hover{transform:translateY(-3px);background:var(--clay-deep);}
 
+@media(max-width:1100px){
+  .layout{grid-template-columns:1fr;}
+  .newsbar{position:static;max-height:none;overflow:visible;border-left:0;border-top:1px solid var(--line);padding:56px 44px;}
+  .newsbar .shead{margin-bottom:38px;}
+  .newsbar .shead h2{font-size:clamp(30px,3.6vw,42px);}
+}
 @media(max-width:960px){
   .wrap{padding:0 24px;}
+  .newsbar{padding:48px 24px;}
   .hero-grid{grid-template-columns:1fr;gap:40px;}
   .hero-photo{max-width:440px;margin:0 auto;}
   .pgrid{grid-template-columns:repeat(3,1fr);}
@@ -238,6 +257,7 @@ footer.site a:hover{opacity:1;color:#fff;}
 </div></header>
 
 <a id="top"></a>
+<div class="layout">
 <main id="main-content">
 
 <section class="hero"><div class="wrap">
@@ -258,6 +278,14 @@ footer.site a:hover{opacity:1;color:#fff;}
       <div class="tab"><span class="label">From the lab</span><span class="cap" id="heroCap"></span></div>
     </div>
   </div>
+</div></section>
+
+<section id="funding"><div class="wrap">
+  <div class="shead" style="text-align:center;margin:0 auto 38px;">
+    <span class="eyebrow">With support from</span>
+    <h2>Funding &amp; partners.</h2>
+  </div>
+  <div class="fund-grid" id="funding-logos"></div>
 </div></section>
 
 <section id="people" class="psec"><div class="wrap">
@@ -298,11 +326,11 @@ footer.site a:hover{opacity:1;color:#fff;}
     <h2>Lab life</h2>
   </div>
   <div class="gal">
+    <figure class="gtile"><img src="img/group/karin_defense_2026.jpg" alt="Karin de Langis with her committee after her Ph.D. defense" loading="lazy"><figcaption>Karin&rsquo;s Ph.D. defense — Sep 2026</figcaption></figure>
     <figure class="gtile"><img src="img/group/acl_2026_san_diego.jpg" alt="Lab members at ACL 2026 in San Diego" loading="lazy"><figcaption>ACL 2026 — San Diego</figcaption></figure>
     <figure class="gtile"><img src="img/group/lab_picnic_april_2026.jpg" alt="Lab picnic" loading="lazy"><figcaption>Lab picnic — April 2026</figcaption></figure>
     <figure class="gtile"><img src="img/group/end-of-semester-2025-fall.jpg" alt="End-of-semester gathering" loading="lazy"><figcaption>End-of-semester gathering — Fall 2025</figcaption></figure>
     <figure class="gtile"><img src="img/group/reunion_at_colm.jpg" alt="Reunion at CoLM" loading="lazy"><figcaption>Reunion at CoLM</figcaption></figure>
-    <figure class="gtile"><img src="img/group/group_tennis.jpg" alt="Tennis drill" loading="lazy"><figcaption>Tennis drill — May 2024</figcaption></figure>
   </div>
 </div></section>
 
@@ -322,23 +350,16 @@ footer.site a:hover{opacity:1;color:#fff;}
   <p class="pall">→ See the <a href="https://dykang.github.io/">complete publication list</a>.</p>
 </div></section>
 
-<section id="news"><div class="wrap">
+</main>
+
+<aside class="newsbar" id="news" aria-label="News and notes">
   <div class="shead">
     <span class="eyebrow">News &amp; notes</span>
     <h2>What&rsquo;s happening lately.</h2>
   </div>
   <div class="nlist" id="items_news"></div>
-</div></section>
-
-<section id="funding" class="psec"><div class="wrap">
-  <div class="shead" style="text-align:center;margin:0 auto 38px;">
-    <span class="eyebrow">With support from</span>
-    <h2>Funding &amp; partners.</h2>
-  </div>
-  <div class="fund-grid" id="funding-logos"></div>
-</div></section>
-
-</main>
+</aside>
+</div>
 
 <footer class="site"><div class="wrap">
   <div class="ftop">
