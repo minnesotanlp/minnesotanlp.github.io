@@ -133,6 +133,9 @@ function render_alumni(elements, filter = null) {
                 if (value.current === true) { return; }
                 if (filter === 'alumni_mastersundergraduate') {
                     if (value.position !== 'Masters' && value.position !== 'Undergraduate') { return; }
+                } else if (filter === 'alumni_phd') {
+                    // Ph.D., postdoc, and visiting alumni
+                    if (!/phd|postdoc|visiting/.test(String(value.position || '').toLowerCase())) { return; }
                 } else if (filter_second != null && value.position != null) {
                     if (!value.position.toString().toLowerCase().includes(filter_second)) { return; }
                 }
@@ -153,6 +156,8 @@ function render_alumni(elements, filter = null) {
             var note_html = '';
             if (value.note != null) {
                 note_html = '<div class="nt">' + value.note + '</div>';
+            } else if (value.position != null && value.position !== 'PhD') {
+                note_html = '<div class="nt">' + value.position + (value.year != null ? ', ' + value.year : '') + '</div>';
             } else if (value.description != null) {
                 note_html = '<div class="nt">' + value.description + '</div>';
             }
