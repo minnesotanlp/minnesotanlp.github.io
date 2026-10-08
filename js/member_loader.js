@@ -148,7 +148,7 @@ function render_alumni(elements, filter = null) {
         if (filter === 'alumni_phd') {
             var next_html = '';
             if (value.next_position != null) {
-                next_html = '<div class="nx">→ ' + value.next_position + '</div>';
+                next_html = '<div class="nx">' + value.next_position + '</div>';
             }
             var note_html = '';
             if (value.note != null) {
