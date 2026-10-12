@@ -29,41 +29,45 @@ function member_photo(value, phClass) {
 }
 
 
-function render_member(elements, filter = null) {
+// Everyone currently in the group is shown in one grid. Category only decides
+// the order -- faculty, then postdocs and visitors, then Ph.D., then masters and
+// undergraduates -- and each card states its own role, so no headings are needed.
+var MEMBER_ORDER = [
+    ['Professor', 'Associate Professor', 'Assistant Professor'],
+    ['Postdoc', 'Research Engineer', 'Visiting Scholar'],
+    ['PhD', 'Visiting PhD'],
+    ['Masters', 'Undergraduate']
+];
 
-    var cards = [];
-    var counter = 0;
+function member_rank(position) {
+    for (var i = 0; i < MEMBER_ORDER.length; i++) {
+        if (MEMBER_ORDER[i].indexOf(position) !== -1) { return i; }
+    }
+    return MEMBER_ORDER.length;   // anything unrecognised sorts last
+}
+
+// members.json stores terse positions; spell them out now that they carry the grouping.
+var MEMBER_ROLE_LABELS = {
+    'PhD': 'Ph.D. Student',
+    'Visiting PhD': 'Visiting Ph.D. Student',
+    'Masters': 'Masters Student'
+};
+
+function member_role_label(position) {
+    return MEMBER_ROLE_LABELS[position] || position || '';
+}
+
+function member_sort_key(name) {
+    var parts = (name || '').trim().split(/\s+/);
+    return (parts[parts.length - 1] || '').toLowerCase();
+}
+
+function render_member(elements) {
+
+    var entries = [];
 
     $.each(elements, function (index, value) {
-
-        // filters (preserve the live members.json position vocabulary)
-        if (filter != null) {
-            if (filter === 'current') {
-                if (value.current === false) { return; }
-            }
-            if (filter === 'faculty') {
-                if (value.position != 'Assistant Professor' && value.position != 'Associate Professor' && value.position != 'Professor') { return; }
-            }
-            if (filter === 'phd') {
-                if (value.position != 'PhD' && value.position != 'Visiting PhD') { return; }
-            }
-            if (filter === 'mastersundergraduate') {
-                if (value.position != 'Masters' && value.position != 'Undergraduate') { return; }
-            }
-            if (filter === 'visitors') {
-                if (value.position != 'Research Engineer' && value.position != 'Postdoc' && value.position != 'Visiting Scholar') { return; }
-            }
-            if (filter === 'masters') {
-                if (value.position != 'Masters') { return; }
-            }
-            if (filter === 'undergraduate') {
-                if (value.position != 'Undergraduate') { return; }
-            }
-            if (filter === 'staff') {
-                if (value.position != 'Staff') { return; }
-            }
-        }
-        counter += 1;
+        if (value.current === false) { return; }
 
         // Name (linked to homepage when available)
         var name_html = value.homepage != null
@@ -71,7 +75,7 @@ function render_member(elements, filter = null) {
             : value.name;
 
         // Role line: position, optional co-advisor
-        var role_html = value.position || '';
+        var role_html = member_role_label(value.position);
         if (value.coadvisor != null) {
             role_html += ', w/ <a href="' + value.coadvisor_homepage + '">' + value.coadvisor + '</a>';
         }
@@ -101,18 +105,23 @@ function render_member(elements, filter = null) {
             tag_html +
             '</div>';
 
-        cards.push(card);
+        entries.push({
+            rank: member_rank(value.position),
+            key: member_sort_key(value.name),
+            card: card
+        });
     });
 
-    shuffleArray(cards);
+    // Category decides the blocks; last name orders people inside each block.
+    entries.sort(function (a, b) {
+        if (a.rank !== b.rank) { return a.rank - b.rank; }
+        return a.key < b.key ? -1 : (a.key > b.key ? 1 : 0);
+    });
 
-    var div_tag = 'members';
-    if (filter != null) { div_tag += '_' + filter; }
-    if (counter > 0) {
-        $('#' + div_tag).append(cards.join(''));
+    if (entries.length > 0) {
+        $('#members_current').append(entries.map(function (e) { return e.card; }).join(''));
     }
 }
-
 
 
 function render_alumni(elements, filter = null) {
