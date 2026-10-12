@@ -19,10 +19,7 @@ $.getJSON(json_news_url, function (result) { render_news(result); });
 
 // ---- Current members ----
 var json_member_url = 'https://dykang.github.io/assets/members.json';
-$.getJSON(json_member_url, function (result) { render_member(result, filter='faculty'); });
-$.getJSON(json_member_url, function (result) { render_member(result, filter='visitors'); });
-$.getJSON(json_member_url, function (result) { render_member(result, filter='phd'); });
-$.getJSON(json_member_url, function (result) { render_member(result, filter='mastersundergraduate'); });
+$.getJSON(json_member_url, function (result) { render_member(result); });
 
 // ---- Alumni ----
 var json_alumni_url = 'https://dykang.github.io/assets/alumni.json';
