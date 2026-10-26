@@ -1,6 +1,12 @@
 [
     {
         "date": "Oct 2026",
+        "category": "award",
+        "importance": "high",
+        "description": "<a href='https://shuyugan.github.io/'>Shuyu Gan</a> received the GAGE Fellowship. Congratulations, Shuyu!"
+    },
+    {
+        "date": "Oct 2026",
         "category": "announcement",
         "importance": "normal",
         "description": "<a href='https://passing2961.github.io/'>Young-Jun Lee</a> visited us as a visiting scholar, and <a href='https://seungyeonlj.github.io/'>Seungyeon Jwa</a> is visiting as a Ph.D. student from Seoul National University. Thank you both for the great work with the group!"
