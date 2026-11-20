@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Minnesota NLP · Internal</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" type="image/png" href="../img/UMN_NLP_logo_final_circle.png">
+<style>
+:root{--text:#222;--mute:#666;--line:#e2e2e2;--bg:#f7f6f4;--maroon:#7a0019;--maroon-d:#5c0013;--gold:#ffcc33;--ok:#0f766e;--err:#b42318;}
+*{box-sizing:border-box;}
+html,body{height:100%;}
+body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;font-size:16px;line-height:1.5;display:flex;flex-direction:column;}
+a{color:var(--maroon);}
+header.site{background:var(--maroon);}
+header.site .wrap{display:flex;align-items:center;justify-content:space-between;height:56px;max-width:1200px;margin:0 auto;padding:0 24px;}
+.brand{font-size:18px;font-weight:600;color:#fff;display:flex;align-items:center;gap:10px;text-decoration:none;white-space:nowrap;}
+.brand img{width:28px;height:28px;}
+.brand small{font-weight:400;opacity:.75;font-size:14px;}
+.hbtn{background:none;border:1px solid rgba(255,255,255,.45);color:#fff;border-radius:6px;padding:5px 12px;font-size:14px;cursor:pointer;}
+.hbtn:hover{border-color:var(--gold);color:var(--gold);}
+main{flex:1;}
+.wrap{max-width:1200px;margin:0 auto;padding:0 24px;}
+
+/* login */
+.login{max-width:380px;margin:9vh auto 40px;background:#fff;border:1px solid var(--line);border-radius:10px;padding:32px 28px;box-shadow:0 1px 3px rgba(0,0,0,.05);}
+.login h1{font-size:22px;margin:0 0 4px;}
+.login p.sub{color:var(--mute);font-size:14px;margin:0 0 22px;}
+.login label{display:block;font-size:13px;font-weight:600;margin:14px 0 6px;}
+.login input[type=text],.login input[type=password]{width:100%;font-size:16px;padding:10px 12px;border:1px solid #ccc;border-radius:6px;}
+.login input:focus{outline:2px solid var(--gold);outline-offset:1px;border-color:var(--maroon);}
+.remember{display:flex;align-items:center;gap:8px;font-size:14px;color:var(--mute);margin-top:14px;}
+.login button[type=submit]{width:100%;margin-top:20px;background:var(--maroon);color:#fff;border:0;border-radius:6px;padding:11px;font-size:16px;font-weight:600;cursor:pointer;}
+.login button[type=submit]:hover{background:var(--maroon-d);}
+.login button[disabled]{opacity:.6;cursor:wait;}
+.msg{min-height:20px;font-size:14px;margin-top:12px;color:var(--err);}
+
+/* portal */
+.tabs{background:#fff;border-bottom:1px solid var(--line);}
+.tabs .wrap{display:flex;gap:4px;}
+.tabs button{background:none;border:0;border-bottom:3px solid transparent;padding:14px 16px 11px;font-size:15px;color:var(--mute);cursor:pointer;}
+.tabs button.on{color:var(--maroon);border-bottom-color:var(--maroon);font-weight:600;}
+.tabs button:hover{color:var(--maroon);}
+.panel{padding:28px 0 48px;}
+.panel[hidden]{display:none;}
+footer.site{background:var(--maroon);color:rgba(255,255,255,.85);font-size:13px;}
+footer.site .wrap{padding:16px 24px;}
+</style>
+</head>
+<body>
+<header class="site"><div class="wrap">
+  <a class="brand" href="../"><img src="../img/UMN_NLP_logo_final_circle.png" alt="">Minnesota NLP <small>· Internal</small></a>
+  <button class="hbtn" id="logout" hidden>Sign out</button>
+</div></header>
+
+<main>
+  <form class="login" id="login" autocomplete="on">
+    <h1>Lab internal</h1>
+    <p class="sub">For Minnesota NLP members only.</p>
+    <label for="uid">ID</label>
+    <input type="text" id="uid" name="username" autocomplete="username" autocapitalize="off" spellcheck="false" required>
+    <label for="pw">Password</label>
+    <input type="password" id="pw" name="password" autocomplete="current-password" required>
+    <label class="remember"><input type="checkbox" id="remember"> Keep me signed in on this device</label>
+    <button type="submit" id="go">Sign in</button>
+    <div class="msg" id="msg" role="alert"></div>
+  </form>
+
+  <div id="portal" hidden>
+    <nav class="tabs"><div class="wrap" id="tabbar" role="tablist"></div></nav>
+    <div class="wrap" id="panels"></div>
+  </div>
+</main>
+
+<footer class="site"><div class="wrap">Minnesota NLP · Computer Science &amp; Engineering, University of Minnesota</div></footer>
+
+<script>
+/*
+ * The portal content is AES-GCM encrypted in content.enc.json.
+ * Key = PBKDF2-SHA256("<id>:<password>", salt, iterations).
+ * Nothing secret is in this file; see tools/internal-crypt.mjs to edit content.
+ */
+(function(){
+  const KEY_STORE = "mnlp-internal-key";
+  const $ = id => document.getElementById(id);
+  const b64d = s => Uint8Array.from(atob(s), c => c.charCodeAt(0));
+  const b64e = u => btoa(String.fromCharCode(...new Uint8Array(u)));
+  let payload = null;
+
+  async function getPayload(){
+    if (!payload) {
+      const r = await fetch("content.enc.json", {cache: "no-store"});
+      if (!r.ok) throw new Error("Could not load content (" + r.status + ").");
+      payload = await r.json();
+    }
+    return payload;
+  }
+
+  async function deriveRaw(id, pw, p){
+    const base = await crypto.subtle.importKey("raw", new TextEncoder().encode(id + ":" + pw), "PBKDF2", false, ["deriveBits"]);
+    return crypto.subtle.deriveBits({name: "PBKDF2", hash: "SHA-256", salt: b64d(p.salt), iterations: p.iter}, base, 256);
+  }
+
+  async function decrypt(raw, p){
+    const key = await crypto.subtle.importKey("raw", raw, "AES-GCM", false, ["decrypt"]);
+    const out = await crypto.subtle.decrypt({name: "AES-GCM", iv: b64d(p.iv)}, key, b64d(p.ct));
+    return new TextDecoder().decode(out);
+  }
+
+  function storage(){ return localStorage.getItem(KEY_STORE) ? localStorage : sessionStorage; }
+  function saveKey(raw, remember){
+    try {
+      localStorage.removeItem(KEY_STORE); sessionStorage.removeItem(KEY_STORE);
+      (remember ? localStorage : sessionStorage).setItem(KEY_STORE, b64e(raw));
+    } catch(e) {}
+  }
+  function loadKey(){ try { return storage().getItem(KEY_STORE); } catch(e) { return null; } }
+  function clearKey(){ try { localStorage.removeItem(KEY_STORE); sessionStorage.removeItem(KEY_STORE); } catch(e) {} }
+
+  function render(html){
+    const tpl = document.createElement("template");
+    tpl.innerHTML = html;
+    const sections = [...tpl.content.querySelectorAll("section[data-tab]")];
+    const bar = $("tabbar"), panels = $("panels");
+    bar.innerHTML = ""; panels.innerHTML = "";
+    sections.forEach(sec => {
+      const id = sec.dataset.tab;
+      const b = document.createElement("button");
+      b.type = "button"; b.role = "tab"; b.dataset.tab = id; b.textContent = sec.dataset.label || id;
+      b.onclick = () => { location.hash = id; show(id); };
+      bar.appendChild(b);
+      sec.classList.add("panel"); sec.id = "tab-" + id;
+      panels.appendChild(sec);
+    });
+    // Run inline <style> from content; scripts are not used.
+    tpl.content.querySelectorAll("style").forEach(s => document.head.appendChild(s));
+    $("login").hidden = true; $("portal").hidden = false; $("logout").hidden = false;
+    const want = location.hash.slice(1);
+    show(sections.some(s => s.dataset.tab === want) ? want : (sections[0] && sections[0].dataset.tab));
+  }
+
+  function show(id){
+    document.querySelectorAll("#tabbar button").forEach(b => b.classList.toggle("on", b.dataset.tab === id));
+    document.querySelectorAll("#panels > section").forEach(s => s.hidden = s.dataset.tab !== id);
+  }
+
+  window.addEventListener("hashchange", () => { if (!$("portal").hidden) show(location.hash.slice(1)); });
+
+  $("login").addEventListener("submit", async e => {
+    e.preventDefault();
+    const go = $("go"); go.disabled = true; $("msg").textContent = "";
+    try {
+      const p = await getPayload();
+      const raw = await deriveRaw($("uid").value.trim(), $("pw").value, p);
+      let html;
+      try { html = await decrypt(raw, p); }
+      catch(err) { $("msg").textContent = "ID or password is not correct."; $("pw").select(); return; }
+      saveKey(raw, $("remember").checked);
+      $("pw").value = "";
+      render(html);
+    } catch(err) {
+      $("msg").textContent = err.message || String(err);
+    } finally { go.disabled = false; }
+  });
+
+  $("logout").onclick = () => { clearKey(); location.hash = ""; location.reload(); };
+
+  (async () => {
+    const k = loadKey();
+    if (!k) { $("uid").focus(); return; }
+    try { render(await decrypt(b64d(k), await getPayload())); }
+    catch(e) { clearKey(); $("uid").focus(); }   // content was re-encrypted (password changed)
+  })();
+})();
+</script>
+</body>
+</html>
